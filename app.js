@@ -13,7 +13,7 @@ const data = {
         },
         {
           name: "NEET",
-          info: "National medical entrance examination.",
+          info: "National medical entrance exam conducted by NTA.",
           link: "https://neet.nta.nic.in"
         }
       ]
@@ -35,7 +35,7 @@ const data = {
       items: [
         {
           name: "SAT",
-          info: "Standardized test widely used for college admissions.",
+          info: "Standardized test used for college admissions worldwide.",
           link: "https://satsuite.collegeboard.org"
         }
       ]
@@ -44,7 +44,7 @@ const data = {
 };
 
 function navigate(route) {
-  if (route === "home" || route === "categories") {
+  if (route === "home") {
     renderHome();
   } else {
     renderCategory(route);
@@ -52,37 +52,51 @@ function navigate(route) {
 }
 
 function renderHome() {
-  app.innerHTML = `
+  let html = `
     <div class="card">
-      <h2>Global Education Gateway</h2>
+      <h2>🌍 Global Education Gateway</h2>
       <p>Access structured education ecosystem in one place.</p>
     </div>
-    ${data.categories.map(cat => `
+  `;
+
+  data.categories.forEach(cat => {
+    html += `
       <div class="card" onclick="navigate('${cat.slug}')">
         <h3>${cat.title}</h3>
-        <p>Explore ${cat.title}</p>
+        <p>Explore official resources and platforms.</p>
       </div>
-    `).join("")}
-  `;
+    `;
+  });
+
+  app.innerHTML = html;
 }
 
 function renderCategory(slug) {
   const category = data.categories.find(c => c.slug === slug);
-  if (!category) return renderHome();
 
-  app.innerHTML = `
+  if (!category) {
+    renderHome();
+    return;
+  }
+
+  let html = `
     <div class="card">
       <h2>${category.title}</h2>
-      <p>Structured official resources</p>
+      <p>Official structured resources</p>
     </div>
-    ${category.items.map(item => `
+  `;
+
+  category.items.forEach(item => {
+    html += `
       <div class="card">
         <h3>${item.name}</h3>
         <p>${item.info}</p>
-        <a class="button" href="${item.link}" target="_blank">Visit Official</a>
+        <a href="${item.link}" target="_blank" class="button">Visit Official</a>
       </div>
-    `).join("")}
-  `;
+    `;
+  });
+
+  app.innerHTML = html;
 }
 
 renderHome();
