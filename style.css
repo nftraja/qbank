@@ -1,64 +1,171 @@
-body {
+/* ===== RESET ===== */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #1b0f06, #0c0603);
-  color: #ffffff;
-  padding-bottom: 70px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.topbar {
+body {
+  background: linear-gradient(180deg, #1a0f08 0%, #120a05 100%);
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 90px;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, #2b160c, #1a0f08);
+  padding: 18px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  background: #140904;
-  font-size: 18px;
-  font-weight: bold;
+  justify-content: space-between;
 }
 
-.menu {
+header h1 {
   font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.logo {
-  font-size: 20px;
-}
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #140904;
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 0;
-}
-
-.nav-item {
-  font-size: 14px;
+.menu-icon {
+  font-size: 22px;
+  color: #f4c16e;
   cursor: pointer;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  margin: 16px;
-  padding: 18px;
+/* ===== CONTAINER ===== */
+.container {
+  padding: 20px;
+}
+
+/* ===== HERO CARD ===== */
+.hero-card {
+  background: linear-gradient(145deg, #2a1a12, #1a110b);
   border-radius: 18px;
-  box-shadow: 0 0 20px rgba(255, 140, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 0 0 1px rgba(255, 183, 94, 0.15),
+              0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-.card h2,
+.hero-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hero-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6c2b1;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+/* ===== CATEGORY CARD ===== */
+.card {
+  background: linear-gradient(145deg, #2b1b12, #1a110b);
+  border-radius: 18px;
+  padding: 22px 15px;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(255, 183, 94, 0.12),
+              0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(255, 183, 94, 0.25),
+              0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
 .card h3 {
-  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.button {
+/* ===== INFO SECTION CARDS ===== */
+.info-card {
+  background: linear-gradient(145deg, #2b1b12, #1a110b);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 0 1px rgba(255, 183, 94, 0.12),
+              0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.info-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6c2b1;
+  margin-bottom: 15px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 8px 16px;
-  border-radius: 25px;
-  background: linear-gradient(45deg, #ffb347, #ff8008);
+  padding: 10px 18px;
+  background: #f4c16e;
   color: #000;
-  font-weight: bold;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
   text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #ffcf82;
+}
+
+/* ===== BOTTOM NAV ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: linear-gradient(180deg, #2b160c, #1a0f08);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(255, 183, 94, 0.15);
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #caa26c;
+  font-size: 12px;
+  text-align: center;
+}
+
+.bottom-nav a.active {
+  color: #f4c16e;
+}
+
+.bottom-nav span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
 }
