@@ -1,39 +1,27 @@
-/* ===================================================== */
-/* QBank – FINAL GLOBAL UI LOCK (Super App Version)     */
-/* ===================================================== */
-
-/* ================= ROOT THEME ================= */
 
 :root{
 
-  /* Base Theme */
-  --bg-main:#0f0c0a;              /* dark chocolate base */
+  --bg-main:#0f0c0a;
   --bg-elev-1:#181310;
   --bg-elev-2:#211a16;
   --bg-elev-3:#2a221c;
 
-  /* Accent */
-  --accent:#d4af37;               /* premium gold */
+  --accent:#d4af37;
   --accent-soft:rgba(212,175,55,.15);
 
-  /* Borders */
   --border-soft:rgba(255,255,255,.05);
   --border-mid:rgba(255,255,255,.08);
   --border-strong:rgba(255,255,255,.18);
 
-  /* Text */
   --text-primary:#ffffff;
   --text-secondary:#b9b1a8;
 
-  /* Radius */
   --radius-lg:18px;
   --radius-md:14px;
   --radius-sm:10px;
 
-  /* Shadows */
   --shadow-soft:0 6px 20px rgba(0,0,0,.35);
   --shadow-hover:0 10px 30px rgba(0,0,0,.45);
-
 }
 
 /* ================= RESET ================= */
@@ -51,6 +39,13 @@ html,body{
   background:var(--bg-main);
   color:var(--text-primary);
   -webkit-overflow-scrolling:touch;
+}
+
+/* ================= GLOBAL SCROLL CONTROL (LOCKED) ================= */
+
+body.no-scroll{
+  overflow:hidden;
+  height:100vh;
 }
 
 /* ================= HEADER ================= */
@@ -302,9 +297,7 @@ html,body{
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:420px){
-
   .grid{
     grid-template-columns:repeat(2,1fr);
   }
-
 }
