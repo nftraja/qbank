@@ -1,102 +1,112 @@
 const app = document.getElementById("app");
 
-const data = {
-  categories: [
-    {
-      slug: "exams",
-      title: "Competitive Exams",
-      items: [
-        {
-          name: "JEE Main",
-          info: "National engineering entrance exam conducted by NTA.",
-          link: "https://jeemain.nta.nic.in"
-        },
-        {
-          name: "NEET",
-          info: "National medical entrance exam conducted by NTA.",
-          link: "https://neet.nta.nic.in"
-        }
-      ]
-    },
-    {
-      slug: "universities",
-      title: "Universities",
-      items: [
-        {
-          name: "IIT Delhi",
-          info: "Premier engineering institute in India.",
-          link: "https://home.iitd.ac.in"
-        }
-      ]
-    },
-    {
-      slug: "global",
-      title: "Global Access",
-      items: [
-        {
-          name: "SAT",
-          info: "Standardized test used for college admissions worldwide.",
-          link: "https://satsuite.collegeboard.org"
-        }
-      ]
-    }
-  ]
+function setActiveNav(page) {
+  document.querySelectorAll(".bottom-nav button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+  const active = document.getElementById("nav-" + page);
+  if (active) active.classList.add("active");
+}
+
+window.navigate = function (page) {
+  history.pushState({}, "", "#" + page);
+  render(page);
 };
 
-function navigate(route) {
-  if (route === "home") {
-    renderHome();
-  } else {
-    renderCategory(route);
+window.onpopstate = function () {
+  render(location.hash.replace("#", "") || "home");
+};
+
+function render(page) {
+  setActiveNav(page);
+
+  switch (page) {
+    case "categories":
+      app.innerHTML = categoriesPage();
+      break;
+    case "exams":
+      app.innerHTML = examsPage();
+      break;
+    case "uni":
+      app.innerHTML = uniPage();
+      break;
+    case "global":
+      app.innerHTML = globalPage();
+      break;
+    default:
+      app.innerHTML = homePage();
   }
 }
 
-function renderHome() {
-  let html = `
+function card(title, desc) {
+  return `
     <div class="card">
-      <h2>🌍 Global Education Gateway</h2>
-      <p>Access structured education ecosystem in one place.</p>
+      <h3>${title}</h3>
+      <p>${desc}</p>
     </div>
   `;
-
-  data.categories.forEach(cat => {
-    html += `
-      <div class="card" onclick="navigate('${cat.slug}')">
-        <h3>${cat.title}</h3>
-        <p>Explore official resources and platforms.</p>
-      </div>
-    `;
-  });
-
-  app.innerHTML = html;
 }
 
-function renderCategory(slug) {
-  const category = data.categories.find(c => c.slug === slug);
-
-  if (!category) {
-    renderHome();
-    return;
-  }
-
-  let html = `
-    <div class="card">
-      <h2>${category.title}</h2>
-      <p>Official structured resources</p>
-    </div>
+function homePage() {
+  return `
+    <section class="section">
+      <h2>🌐 Global Education Gateway</h2>
+      ${card("Competitive Exams", "All major global entrance exams.")}
+      ${card("Universities", "Global universities & official portals.")}
+      ${card("Scholarships", "Verified funding & grants.")}
+      ${card("Research", "Global research institutions.")}
+    </section>
   `;
-
-  category.items.forEach(item => {
-    html += `
-      <div class="card">
-        <h3>${item.name}</h3>
-        <p>${item.info}</p>
-        <a href="${item.link}" target="_blank" class="button">Visit Official</a>
-      </div>
-    `;
-  });
-
-  app.innerHTML = html;
 }
 
-renderHome();
+function categoriesPage() {
+  return `
+    <section class="section">
+      <h2>📂 QBank Categories</h2>
+      ${card("Engineering", "All engineering boards & exams.")}
+      ${card("Medical", "Medical councils & tests.")}
+      ${card("AI", "Artificial Intelligence learning & resources.")}
+      ${card("Finance", "Finance & Economics portals.")}
+      ${card("Law", "Judiciary & law boards.")}
+    </section>
+  `;
+}
+
+function examsPage() {
+  return `
+    <section class="section">
+      <h2>📝 Competitive Exams</h2>
+      ${card("SAT", "Official SAT resources.")}
+      ${card("GRE", "Graduate Record Exam details.")}
+      ${card("IELTS", "English proficiency test.")}
+    </section>
+  `;
+}
+
+function uniPage() {
+  return `
+    <section class="section">
+      <h2>🎓 Universities</h2>
+      ${card("USA Universities", "Top US institutions.")}
+      ${card("UK Universities", "Top UK institutions.")}
+      ${card("Indian Universities", "UGC approved universities.")}
+    </section>
+  `;
+}
+
+function globalPage() {
+  return `
+    <section class="section">
+      <h2>🌍 Global Access</h2>
+      ${card("Government Portals", "Official exam boards.")}
+      ${card("Accreditation Bodies", "AICTE, NAAC, global councils.")}
+      ${card("Study Abroad", "International education gateways.")}
+    </section>
+  `;
+}
+
+render(location.hash.replace("#", "") || "home");
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
