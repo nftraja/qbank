@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QBank</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QBank - Global Education Gateway</title>
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+
+  <meta name="theme-color" content="#111111" />
+</head>
 <body>
 
-<header class="topbar">
-  <div class="menu">☰</div>
-  <div class="logo">QBank</div>
-</header>
+  <header class="top-bar">
+    <div class="menu">☰</div>
+    <div class="logo">QBank</div>
+  </header>
 
-<main id="app"></main>
+  <main id="app"></main>
 
-<nav class="bottom-nav">
-  <div class="nav-item" onclick="navigate('home')">Home</div>
-  <div class="nav-item" onclick="navigate('home')">Categories</div>
-  <div class="nav-item" onclick="navigate('exams')">Exams</div>
-  <div class="nav-item" onclick="navigate('universities')">Uni</div>
-  <div class="nav-item" onclick="navigate('global')">Global</div>
-</nav>
+  <nav class="bottom-nav">
+    <button onclick="navigate('home')" id="nav-home">🏠<span>Home</span></button>
+    <button onclick="navigate('categories')" id="nav-categories">📂<span>Categories</span></button>
+    <button onclick="navigate('exams')" id="nav-exams">📝<span>Exams</span></button>
+    <button onclick="navigate('uni')" id="nav-uni">🎓<span>Uni</span></button>
+    <button onclick="navigate('global')" id="nav-global">🌍<span>Global</span></button>
+  </nav>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
