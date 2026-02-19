@@ -1,107 +1,88 @@
-document.addEventListener("DOMContentLoaded", function(){
+const app = document.getElementById("app");
 
-  /* =========================
-     DRAWER TOGGLE SYSTEM
-  ========================== */
-
-  const menuBtn = document.getElementById("menuBtn");
-  const drawer = document.getElementById("drawer");
-  const overlay = document.getElementById("overlay");
-
-  if(menuBtn && drawer && overlay){
-
-    menuBtn.addEventListener("click", function(){
-      drawer.classList.toggle("active");
-      overlay.classList.toggle("active");
-      document.body.classList.toggle("no-scroll");
-    });
-
-    overlay.addEventListener("click", function(){
-      drawer.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-    });
-
-  }
-
-
-  /* =========================
-     ACTIVE BOTTOM NAV AUTO DETECT
-  ========================== */
-
-  const bottomItems = document.querySelectorAll(".bottom-item");
-  const currentPath = window.location.pathname;
-
-  bottomItems.forEach(item => {
-    const linkPath = item.getAttribute("href");
-
-    if(linkPath === currentPath){
-      item.classList.add("active");
+const data = {
+  categories: [
+    {
+      slug: "exams",
+      title: "Competitive Exams",
+      items: [
+        {
+          name: "JEE Main",
+          info: "National engineering entrance exam conducted by NTA.",
+          link: "https://jeemain.nta.nic.in"
+        },
+        {
+          name: "NEET",
+          info: "National medical entrance examination.",
+          link: "https://neet.nta.nic.in"
+        }
+      ]
+    },
+    {
+      slug: "universities",
+      title: "Universities",
+      items: [
+        {
+          name: "IIT Delhi",
+          info: "Premier engineering institute in India.",
+          link: "https://home.iitd.ac.in"
+        }
+      ]
+    },
+    {
+      slug: "global",
+      title: "Global Access",
+      items: [
+        {
+          name: "SAT",
+          info: "Standardized test widely used for college admissions.",
+          link: "https://satsuite.collegeboard.org"
+        }
+      ]
     }
-  });
+  ]
+};
 
-
-  /* =========================
-     SAFE EXTERNAL LINK HANDLING
-  ========================== */
-
-  const externalLinks = document.querySelectorAll("a[target='_blank']");
-  externalLinks.forEach(link => {
-    link.setAttribute("rel", "noopener noreferrer");
-  });
-
-
-  /* =========================
-     FUTURE JSON READY (SAFE PLACEHOLDER)
-     (No execution until JSON page uses it)
-  ========================== */
-
-  const dataContainer = document.getElementById("dataContainer");
-
-  if(dataContainer){
-
-    const jsonFile = dataContainer.dataset.json;
-
-    if(jsonFile){
-
-      fetch(jsonFile, { cache: "no-store" })
-        .then(res => res.json())
-        .then(data => {
-
-          if(!Array.isArray(data)) return;
-
-          dataContainer.innerHTML = data.map(item => `
-            <div class="list-card">
-              <div class="list-title">${item.name}</div>
-              <div class="list-desc">${item.description}</div>
-              <a href="${item.link}" target="_blank" class="btn">Visit</a>
-            </div>
-          `).join("");
-
-        })
-        .catch(err => {
-          console.error("JSON load error:", err);
-        });
-
-    }
-
+function navigate(route) {
+  if (route === "home" || route === "categories") {
+    renderHome();
+  } else {
+    renderCategory(route);
   }
-
-});
-
-
-/* =======================================================
-   SERVICE WORKER (SAFE REGISTER – NO BREAK)
-======================================================= */
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register("/sw.js")
-      .then(function () {
-        console.log("QBank Service Worker Registered");
-      })
-      .catch(function (error) {
-        console.log("Service Worker Registration Failed:", error);
-      });
-  });
 }
+
+function renderHome() {
+  app.innerHTML = `
+    <div class="card">
+      <h2>Global Education Gateway</h2>
+      <p>Access structured education ecosystem in one place.</p>
+    </div>
+    ${data.categories.map(cat => `
+      <div class="card" onclick="navigate('${cat.slug}')">
+        <h3>${cat.title}</h3>
+        <p>Explore ${cat.title}</p>
+      </div>
+    `).join("")}
+  `;
+}
+
+function renderCategory(slug) {
+  const category = data.categories.find(c => c.slug === slug);
+  if (!category) return renderHome();
+
+  app.innerHTML = `
+    <div class="card">
+      <h2>${category.title}</h2>
+      <p>Structured official resources</p>
+    </div>
+    ${category.items.map(item => `
+      <div class="card">
+        <h3>${item.name}</h3>
+        <p>${item.info}</p>
+        <a class="button" href="${item.link}" target="_blank">Visit Official</a>
+      </div>
+    `).join("")}
+  `;
+}
+
+renderHome();
