@@ -1,112 +1,112 @@
-const app = document.getElementById("app");
+/* =======================================================
+   QBANK – FINAL UNIVERSAL APP SCRIPT (LOCKED)
+   Works across all 30 pages without breaking anything
+======================================================= */
 
-function setActiveNav(page) {
-  document.querySelectorAll(".bottom-nav button").forEach(btn => {
-    btn.classList.remove("active");
-  });
-  const active = document.getElementById("nav-" + page);
-  if (active) active.classList.add("active");
-}
+document.addEventListener("DOMContentLoaded", function(){
 
-window.navigate = function (page) {
-  history.pushState({}, "", "#" + page);
-  render(page);
-};
+  /* =========================
+     DRAWER TOGGLE SYSTEM
+  ========================== */
 
-window.onpopstate = function () {
-  render(location.hash.replace("#", "") || "home");
-};
+  const menuBtn = document.getElementById("menuBtn");
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
 
-function render(page) {
-  setActiveNav(page);
+  if(menuBtn && drawer && overlay){
 
-  switch (page) {
-    case "categories":
-      app.innerHTML = categoriesPage();
-      break;
-    case "exams":
-      app.innerHTML = examsPage();
-      break;
-    case "uni":
-      app.innerHTML = uniPage();
-      break;
-    case "global":
-      app.innerHTML = globalPage();
-      break;
-    default:
-      app.innerHTML = homePage();
+    menuBtn.addEventListener("click", function(){
+      drawer.classList.toggle("active");
+      overlay.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
+    });
+
+    overlay.addEventListener("click", function(){
+      drawer.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
+
   }
-}
 
-function card(title, desc) {
-  return `
-    <div class="card">
-      <h3>${title}</h3>
-      <p>${desc}</p>
-    </div>
-  `;
-}
 
-function homePage() {
-  return `
-    <section class="section">
-      <h2>🌐 Global Education Gateway</h2>
-      ${card("Competitive Exams", "All major global entrance exams.")}
-      ${card("Universities", "Global universities & official portals.")}
-      ${card("Scholarships", "Verified funding & grants.")}
-      ${card("Research", "Global research institutions.")}
-    </section>
-  `;
-}
+  /* =========================
+     ACTIVE BOTTOM NAV AUTO DETECT
+  ========================== */
 
-function categoriesPage() {
-  return `
-    <section class="section">
-      <h2>📂 QBank Categories</h2>
-      ${card("Engineering", "All engineering boards & exams.")}
-      ${card("Medical", "Medical councils & tests.")}
-      ${card("AI", "Artificial Intelligence learning & resources.")}
-      ${card("Finance", "Finance & Economics portals.")}
-      ${card("Law", "Judiciary & law boards.")}
-    </section>
-  `;
-}
+  const bottomItems = document.querySelectorAll(".bottom-item");
+  const currentPath = window.location.pathname;
 
-function examsPage() {
-  return `
-    <section class="section">
-      <h2>📝 Competitive Exams</h2>
-      ${card("SAT", "Official SAT resources.")}
-      ${card("GRE", "Graduate Record Exam details.")}
-      ${card("IELTS", "English proficiency test.")}
-    </section>
-  `;
-}
+  bottomItems.forEach(item => {
+    const linkPath = item.getAttribute("href");
 
-function uniPage() {
-  return `
-    <section class="section">
-      <h2>🎓 Universities</h2>
-      ${card("USA Universities", "Top US institutions.")}
-      ${card("UK Universities", "Top UK institutions.")}
-      ${card("Indian Universities", "UGC approved universities.")}
-    </section>
-  `;
-}
+    if(linkPath === currentPath){
+      item.classList.add("active");
+    }
+  });
 
-function globalPage() {
-  return `
-    <section class="section">
-      <h2>🌍 Global Access</h2>
-      ${card("Government Portals", "Official exam boards.")}
-      ${card("Accreditation Bodies", "AICTE, NAAC, global councils.")}
-      ${card("Study Abroad", "International education gateways.")}
-    </section>
-  `;
-}
 
-render(location.hash.replace("#", "") || "home");
+  /* =========================
+     SAFE EXTERNAL LINK HANDLING
+  ========================== */
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
+  const externalLinks = document.querySelectorAll("a[target='_blank']");
+  externalLinks.forEach(link => {
+    link.setAttribute("rel", "noopener noreferrer");
+  });
+
+
+  /* =========================
+     FUTURE JSON READY (SAFE PLACEHOLDER)
+     (No execution until JSON page uses it)
+  ========================== */
+
+  const dataContainer = document.getElementById("dataContainer");
+
+  if(dataContainer){
+
+    const jsonFile = dataContainer.dataset.json;
+
+    if(jsonFile){
+
+      fetch(jsonFile, { cache: "no-store" })
+        .then(res => res.json())
+        .then(data => {
+
+          if(!Array.isArray(data)) return;
+
+          dataContainer.innerHTML = data.map(item => `
+            <div class="list-card">
+              <div class="list-title">${item.name}</div>
+              <div class="list-desc">${item.description}</div>
+              <a href="${item.link}" target="_blank" class="btn">Visit</a>
+            </div>
+          `).join("");
+
+        })
+        .catch(err => {
+          console.error("JSON load error:", err);
+        });
+
+    }
+
+  }
+
+});
+
+
+/* =======================================================
+   SERVICE WORKER (SAFE REGISTER – NO BREAK)
+======================================================= */
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js")
+      .then(function () {
+        console.log("QBank Service Worker Registered");
+      })
+      .catch(function (error) {
+        console.log("Service Worker Registration Failed:", error);
+      });
+  });
 }
