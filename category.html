@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>QBank – Category</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QBank Category</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
+<!-- OVERLAY -->
 <div class="drawer-overlay" id="overlay"></div>
 
+<!-- DRAWER -->
 <div class="drawer" id="drawer">
   <a href="/">🏠 Home</a>
   <a href="/categories.html">📂 All Categories</a>
 </div>
 
+<!-- HEADER -->
 <header class="app-header">
   <button class="menu-btn" id="menuBtn">☰</button>
   <div class="logo" id="categoryTitle">Category</div>
 </header>
 
+<!-- MAIN -->
 <main class="main-content">
 
   <div class="glass-card">
@@ -34,55 +38,56 @@
 
 </main>
 
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a href="/" class="bottom-item"><span>🏠</span><small>Home</small></a>
+  <a href="/categories.html" class="bottom-item active"><span>📂</span><small>Categories</small></a>
+</nav>
+
 <script src="/app.js"></script>
 
 <script>
-const params = new URLSearchParams(window.location.search);
-const category = params.get("cat");
-const container = document.getElementById("dataContainer");
+document.addEventListener("DOMContentLoaded", function(){
 
-if(category){
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("cat");
 
-  const formatted = category.replaceAll("-", " ");
-  document.getElementById("categoryTitle").innerText = formatted;
-  document.getElementById("categoryHeading").innerText = formatted;
+  if(!category){
+    document.getElementById("categoryHeading").innerText = "Invalid Category";
+    return;
+  }
 
-  fetch("./data/platforms.json")
+  document.getElementById("categoryTitle").innerText = category;
+  document.getElementById("categoryHeading").innerText = category;
+
+  fetch("/platforms.json")
     .then(res => res.json())
     .then(data => {
 
-      const filtered = data.filter(item =>
-        item.category.trim().toLowerCase() === category.trim().toLowerCase()
-      );
+      const filtered = data.filter(item => item.category === category);
 
       if(filtered.length === 0){
-        container.innerHTML = `
-          <div class="glass-card">
-            <div class="card-title">No Platforms Found</div>
-            <div class="card-desc">Category mapping mismatch.</div>
-          </div>
-        `;
+        document.getElementById("dataContainer").innerHTML =
+          '<div class="list-card"><div class="list-title">No Platforms Found</div></div>';
         return;
       }
 
-      container.innerHTML = filtered.map(item => `
-        <div class="list-card">
-          <div class="list-title">${item.name}</div>
-          <div class="list-desc">${item.description}</div>
-          <a href="${item.link}" target="_blank" class="btn">Visit</a>
-        </div>
-      `).join("");
+      document.getElementById("dataContainer").innerHTML =
+        filtered.map(item => `
+          <div class="list-card">
+            <div class="list-title">${item.name}</div>
+            <div class="list-desc">${item.description}</div>
+            <a href="${item.link}" target="_blank" class="btn">Visit</a>
+          </div>
+        `).join("");
 
     })
-    .catch(err => {
-      container.innerHTML = `
-        <div class="glass-card">
-          <div class="card-title">Data Load Failed</div>
-        </div>
-      `;
-      console.error(err);
+    .catch(() => {
+      document.getElementById("dataContainer").innerHTML =
+        '<div class="list-card"><div class="list-title">Data Load Failed</div></div>';
     });
-}
+
+});
 </script>
 
 </body>
