@@ -1,8 +1,3 @@
-/* ===================================================== */
-/* QBank – FINAL GLOBAL UI LOCK (Super App Version)     */
-/* ===================================================== */
-
-/* ================= ROOT THEME ================= */
 
 :root{
 
@@ -29,8 +24,6 @@
   --shadow-hover:0 10px 30px rgba(0,0,0,.45);
 }
 
-/* ================= RESET ================= */
-
 *{
   margin:0;
   padding:0;
@@ -46,14 +39,10 @@ html,body{
   -webkit-overflow-scrolling:touch;
 }
 
-/* ================= GLOBAL SCROLL CONTROL (LOCKED) ================= */
-
 body.no-scroll{
   overflow:hidden;
   height:100vh;
 }
-
-/* ================= HEADER ================= */
 
 .app-header{
   position:fixed;
@@ -86,14 +75,10 @@ body.no-scroll{
   color:#fff;
 }
 
-/* ================= MAIN ================= */
-
 .main-content{
   padding-top:66px;
   padding-bottom:78px;
 }
-
-/* ================= CARDS ================= */
 
 .glass-card{
   margin:10px 14px;
@@ -116,8 +101,6 @@ body.no-scroll{
   line-height:1.5;
 }
 
-/* ================= GRID ================= */
-
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -132,8 +115,6 @@ body.no-scroll{
 .grid-4{
   grid-template-columns:repeat(4,1fr);
 }
-
-/* ================= CATEGORY BOX ================= */
 
 .category-box{
   background:var(--bg-elev-2);
@@ -160,8 +141,6 @@ body.no-scroll{
   transform:translateY(-3px);
   box-shadow:var(--shadow-hover);
 }
-
-/* ================= LIST CARDS ================= */
 
 .list-card{
   background:var(--bg-elev-2);
@@ -191,8 +170,6 @@ body.no-scroll{
   line-height:1.4;
 }
 
-/* ================= BUTTON ================= */
-
 .btn{
   display:inline-block;
   padding:8px 14px;
@@ -210,22 +187,20 @@ body.no-scroll{
   opacity:.9;
 }
 
-/* ================= DRAWER ================= */
-
 .drawer{
   position:fixed;
   top:0;
   left:-260px;
   width:260px;
-  height:100%;
+  height:100vh;      
   background:var(--bg-elev-1);
   padding-top:60px;
   transition:.35s ease;
   z-index:2000;
-  overflow-y:auto;
+  overflow-y:auto;          
+  -webkit-overflow-scrolling:touch;
   border-right:1px solid var(--border-soft);
 }
-
 .drawer.active{ left:0; }
 
 .drawer a{
@@ -250,8 +225,6 @@ body.no-scroll{
 }
 
 .drawer-overlay.active{ display:block; }
-
-/* ================= BOTTOM NAV ================= */
 
 .bottom-nav{
   position:fixed;
@@ -288,8 +261,6 @@ body.no-scroll{
   color:var(--accent);
 }
 
-/* ================= SCROLLBAR CLEAN ================= */
-
 ::-webkit-scrollbar{
   width:6px;
 }
@@ -298,8 +269,6 @@ body.no-scroll{
   background:rgba(255,255,255,.15);
   border-radius:10px;
 }
-
-/* ================= RESPONSIVE ================= */
 
 @media(max-width:420px){
   .grid{
