@@ -50,21 +50,30 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   const params = new URLSearchParams(window.location.search);
-  const category = params.get("cat");
+  let category = params.get("cat");
 
   if(!category){
     document.getElementById("categoryHeading").innerText = "Invalid Category";
     return;
   }
 
+  // Normalize URL category
+  category = category.toLowerCase().trim();
+
   document.getElementById("categoryTitle").innerText = category;
   document.getElementById("categoryHeading").innerText = category;
 
   fetch("/platforms.json")
-    .then(res => res.json())
+    .then(res => {
+      if(!res.ok) throw new Error("Fetch failed");
+      return res.json();
+    })
     .then(data => {
 
-      const filtered = data.filter(item => item.category === category);
+      const filtered = data.filter(item =>
+        item.category &&
+        item.category.toLowerCase().trim() === category
+      );
 
       if(filtered.length === 0){
         document.getElementById("dataContainer").innerHTML =
@@ -82,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function(){
         `).join("");
 
     })
-    .catch(() => {
+    .catch((err) => {
+      console.error("JSON Load Error:", err);
       document.getElementById("dataContainer").innerHTML =
         '<div class="list-card"><div class="list-title">Data Load Failed</div></div>';
     });
