@@ -1,0 +1,2186 @@
+[
+{
+  "category": "competitive-exams",
+  "name": "UPSC",
+  "description": "Official portal of the Union Public Service Commission providing notifications, examination calendars, syllabus details, recruitment advertisements and final results for India’s most prestigious civil services and central government competitive examinations.",
+  "link": "https://www.upsc.gov.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "SSC",
+  "description": "Staff Selection Commission official website offering recruitment notices, exam schedules, admit cards, answer keys and results for central government posts including CGL, CHSL, MTS and other national level examinations.",
+  "link": "https://ssc.nic.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "IBPS",
+  "description": "Institute of Banking Personnel Selection portal for banking recruitment exams including PO, Clerk and Specialist Officer, featuring notifications, application forms, exam patterns and result announcements for public sector banks.",
+  "link": "https://www.ibps.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "NTA",
+  "description": "National Testing Agency official site conducting major entrance examinations such as JEE, NEET, CUET and UGC NET, providing registration links, exam city slips, admit cards and official answer keys.",
+  "link": "https://nta.ac.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "Railway Recruitment Board",
+  "description": "Official RRB portal for railway job aspirants publishing recruitment notifications, exam schedules, admit cards, results and updates related to NTPC, Group D and other Indian Railways examinations.",
+  "link": "https://www.rrbcdg.gov.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "State PSC",
+  "description": "State Public Service Commission portals across India conducting civil service examinations for state administrative posts, providing detailed notifications, syllabus, application procedures and final merit lists.",
+  "link": "https://psc.gov.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "CTET",
+  "description": "Central Teacher Eligibility Test official website offering teacher certification exam details, eligibility criteria, registration process, admit cards and result declarations for aspiring government school educators.",
+  "link": "https://ctet.nic.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "UGC NET",
+  "description": "Official UGC NET portal managed by NTA providing eligibility test information for lectureship and Junior Research Fellowship including syllabus, exam dates, registration forms and scorecard access.",
+  "link": "https://ugcnet.nta.nic.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "GATE",
+  "description": "Graduate Aptitude Test in Engineering official website providing examination notifications, subject wise syllabus, score validity details and admission pathways for postgraduate engineering and PSU recruitment.",
+  "link": "https://gate.iitk.ac.in"
+},
+{
+  "category": "competitive-exams",
+  "name": "CLAT",
+  "description": "Consortium of National Law Universities official portal for Common Law Admission Test offering law entrance exam notifications, eligibility rules, syllabus structure and counseling updates for NLUs across India.",
+  "link": "https://consortiumofnlus.ac.in"
+},
+
+{
+  "category": "universities",
+  "name": "University of Delhi",
+  "description": "Official website of the University of Delhi providing admission updates, academic programs, examination schedules, faculty information and research initiatives for undergraduate, postgraduate and doctoral studies.",
+  "link": "https://www.du.ac.in"
+},
+{
+  "category": "universities",
+  "name": "Jawaharlal Nehru University",
+  "description": "JNU official portal featuring academic schools, research centers, admission notices, faculty directories and examination information for one of India’s leading public research universities.",
+  "link": "https://www.jnu.ac.in"
+},
+{
+  "category": "universities",
+  "name": "Banaras Hindu University",
+  "description": "BHU official website offering course information, entrance procedures, research programs, campus updates and academic announcements for diverse disciplines including science, arts and medicine.",
+  "link": "https://www.bhu.ac.in"
+},
+{
+  "category": "universities",
+  "name": "University of Mumbai",
+  "description": "Official portal of Mumbai University providing admission notifications, affiliated college details, exam timetables, results and academic circulars for undergraduate and postgraduate programs.",
+  "link": "https://mu.ac.in"
+},
+{
+  "category": "universities",
+  "name": "Anna University",
+  "description": "Anna University official site featuring engineering and technical program admissions, academic regulations, syllabus details, examination schedules and affiliated college updates.",
+  "link": "https://www.annauniv.edu"
+},
+{
+  "category": "universities",
+  "name": "University of Calcutta",
+  "description": "Calcutta University official portal providing academic program listings, admission procedures, research publications, examination notifications and administrative announcements.",
+  "link": "https://www.caluniv.ac.in"
+},
+{
+  "category": "universities",
+  "name": "Osmania University",
+  "description": "Osmania University official website offering course details, examination updates, admission notices and research information for one of India’s historic public universities.",
+  "link": "https://www.osmania.ac.in"
+},
+{
+  "category": "universities",
+  "name": "Aligarh Muslim University",
+  "description": "AMU official portal providing information on admissions, academic departments, research initiatives, campus facilities and examination notifications for diverse academic disciplines.",
+  "link": "https://www.amu.ac.in"
+},
+{
+  "category": "universities",
+  "name": "IIT Bombay",
+  "description": "Indian Institute of Technology Bombay official site featuring engineering programs, research laboratories, innovation centers, admission procedures and campus announcements.",
+  "link": "https://www.iitb.ac.in"
+},
+{
+  "category": "universities",
+  "name": "IISc Bangalore",
+  "description": "Indian Institute of Science official portal providing advanced research program details, faculty expertise information, admissions guidelines and scientific publications.",
+  "link": "https://www.iisc.ac.in"
+},
+
+{
+  "category": "colleges",
+  "name": "St. Stephen’s College",
+  "description": "Official website of St. Stephen’s College Delhi providing undergraduate program information, admission procedures, faculty profiles and academic event announcements.",
+  "link": "https://www.ststephens.edu"
+},
+{
+  "category": "colleges",
+  "name": "Lady Shri Ram College",
+  "description": "LSR College official portal offering admission updates, course structures, academic calendar details and student activity information for arts and commerce disciplines.",
+  "link": "https://lsr.edu.in"
+},
+{
+  "category": "colleges",
+  "name": "Loyola College Chennai",
+  "description": "Loyola College official site featuring undergraduate and postgraduate programs, admission guidelines, campus facilities and academic announcements.",
+  "link": "https://www.loyolacollege.edu"
+},
+{
+  "category": "colleges",
+  "name": "Christ University",
+  "description": "Christ University official portal providing admission notifications, academic program details, research initiatives and campus information across multiple disciplines.",
+  "link": "https://christuniversity.in"
+},
+{
+  "category": "colleges",
+  "name": "Fergusson College",
+  "description": "Fergusson College official website offering information on science and arts programs, admission processes, faculty details and student activities.",
+  "link": "https://www.fergusson.edu"
+},
+{
+  "category": "colleges",
+  "name": "Hindu College Delhi",
+  "description": "Hindu College official portal featuring academic departments, admission guidelines, faculty directories and examination schedules for undergraduate studies.",
+  "link": "https://hinducollege.ac.in"
+},
+{
+  "category": "colleges",
+  "name": "Presidency College Chennai",
+  "description": "Presidency College official website providing course listings, admission details, academic calendar updates and campus announcements.",
+  "link": "https://www.presidencycollegechennai.ac.in"
+},
+{
+  "category": "colleges",
+  "name": "Ramjas College",
+  "description": "Ramjas College official portal offering information on undergraduate programs, admission procedures, faculty members and academic notices.",
+  "link": "https://ramjas.du.ac.in"
+},
+{
+  "category": "colleges",
+  "name": "Hansraj College",
+  "description": "Hansraj College official website featuring admission updates, departmental information, academic schedules and campus activities.",
+  "link": "https://www.hansrajcollege.ac.in"
+},
+{
+  "category": "colleges",
+  "name": "Madras Christian College",
+  "description": "Madras Christian College official portal providing program information, admission procedures, faculty profiles and research opportunities.",
+  "link": "https://www.mcc.edu.in"
+},
+{
+  "category": "school-boards",
+  "name": "CBSE",
+  "description": "Central Board of Secondary Education official portal providing curriculum guidelines, examination schedules, results, sample papers and circulars for affiliated schools across India.",
+  "link": "https://www.cbse.gov.in"
+},
+{
+  "category": "school-boards",
+  "name": "ICSE",
+  "description": "Council for the Indian School Certificate Examinations official site offering syllabus structure, examination notices, result access and academic resources for ICSE and ISC students.",
+  "link": "https://cisce.org"
+},
+{
+  "category": "school-boards",
+  "name": "NIOS",
+  "description": "National Institute of Open Schooling official portal providing open schooling opportunities, examination details, online admissions and flexible learning programs for secondary and senior secondary levels.",
+  "link": "https://www.nios.ac.in"
+},
+{
+  "category": "school-boards",
+  "name": "MP Board",
+  "description": "Madhya Pradesh Board of Secondary Education official website publishing exam timetables, results, syllabus updates and official circulars for state board students.",
+  "link": "https://mpbse.nic.in"
+},
+{
+  "category": "school-boards",
+  "name": "Maharashtra Board",
+  "description": "MSBSHSE official portal providing examination schedules, hall tickets, results and academic notifications for secondary and higher secondary education in Maharashtra.",
+  "link": "https://mahahsscboard.in"
+},
+{
+  "category": "school-boards",
+  "name": "UP Board",
+  "description": "Uttar Pradesh Madhyamik Shiksha Parishad official website offering exam updates, syllabus documents, results and administrative notices for high school and intermediate students.",
+  "link": "https://upmsp.edu.in"
+},
+{
+  "category": "school-boards",
+  "name": "Tamil Nadu Board",
+  "description": "Directorate of Government Examinations Tamil Nadu official portal providing board exam notifications, results access and syllabus resources for state students.",
+  "link": "https://dge.tn.gov.in"
+},
+{
+  "category": "school-boards",
+  "name": "Kerala Board",
+  "description": "Kerala Pareeksha Bhavan official website offering examination updates, result links, certificate verification and academic circulars for school education.",
+  "link": "https://keralapareekshabhavan.in"
+},
+{
+  "category": "school-boards",
+  "name": "Rajasthan Board",
+  "description": "Board of Secondary Education Rajasthan official portal providing exam timetables, admit cards, results and syllabus notifications for secondary education.",
+  "link": "https://rajeduboard.rajasthan.gov.in"
+},
+{
+  "category": "school-boards",
+  "name": "Gujarat Board",
+  "description": "GSEB official website offering examination schedules, academic updates, syllabus documents and result announcements for Gujarat state board students.",
+  "link": "https://www.gseb.org"
+},
+
+{
+  "category": "entrance-tests",
+  "name": "JEE Main",
+  "description": "Official JEE Main examination portal managed by NTA providing registration details, exam schedules, admit cards and scorecards for engineering aspirants.",
+  "link": "https://jeemain.nta.nic.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "NEET",
+  "description": "National Eligibility cum Entrance Test official website offering medical entrance exam notifications, eligibility guidelines, application forms and results.",
+  "link": "https://neet.nta.nic.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "CUET",
+  "description": "Common University Entrance Test official portal providing centralized university admission exam details, registration process and official notifications.",
+  "link": "https://cuet.samarth.ac.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "CAT",
+  "description": "Common Admission Test official website for MBA aspirants featuring registration details, exam pattern, syllabus and result announcements.",
+  "link": "https://iimcat.ac.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "MAT",
+  "description": "Management Aptitude Test official portal providing MBA entrance exam registration, schedules and score access for management institutes.",
+  "link": "https://mat.aima.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "XAT",
+  "description": "Xavier Aptitude Test official website offering MBA entrance details, application forms, eligibility criteria and exam pattern updates.",
+  "link": "https://xatonline.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "CMAT",
+  "description": "Common Management Admission Test official portal providing national level MBA entrance examination details and result access.",
+  "link": "https://cmat.nta.nic.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "AILET",
+  "description": "All India Law Entrance Test official website offering admission details for National Law University Delhi including syllabus and exam schedule.",
+  "link": "https://nludelhi.ac.in"
+},
+{
+  "category": "entrance-tests",
+  "name": "BITSAT",
+  "description": "Birla Institute of Technology and Science Admission Test official portal providing engineering entrance exam information and application details.",
+  "link": "https://www.bitsadmission.com"
+},
+{
+  "category": "entrance-tests",
+  "name": "VITEEE",
+  "description": "VIT Engineering Entrance Examination official site offering registration, eligibility criteria and result announcements for VIT admissions.",
+  "link": "https://viteee.vit.ac.in"
+},
+
+{
+  "category": "government-jobs",
+  "name": "Employment News",
+  "description": "Official Employment News portal publishing weekly government job notifications, recruitment advertisements and application deadlines across ministries and departments.",
+  "link": "https://employmentnews.gov.in"
+},
+{
+  "category": "government-jobs",
+  "name": "UPSC Recruitment",
+  "description": "UPSC recruitment section providing direct central government vacancy announcements, eligibility details and online application links.",
+  "link": "https://upsconline.nic.in"
+},
+{
+  "category": "government-jobs",
+  "name": "SSC Recruitment",
+  "description": "SSC recruitment portal featuring detailed government job notifications, exam schedules, eligibility requirements and application procedures.",
+  "link": "https://ssc.nic.in"
+},
+{
+  "category": "government-jobs",
+  "name": "IBPS Careers",
+  "description": "IBPS official recruitment site providing banking job notifications, online application systems and examination updates for public sector banks.",
+  "link": "https://www.ibps.in"
+},
+{
+  "category": "government-jobs",
+  "name": "Indian Railways Jobs",
+  "description": "Indian Railways recruitment portal publishing notifications for technical and non technical positions including exam dates and results.",
+  "link": "https://indianrailways.gov.in"
+},
+{
+  "category": "government-jobs",
+  "name": "DRDO Careers",
+  "description": "Defence Research and Development Organisation official career portal offering recruitment details, internship opportunities and research positions.",
+  "link": "https://drdo.gov.in"
+},
+{
+  "category": "government-jobs",
+  "name": "ISRO Careers",
+  "description": "Indian Space Research Organisation recruitment portal providing scientist and technical staff vacancy notifications and online applications.",
+  "link": "https://www.isro.gov.in"
+},
+{
+  "category": "government-jobs",
+  "name": "State PSC Jobs",
+  "description": "State Public Service Commission recruitment portals offering notifications for administrative, police and other state government services.",
+  "link": "https://psc.gov.in"
+},
+{
+  "category": "government-jobs",
+  "name": "Bank of India Careers",
+  "description": "Official Bank of India career portal providing recruitment announcements, eligibility criteria and application procedures for banking positions.",
+  "link": "https://bankofindia.co.in"
+},
+{
+  "category": "government-jobs",
+  "name": "LIC Careers",
+  "description": "Life Insurance Corporation of India recruitment portal featuring assistant and officer vacancies with exam schedules and result announcements.",
+  "link": "https://licindia.in"
+},
+{
+  "category": "education-ministries",
+  "name": "Ministry of Education India",
+  "description": "Official portal of the Ministry of Education providing national education policies, regulatory updates, schemes, reforms, institutional frameworks and official circulars related to school and higher education governance.",
+  "link": "https://www.education.gov.in"
+},
+{
+  "category": "education-ministries",
+  "name": "Department of Higher Education",
+  "description": "Government department portal overseeing universities, technical education, scholarships and higher academic reforms including national level education initiatives and regulatory announcements.",
+  "link": "https://highereducation.gov.in"
+},
+{
+  "category": "education-ministries",
+  "name": "Department of School Education",
+  "description": "Official government portal managing school level education schemes, teacher training programs, digital learning initiatives and nationwide policy implementations.",
+  "link": "https://dsel.education.gov.in"
+},
+{
+  "category": "education-ministries",
+  "name": "AICTE",
+  "description": "All India Council for Technical Education official portal regulating technical education institutions, approvals, accreditation frameworks and academic compliance standards.",
+  "link": "https://www.aicte-india.org"
+},
+{
+  "category": "education-ministries",
+  "name": "UGC",
+  "description": "University Grants Commission official website providing university recognition lists, funding schemes, academic regulations and research grant announcements.",
+  "link": "https://www.ugc.gov.in"
+},
+{
+  "category": "education-ministries",
+  "name": "NAAC",
+  "description": "National Assessment and Accreditation Council portal offering accreditation ratings, institutional quality benchmarks and assessment reports for higher education institutions.",
+  "link": "https://www.naac.gov.in"
+},
+{
+  "category": "education-ministries",
+  "name": "NCERT",
+  "description": "National Council of Educational Research and Training official portal providing textbooks, curriculum frameworks, research publications and educational resources for schools.",
+  "link": "https://ncert.nic.in"
+},
+{
+  "category": "education-ministries",
+  "name": "NCTE",
+  "description": "National Council for Teacher Education official site regulating teacher training institutions, approvals and academic standards for teacher education programs.",
+  "link": "https://ncte.gov.in"
+},
+{
+  "category": "education-ministries",
+  "name": "IGNOU",
+  "description": "Indira Gandhi National Open University official portal offering distance learning programs, admissions, exam updates and digital academic resources.",
+  "link": "https://www.ignou.ac.in"
+},
+{
+  "category": "education-ministries",
+  "name": "SWAYAM",
+  "description": "Government of India online learning platform providing free courses from leading institutions, certification programs and digital learning initiatives.",
+  "link": "https://swayam.gov.in"
+},
+
+{
+  "category": "accreditation-bodies",
+  "name": "NBA",
+  "description": "National Board of Accreditation official portal evaluating technical programs and ensuring quality standards in engineering and management institutions.",
+  "link": "https://www.nbaind.org"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "NIRF",
+  "description": "National Institutional Ranking Framework official website publishing annual rankings of universities and colleges based on transparent evaluation criteria.",
+  "link": "https://www.nirfindia.org"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "IQAC",
+  "description": "Internal Quality Assurance Cell framework portal guiding higher education institutions in maintaining academic quality and institutional standards.",
+  "link": "https://www.naac.gov.in/iqac"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "ABET",
+  "description": "Accreditation Board for Engineering and Technology official portal accrediting global engineering and computing programs with recognized quality standards.",
+  "link": "https://www.abet.org"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "AACSB",
+  "description": "International accreditation body for business schools providing quality assurance standards and global recognition frameworks.",
+  "link": "https://www.aacsb.edu"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "QS Rankings",
+  "description": "Global university ranking authority publishing academic rankings, subject rankings and institutional performance comparisons worldwide.",
+  "link": "https://www.topuniversities.com"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "Times Higher Education",
+  "description": "International university ranking platform providing global academic performance metrics and institutional evaluation reports.",
+  "link": "https://www.timeshighereducation.com"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "AIU",
+  "description": "Association of Indian Universities official portal coordinating equivalence of degrees and academic collaboration among member universities.",
+  "link": "https://www.aiu.ac.in"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "ICAR",
+  "description": "Indian Council of Agricultural Research portal regulating agricultural universities, research institutions and academic programs.",
+  "link": "https://icar.org.in"
+},
+{
+  "category": "accreditation-bodies",
+  "name": "MCI",
+  "description": "Medical Council regulatory portal overseeing medical education standards, college approvals and professional licensing frameworks.",
+  "link": "https://www.nmc.org.in"
+},
+
+{
+  "category": "research-institutes",
+  "name": "CSIR",
+  "description": "Council of Scientific and Industrial Research official portal managing national research laboratories, scientific innovation initiatives and research programs.",
+  "link": "https://www.csir.res.in"
+},
+{
+  "category": "research-institutes",
+  "name": "ISRO",
+  "description": "Indian Space Research Organisation official website providing space research updates, missions, scientific developments and recruitment opportunities.",
+  "link": "https://www.isro.gov.in"
+},
+{
+  "category": "research-institutes",
+  "name": "ICMR",
+  "description": "Indian Council of Medical Research official portal offering medical research initiatives, public health studies and institutional collaborations.",
+  "link": "https://www.icmr.gov.in"
+},
+{
+  "category": "research-institutes",
+  "name": "DRDO",
+  "description": "Defence Research and Development Organisation official site providing defence technology research information and innovation programs.",
+  "link": "https://drdo.gov.in"
+},
+{
+  "category": "research-institutes",
+  "name": "BARC",
+  "description": "Bhabha Atomic Research Centre official portal focusing on nuclear research, scientific innovation and advanced technology development.",
+  "link": "https://www.barc.gov.in"
+},
+{
+  "category": "research-institutes",
+  "name": "IISER",
+  "description": "Indian Institutes of Science Education and Research official portal providing advanced science research and integrated academic programs.",
+  "link": "https://www.iiseradmission.in"
+},
+{
+  "category": "research-institutes",
+  "name": "TIFR",
+  "description": "Tata Institute of Fundamental Research official site offering cutting edge research programs in mathematics, physics and computer science.",
+  "link": "https://www.tifr.res.in"
+},
+{
+  "category": "research-institutes",
+  "name": "NCBS",
+  "description": "National Centre for Biological Sciences official portal dedicated to advanced biological and molecular research initiatives.",
+  "link": "https://www.ncbs.res.in"
+},
+{
+  "category": "research-institutes",
+  "name": "IARI",
+  "description": "Indian Agricultural Research Institute official website providing agricultural research programs, innovation updates and academic training.",
+  "link": "https://www.iari.res.in"
+},
+{
+  "category": "research-institutes",
+  "name": "NPL",
+  "description": "National Physical Laboratory official portal offering scientific measurement research, standards development and innovation initiatives.",
+  "link": "https://www.nplindia.org"
+},
+{
+  "category": "scholarships",
+  "name": "National Scholarship Portal",
+  "description": "Government of India unified scholarship portal providing centralized access to multiple central and state scholarship schemes, application tracking, eligibility details and digital verification systems.",
+  "link": "https://scholarships.gov.in"
+},
+{
+  "category": "scholarships",
+  "name": "AICTE Scholarships",
+  "description": "Official AICTE scholarship portal offering financial assistance schemes for technical education students including Pragati and Saksham programs.",
+  "link": "https://www.aicte-india.org/schemes/students-development-schemes"
+},
+{
+  "category": "scholarships",
+  "name": "UGC Scholarships",
+  "description": "University Grants Commission scholarship portal providing fellowships, merit based grants and research funding schemes for higher education students.",
+  "link": "https://www.ugc.ac.in/page/Scholarships-and-Fellowships.aspx"
+},
+{
+  "category": "scholarships",
+  "name": "INSPIRE Scholarship",
+  "description": "Department of Science and Technology scholarship initiative encouraging students to pursue science education through financial support programs.",
+  "link": "https://www.online-inspire.gov.in"
+},
+{
+  "category": "scholarships",
+  "name": "PM Scholarship Scheme",
+  "description": "Prime Minister Scholarship Scheme portal offering financial aid to dependents of ex servicemen and central armed police personnel.",
+  "link": "https://ksb.gov.in"
+},
+{
+  "category": "scholarships",
+  "name": "KVPY",
+  "description": "Kishore Vaigyanik Protsahan Yojana scholarship program encouraging talented science students with fellowships and research exposure.",
+  "link": "https://kvpy.iisc.ernet.in"
+},
+{
+  "category": "scholarships",
+  "name": "Fulbright Program",
+  "description": "International scholarship program supporting educational exchange, research grants and academic collaboration between countries.",
+  "link": "https://foreign.fulbrightonline.org"
+},
+{
+  "category": "scholarships",
+  "name": "Chevening Scholarship",
+  "description": "UK government global scholarship program providing fully funded master's degrees for international students with leadership potential.",
+  "link": "https://www.chevening.org"
+},
+{
+  "category": "scholarships",
+  "name": "Commonwealth Scholarship",
+  "description": "Commonwealth Scholarship Commission portal offering postgraduate funding opportunities for students from Commonwealth nations.",
+  "link": "https://cscuk.fcdo.gov.uk"
+},
+{
+  "category": "scholarships",
+  "name": "DAAD Scholarships",
+  "description": "German Academic Exchange Service scholarship portal providing funding for international students to pursue higher studies in Germany.",
+  "link": "https://www.daad.de"
+},
+
+{
+  "category": "engineering",
+  "name": "IIT Official Portal",
+  "description": "Indian Institutes of Technology official network providing admission details, research programs, academic updates and institutional resources.",
+  "link": "https://www.iitb.ac.in"
+},
+{
+  "category": "engineering",
+  "name": "NIT Portal",
+  "description": "National Institutes of Technology official network offering engineering education updates, admissions and research opportunities.",
+  "link": "https://www.nitc.ac.in"
+},
+{
+  "category": "engineering",
+  "name": "IIIT Portal",
+  "description": "Indian Institutes of Information Technology network providing technology focused education, admissions and academic research information.",
+  "link": "https://www.iiit.ac.in"
+},
+{
+  "category": "engineering",
+  "name": "GATE",
+  "description": "Graduate Aptitude Test in Engineering official portal offering postgraduate engineering entrance exam registration, syllabus and results.",
+  "link": "https://gate.iitk.ac.in"
+},
+{
+  "category": "engineering",
+  "name": "IES",
+  "description": "Engineering Services Examination official portal providing recruitment details for engineering positions in government departments.",
+  "link": "https://www.upsc.gov.in"
+},
+{
+  "category": "engineering",
+  "name": "DRDO SET",
+  "description": "Defence Research recruitment examination portal offering scientist entry test details and eligibility criteria.",
+  "link": "https://rac.gov.in"
+},
+{
+  "category": "engineering",
+  "name": "ISRO ICRB",
+  "description": "ISRO Centralised Recruitment Board portal publishing engineering and technical recruitment notifications and exam details.",
+  "link": "https://www.isro.gov.in"
+},
+{
+  "category": "engineering",
+  "name": "AICTE Internship",
+  "description": "AICTE internship portal connecting engineering students with verified internship and training opportunities across industries.",
+  "link": "https://internship.aicte-india.org"
+},
+{
+  "category": "engineering",
+  "name": "NPTEL",
+  "description": "National Programme on Technology Enhanced Learning platform offering engineering and technology courses from IITs and IISc.",
+  "link": "https://nptel.ac.in"
+},
+{
+  "category": "engineering",
+  "name": "e-Yantra",
+  "description": "IIT Bombay robotics outreach program promoting practical engineering learning through project based education initiatives.",
+  "link": "https://www.e-yantra.org"
+},
+
+{
+  "category": "medical",
+  "name": "NMC",
+  "description": "National Medical Commission official portal regulating medical education standards, accreditation processes and licensing procedures in India.",
+  "link": "https://www.nmc.org.in"
+},
+{
+  "category": "medical",
+  "name": "AIIMS",
+  "description": "All India Institute of Medical Sciences official network offering medical education admissions, hospital services and research updates.",
+  "link": "https://www.aiims.edu"
+},
+{
+  "category": "medical",
+  "name": "NEET PG",
+  "description": "National Eligibility cum Entrance Test for Postgraduate official portal providing medical PG admission exam details and results.",
+  "link": "https://nbe.edu.in"
+},
+{
+  "category": "medical",
+  "name": "FMGE",
+  "description": "Foreign Medical Graduate Examination official portal offering licensing examination information for international medical graduates.",
+  "link": "https://natboard.edu.in"
+},
+{
+  "category": "medical",
+  "name": "ICMR",
+  "description": "Indian Council of Medical Research official site providing public health research, funding schemes and institutional collaborations.",
+  "link": "https://www.icmr.gov.in"
+},
+{
+  "category": "medical",
+  "name": "WHO",
+  "description": "World Health Organization official portal providing global health guidelines, research publications and international public health resources.",
+  "link": "https://www.who.int"
+},
+{
+  "category": "medical",
+  "name": "CDC",
+  "description": "Centers for Disease Control and Prevention official site offering health research data, disease prevention guidelines and educational materials.",
+  "link": "https://www.cdc.gov"
+},
+{
+  "category": "medical",
+  "name": "PubMed",
+  "description": "Medical research database providing peer reviewed biomedical research papers, journals and scientific publications.",
+  "link": "https://pubmed.ncbi.nlm.nih.gov"
+},
+{
+  "category": "medical",
+  "name": "MedlinePlus",
+  "description": "Health information portal offering reliable medical knowledge, disease information and patient education materials.",
+  "link": "https://medlineplus.gov"
+},
+{
+  "category": "medical",
+  "name": "NABH",
+  "description": "National Accreditation Board for Hospitals portal regulating healthcare quality standards and hospital accreditation processes.",
+  "link": "https://nabh.co"
+},
+{
+  "category": "law",
+  "name": "Bar Council of India",
+  "description": "Official regulatory body for legal education and professional standards in India, providing enrollment details, law college approvals and compliance frameworks for advocates.",
+  "link": "https://www.barcouncilofindia.org"
+},
+{
+  "category": "law",
+  "name": "Supreme Court of India",
+  "description": "Official portal of the Supreme Court providing judgments, case status, constitutional bench updates and legal notifications for judicial reference.",
+  "link": "https://www.sci.gov.in"
+},
+{
+  "category": "law",
+  "name": "High Court Services",
+  "description": "Unified access to various High Court portals offering case listings, recruitment notifications and judicial updates across Indian states.",
+  "link": "https://services.ecourts.gov.in"
+},
+{
+  "category": "law",
+  "name": "eCourts Portal",
+  "description": "Government judiciary platform enabling case tracking, cause lists, judgments access and district court information digitally.",
+  "link": "https://ecourts.gov.in"
+},
+{
+  "category": "law",
+  "name": "CLAT",
+  "description": "Common Law Admission Test official portal providing undergraduate and postgraduate law entrance examination details and admission processes.",
+  "link": "https://consortiumofnlus.ac.in"
+},
+{
+  "category": "law",
+  "name": "AIBE",
+  "description": "All India Bar Examination official site offering advocate certification examination details and eligibility guidelines.",
+  "link": "https://allindiabarexamination.com"
+},
+{
+  "category": "law",
+  "name": "NALSA",
+  "description": "National Legal Services Authority official portal providing legal aid information and public legal awareness initiatives.",
+  "link": "https://nalsa.gov.in"
+},
+{
+  "category": "law",
+  "name": "Legislative Department",
+  "description": "Government portal publishing acts, bills, ordinances and legislative updates for legal reference and academic study.",
+  "link": "https://legislative.gov.in"
+},
+{
+  "category": "law",
+  "name": "India Code",
+  "description": "Digital repository of central and state laws providing updated legal documents and statutory information for research purposes.",
+  "link": "https://www.indiacode.nic.in"
+},
+{
+  "category": "law",
+  "name": "Law Commission of India",
+  "description": "Advisory body portal publishing legal reform reports, recommendations and research papers on judicial improvement.",
+  "link": "https://lawcommissionofindia.nic.in"
+},
+
+{
+  "category": "commerce",
+  "name": "ICAI",
+  "description": "Institute of Chartered Accountants of India official portal providing CA exam details, membership services and regulatory updates.",
+  "link": "https://www.icai.org"
+},
+{
+  "category": "commerce",
+  "name": "ICSI",
+  "description": "Institute of Company Secretaries of India official website offering CS course structure, exam notifications and professional guidelines.",
+  "link": "https://www.icsi.edu"
+},
+{
+  "category": "commerce",
+  "name": "ICMAI",
+  "description": "Institute of Cost Accountants of India portal providing CMA exam schedules, certification programs and regulatory frameworks.",
+  "link": "https://www.icmai.in"
+},
+{
+  "category": "commerce",
+  "name": "SEBI",
+  "description": "Securities and Exchange Board of India official portal regulating financial markets and providing investor education resources.",
+  "link": "https://www.sebi.gov.in"
+},
+{
+  "category": "commerce",
+  "name": "RBI",
+  "description": "Reserve Bank of India official site offering monetary policy updates, banking regulations and economic research publications.",
+  "link": "https://www.rbi.org.in"
+},
+{
+  "category": "commerce",
+  "name": "NSE",
+  "description": "National Stock Exchange official portal providing financial market data, certifications and investor education programs.",
+  "link": "https://www.nseindia.com"
+},
+{
+  "category": "commerce",
+  "name": "BSE",
+  "description": "Bombay Stock Exchange official platform offering market insights, trading data and financial education resources.",
+  "link": "https://www.bseindia.com"
+},
+{
+  "category": "commerce",
+  "name": "GST Portal",
+  "description": "Government GST portal providing tax compliance systems, filings and educational resources for commerce professionals.",
+  "link": "https://www.gst.gov.in"
+},
+{
+  "category": "commerce",
+  "name": "Income Tax India",
+  "description": "Official income tax department portal offering compliance guidelines, e filing services and financial regulations updates.",
+  "link": "https://www.incometax.gov.in"
+},
+{
+  "category": "commerce",
+  "name": "NABARD",
+  "description": "National Bank for Agriculture and Rural Development official portal providing rural banking research and recruitment details.",
+  "link": "https://www.nabard.org"
+},
+
+{
+  "category": "it-computer",
+  "name": "NIELIT",
+  "description": "National Institute of Electronics and Information Technology portal offering IT certifications, skill development programs and digital literacy initiatives.",
+  "link": "https://www.nielit.gov.in"
+},
+{
+  "category": "it-computer",
+  "name": "CDAC",
+  "description": "Centre for Development of Advanced Computing official site providing IT research programs, certifications and recruitment updates.",
+  "link": "https://www.cdac.in"
+},
+{
+  "category": "it-computer",
+  "name": "ISRO IIRS",
+  "description": "Indian Institute of Remote Sensing portal offering space and GIS related technical education courses and research programs.",
+  "link": "https://www.iirs.gov.in"
+},
+{
+  "category": "it-computer",
+  "name": "Digital India",
+  "description": "Government digital transformation portal providing information on digital initiatives, technology missions and innovation programs.",
+  "link": "https://www.digitalindia.gov.in"
+},
+{
+  "category": "it-computer",
+  "name": "MyGov",
+  "description": "Citizen engagement portal enabling participation in governance initiatives and digital innovation programs.",
+  "link": "https://www.mygov.in"
+},
+{
+  "category": "it-computer",
+  "name": "CERT-In",
+  "description": "Indian Computer Emergency Response Team official portal offering cybersecurity advisories and technical awareness resources.",
+  "link": "https://www.cert-in.org.in"
+},
+{
+  "category": "it-computer",
+  "name": "NIC",
+  "description": "National Informatics Centre official website providing digital governance infrastructure and IT services for public sector.",
+  "link": "https://www.nic.in"
+},
+{
+  "category": "it-computer",
+  "name": "MeitY",
+  "description": "Ministry of Electronics and Information Technology portal publishing IT policies, research programs and digital innovation frameworks.",
+  "link": "https://www.meity.gov.in"
+},
+{
+  "category": "it-computer",
+  "name": "CSC Digital Seva",
+  "description": "Common Service Centre portal providing rural digital services and e governance access points across India.",
+  "link": "https://digitalseva.csc.gov.in"
+},
+{
+  "category": "it-computer",
+  "name": "AICTE NEAT",
+  "description": "National Educational Alliance for Technology portal connecting students with approved digital technology learning solutions.",
+  "link": "https://neat.aicte-india.org"
+},
+{
+  "category": "design-arts",
+  "name": "NID",
+  "description": "National Institute of Design official portal providing design entrance examination details, academic programs and institutional updates for creative disciplines.",
+  "link": "https://www.nid.edu"
+},
+{
+  "category": "design-arts",
+  "name": "NIFT",
+  "description": "National Institute of Fashion Technology official website offering fashion and design admissions, curriculum frameworks and placement information.",
+  "link": "https://www.nift.ac.in"
+},
+{
+  "category": "design-arts",
+  "name": "UCEED",
+  "description": "Undergraduate Common Entrance Examination for Design official portal providing admission details for IIT design programs.",
+  "link": "https://www.uceed.iitb.ac.in"
+},
+{
+  "category": "design-arts",
+  "name": "CEED",
+  "description": "Common Entrance Examination for Design official site offering postgraduate design admission information and exam schedules.",
+  "link": "https://www.ceed.iitb.ac.in"
+},
+{
+  "category": "design-arts",
+  "name": "FTII",
+  "description": "Film and Television Institute of India official portal providing film education programs, admissions and creative arts training resources.",
+  "link": "https://www.ftii.ac.in"
+},
+{
+  "category": "design-arts",
+  "name": "SRFTI",
+  "description": "Satyajit Ray Film and Television Institute official website offering film making education and creative arts programs.",
+  "link": "https://www.srfti.ac.in"
+},
+{
+  "category": "design-arts",
+  "name": "Lalit Kala Akademi",
+  "description": "National academy of fine arts portal supporting visual arts education, exhibitions and cultural development initiatives.",
+  "link": "https://lalitkala.gov.in"
+},
+{
+  "category": "design-arts",
+  "name": "IGNCA",
+  "description": "Indira Gandhi National Centre for the Arts official site promoting art research, heritage studies and cultural documentation.",
+  "link": "https://ignca.gov.in"
+},
+{
+  "category": "design-arts",
+  "name": "Sangeet Natak Akademi",
+  "description": "National academy for performing arts providing resources on music, dance and theatre education and recognition.",
+  "link": "https://sangeetnatak.gov.in"
+},
+{
+  "category": "design-arts",
+  "name": "National Museum Institute",
+  "description": "Deemed university portal offering courses in art history, conservation and museology studies.",
+  "link": "https://www.nmi.gov.in"
+},
+
+{
+  "category": "humanities",
+  "name": "IGNOU Humanities",
+  "description": "IGNOU humanities division portal offering distance education programs in literature, sociology, history and related disciplines.",
+  "link": "https://www.ignou.ac.in"
+},
+{
+  "category": "humanities",
+  "name": "JNU",
+  "description": "Jawaharlal Nehru University official portal providing humanities research programs, admissions and academic resources.",
+  "link": "https://www.jnu.ac.in"
+},
+{
+  "category": "humanities",
+  "name": "DU Humanities",
+  "description": "University of Delhi humanities faculty portal offering undergraduate and postgraduate academic programs in arts disciplines.",
+  "link": "https://www.du.ac.in"
+},
+{
+  "category": "humanities",
+  "name": "Sahitya Akademi",
+  "description": "National academy of letters promoting literary studies, publications and recognition of authors across languages.",
+  "link": "https://sahitya-akademi.gov.in"
+},
+{
+  "category": "humanities",
+  "name": "ICHR",
+  "description": "Indian Council of Historical Research official portal supporting history research funding and academic projects.",
+  "link": "https://ichr.ac.in"
+},
+{
+  "category": "humanities",
+  "name": "ICPCR",
+  "description": "Indian Council of Philosophical Research official website promoting philosophy research and fellowships.",
+  "link": "https://icpr.in"
+},
+{
+  "category": "humanities",
+  "name": "Anthropological Survey of India",
+  "description": "Official portal supporting anthropological research and documentation of cultural diversity.",
+  "link": "https://ansi.gov.in"
+},
+{
+  "category": "humanities",
+  "name": "National Archives of India",
+  "description": "Government archival portal preserving historical records and providing research access to official documents.",
+  "link": "https://nationalarchives.nic.in"
+},
+{
+  "category": "humanities",
+  "name": "INTACH",
+  "description": "Indian National Trust for Art and Cultural Heritage portal focusing on heritage conservation and academic research.",
+  "link": "https://intach.org"
+},
+{
+  "category": "humanities",
+  "name": "IGNOU Sociology",
+  "description": "IGNOU sociology programs portal offering academic resources and distance education courses in social sciences.",
+  "link": "https://www.ignou.ac.in"
+},
+
+{
+  "category": "management",
+  "name": "IIM Official",
+  "description": "Indian Institutes of Management official network providing MBA admissions, executive education and research updates.",
+  "link": "https://www.iimb.ac.in"
+},
+{
+  "category": "management",
+  "name": "XLRI",
+  "description": "Xavier School of Management official portal offering management programs, entrance exam details and placement reports.",
+  "link": "https://www.xlri.ac.in"
+},
+{
+  "category": "management",
+  "name": "FMS Delhi",
+  "description": "Faculty of Management Studies official site providing MBA admission criteria and academic program information.",
+  "link": "https://www.fms.edu"
+},
+{
+  "category": "management",
+  "name": "NMIMS",
+  "description": "Narsee Monjee Institute of Management Studies official portal offering management education and entrance details.",
+  "link": "https://nmims.edu"
+},
+{
+  "category": "management",
+  "name": "TISS",
+  "description": "Tata Institute of Social Sciences official portal offering management and social science programs.",
+  "link": "https://www.tiss.edu"
+},
+{
+  "category": "management",
+  "name": "NISM",
+  "description": "National Institute of Securities Markets portal offering financial market certification programs.",
+  "link": "https://www.nism.ac.in"
+},
+{
+  "category": "management",
+  "name": "IRMA",
+  "description": "Institute of Rural Management Anand official site offering rural management education programs.",
+  "link": "https://www.irma.ac.in"
+},
+{
+  "category": "management",
+  "name": "MDI Gurgaon",
+  "description": "Management Development Institute official portal providing postgraduate management programs and research initiatives.",
+  "link": "https://www.mdi.ac.in"
+},
+{
+  "category": "management",
+  "name": "SPJIMR",
+  "description": "SP Jain Institute of Management and Research official site offering MBA programs and executive education.",
+  "link": "https://www.spjimr.org"
+},
+{
+  "category": "management",
+  "name": "IIFT",
+  "description": "Indian Institute of Foreign Trade official portal offering international business education and entrance details.",
+  "link": "https://www.iift.ac.in"
+},
+{
+  "category": "defence",
+  "name": "Indian Army",
+  "description": "Official Indian Army recruitment and information portal providing officer and soldier entry schemes, exam notifications and training academy details.",
+  "link": "https://joinindianarmy.nic.in"
+},
+{
+  "category": "defence",
+  "name": "Indian Navy",
+  "description": "Indian Navy official recruitment portal offering sailor and officer entry notifications, eligibility criteria and training updates.",
+  "link": "https://www.joinindiannavy.gov.in"
+},
+{
+  "category": "defence",
+  "name": "Indian Air Force",
+  "description": "Indian Air Force official site providing AFCAT, airmen recruitment and officer entry scheme information.",
+  "link": "https://afcat.cdac.in"
+},
+{
+  "category": "defence",
+  "name": "NDA",
+  "description": "National Defence Academy entrance examination portal managed by UPSC providing exam notifications and eligibility details.",
+  "link": "https://www.upsc.gov.in"
+},
+{
+  "category": "defence",
+  "name": "CDS",
+  "description": "Combined Defence Services examination portal providing officer recruitment details for Army, Navy and Air Force.",
+  "link": "https://www.upsc.gov.in"
+},
+{
+  "category": "defence",
+  "name": "Coast Guard",
+  "description": "Indian Coast Guard official recruitment portal offering officer and navik entry notifications and exam details.",
+  "link": "https://joinindiancoastguard.cdac.in"
+},
+{
+  "category": "defence",
+  "name": "Territorial Army",
+  "description": "Territorial Army official portal providing recruitment updates and eligibility guidelines for volunteer defence service.",
+  "link": "https://territorialarmy.in"
+},
+{
+  "category": "defence",
+  "name": "DRDO RAC",
+  "description": "Defence Research and Development Organisation recruitment and assessment centre portal for scientist entry positions.",
+  "link": "https://rac.gov.in"
+},
+{
+  "category": "defence",
+  "name": "CAPF",
+  "description": "Central Armed Police Forces examination portal providing assistant commandant recruitment details.",
+  "link": "https://www.upsc.gov.in"
+},
+{
+  "category": "defence",
+  "name": "SSB Interview",
+  "description": "Services Selection Board information portal guiding defence aspirants on interview procedures and preparation structure.",
+  "link": "https://joinindianarmy.nic.in"
+},
+
+{
+  "category": "railway-exams",
+  "name": "RRB NTPC",
+  "description": "Railway Recruitment Board NTPC official portal providing non technical recruitment notifications and exam schedules.",
+  "link": "https://www.rrbcdg.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "RRB Group D",
+  "description": "Railway Group D recruitment portal offering eligibility guidelines, application process and examination updates.",
+  "link": "https://www.rrbcdg.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "RRB JE",
+  "description": "Railway Junior Engineer recruitment portal publishing technical post notifications and exam pattern details.",
+  "link": "https://www.rrbcdg.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "RPF Recruitment",
+  "description": "Railway Protection Force recruitment portal offering constable and sub inspector vacancy notifications.",
+  "link": "https://indianrailways.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "RRB ALP",
+  "description": "Assistant Loco Pilot recruitment portal providing technical railway job updates and application procedures.",
+  "link": "https://www.rrbcdg.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "Railway Apprenticeship",
+  "description": "Indian Railways apprenticeship portal offering training opportunities and skill development programs.",
+  "link": "https://www.indianrailways.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "Metro Rail Careers",
+  "description": "Metro Rail recruitment portal publishing vacancies for technical and administrative railway operations roles.",
+  "link": "https://www.delhimetrorail.com"
+},
+{
+  "category": "railway-exams",
+  "name": "IRCTC Careers",
+  "description": "Indian Railway Catering and Tourism Corporation official career portal offering job notifications and recruitment updates.",
+  "link": "https://www.irctc.co.in"
+},
+{
+  "category": "railway-exams",
+  "name": "Railway PSC",
+  "description": "Railway related Public Service Commission recruitment portal offering engineering and administrative posts.",
+  "link": "https://www.upsc.gov.in"
+},
+{
+  "category": "railway-exams",
+  "name": "Konkan Railway",
+  "description": "Konkan Railway Corporation official recruitment portal providing vacancy announcements and technical recruitment updates.",
+  "link": "https://konkanrailway.com"
+},
+
+{
+  "category": "global-exams",
+  "name": "SAT",
+  "description": "Scholastic Assessment Test official portal providing international undergraduate admission exam registration and preparation details.",
+  "link": "https://satsuite.collegeboard.org"
+},
+{
+  "category": "global-exams",
+  "name": "GRE",
+  "description": "Graduate Record Examination official site offering postgraduate admission exam registration and score reporting.",
+  "link": "https://www.ets.org/gre"
+},
+{
+  "category": "global-exams",
+  "name": "GMAT",
+  "description": "Graduate Management Admission Test official portal providing MBA entrance exam information and registration services.",
+  "link": "https://www.mba.com"
+},
+{
+  "category": "global-exams",
+  "name": "IELTS",
+  "description": "International English Language Testing System official site providing English proficiency test registration and results.",
+  "link": "https://www.ielts.org"
+},
+{
+  "category": "global-exams",
+  "name": "TOEFL",
+  "description": "Test of English as a Foreign Language official portal offering language proficiency exam registration and preparation resources.",
+  "link": "https://www.ets.org/toefl"
+},
+{
+  "category": "global-exams",
+  "name": "LSAT",
+  "description": "Law School Admission Test official portal providing international law admission exam details and registration.",
+  "link": "https://www.lsac.org"
+},
+{
+  "category": "global-exams",
+  "name": "MCAT",
+  "description": "Medical College Admission Test official portal offering medical entrance exam registration and guidelines.",
+  "link": "https://students-residents.aamc.org"
+},
+{
+  "category": "global-exams",
+  "name": "PTE",
+  "description": "Pearson Test of English official site providing computer based English proficiency exam registration.",
+  "link": "https://www.pearsonpte.com"
+},
+{
+  "category": "global-exams",
+  "name": "ACT",
+  "description": "American College Testing official portal providing standardized undergraduate admission exam registration.",
+  "link": "https://www.act.org"
+},
+{
+  "category": "global-exams",
+  "name": "USMLE",
+  "description": "United States Medical Licensing Examination official site offering licensing exam information for medical graduates.",
+  "link": "https://www.usmle.org"
+},
+{
+  "category": "international-universities",
+  "name": "Harvard University",
+  "description": "Official Harvard University portal providing global admissions information, academic programs, research initiatives and institutional resources across multiple disciplines.",
+  "link": "https://www.harvard.edu"
+},
+{
+  "category": "international-universities",
+  "name": "MIT",
+  "description": "Massachusetts Institute of Technology official site offering science, engineering and research focused academic programs and admissions updates.",
+  "link": "https://www.mit.edu"
+},
+{
+  "category": "international-universities",
+  "name": "Stanford University",
+  "description": "Stanford University official portal providing undergraduate and graduate admissions, innovation research and global academic initiatives.",
+  "link": "https://www.stanford.edu"
+},
+{
+  "category": "international-universities",
+  "name": "University of Oxford",
+  "description": "Official Oxford University website offering course information, admissions guidance and research publications across diverse academic domains.",
+  "link": "https://www.ox.ac.uk"
+},
+{
+  "category": "international-universities",
+  "name": "University of Cambridge",
+  "description": "Cambridge University official portal providing international student admissions, academic departments and research resources.",
+  "link": "https://www.cam.ac.uk"
+},
+{
+  "category": "international-universities",
+  "name": "University of Toronto",
+  "description": "University of Toronto official site offering global admissions details, research programs and interdisciplinary academic courses.",
+  "link": "https://www.utoronto.ca"
+},
+{
+  "category": "international-universities",
+  "name": "University of Melbourne",
+  "description": "Official portal of University of Melbourne providing study abroad information, admissions updates and research initiatives.",
+  "link": "https://www.unimelb.edu.au"
+},
+{
+  "category": "international-universities",
+  "name": "National University of Singapore",
+  "description": "NUS official website offering admissions guidance, research innovation and academic collaboration opportunities.",
+  "link": "https://www.nus.edu.sg"
+},
+{
+  "category": "international-universities",
+  "name": "ETH Zurich",
+  "description": "Swiss Federal Institute of Technology official portal providing advanced science and engineering education and research information.",
+  "link": "https://ethz.ch"
+},
+{
+  "category": "international-universities",
+  "name": "University of Tokyo",
+  "description": "Official University of Tokyo website offering international academic programs, research updates and admissions information.",
+  "link": "https://www.u-tokyo.ac.jp"
+},
+
+{
+  "category": "global-accreditation",
+  "name": "UNESCO Education",
+  "description": "UNESCO official education portal promoting global educational policies, research collaboration and international academic standards.",
+  "link": "https://www.unesco.org"
+},
+{
+  "category": "global-accreditation",
+  "name": "OECD Education",
+  "description": "Organisation for Economic Co operation and Development education portal providing international education data and policy research.",
+  "link": "https://www.oecd.org/education"
+},
+{
+  "category": "global-accreditation",
+  "name": "World Bank Education",
+  "description": "World Bank education portal supporting global education development projects, funding initiatives and policy research.",
+  "link": "https://www.worldbank.org/en/topic/education"
+},
+{
+  "category": "global-accreditation",
+  "name": "Council for Higher Education Accreditation",
+  "description": "CHEA official portal providing accreditation recognition standards and global higher education quality frameworks.",
+  "link": "https://www.chea.org"
+},
+{
+  "category": "global-accreditation",
+  "name": "European University Association",
+  "description": "EUA official portal representing European universities and promoting higher education quality standards.",
+  "link": "https://eua.eu"
+},
+{
+  "category": "global-accreditation",
+  "name": "QAA UK",
+  "description": "Quality Assurance Agency for Higher Education official site providing academic standards and institutional review frameworks in the UK.",
+  "link": "https://www.qaa.ac.uk"
+},
+{
+  "category": "global-accreditation",
+  "name": "WASC",
+  "description": "Western Association of Schools and Colleges accreditation portal ensuring institutional quality standards in the United States.",
+  "link": "https://www.wscuc.org"
+},
+{
+  "category": "global-accreditation",
+  "name": "ABET International",
+  "description": "Global engineering accreditation authority providing program evaluation and quality certification worldwide.",
+  "link": "https://www.abet.org"
+},
+{
+  "category": "global-accreditation",
+  "name": "AACRAO",
+  "description": "American Association of Collegiate Registrars and Admissions Officers portal supporting academic records and admissions standards.",
+  "link": "https://www.aacrao.org"
+},
+{
+  "category": "global-accreditation",
+  "name": "IAU",
+  "description": "International Association of Universities official portal promoting global academic collaboration and institutional development.",
+  "link": "https://www.iau-aiu.net"
+},
+
+{
+  "category": "world-rankings",
+  "name": "QS World Rankings",
+  "description": "Global university ranking platform publishing annual institutional rankings and subject specific academic performance data.",
+  "link": "https://www.topuniversities.com"
+},
+{
+  "category": "world-rankings",
+  "name": "Times Higher Education Rankings",
+  "description": "International ranking authority providing university performance metrics and global comparison insights.",
+  "link": "https://www.timeshighereducation.com"
+},
+{
+  "category": "world-rankings",
+  "name": "ARWU Rankings",
+  "description": "Academic Ranking of World Universities portal offering research based institutional performance rankings worldwide.",
+  "link": "https://www.shanghairanking.com"
+},
+{
+  "category": "world-rankings",
+  "name": "CWUR",
+  "description": "Center for World University Rankings official portal publishing objective university rankings based on research and alumni success.",
+  "link": "https://cwur.org"
+},
+{
+  "category": "world-rankings",
+  "name": "U Multirank",
+  "description": "European Commission supported ranking platform offering multi dimensional comparison of universities globally.",
+  "link": "https://www.umultirank.org"
+},
+{
+  "category": "world-rankings",
+  "name": "Webometrics",
+  "description": "Ranking Web of Universities portal evaluating institutional web presence and research impact worldwide.",
+  "link": "https://www.webometrics.info"
+},
+{
+  "category": "world-rankings",
+  "name": "Nature Index",
+  "description": "Research output ranking portal tracking high quality scientific publications across global institutions.",
+  "link": "https://www.nature.com/nature-index"
+},
+{
+  "category": "world-rankings",
+  "name": "Scimago Institutions Rankings",
+  "description": "Global research performance ranking platform evaluating universities and research institutions worldwide.",
+  "link": "https://www.scimagoir.com"
+},
+{
+  "category": "world-rankings",
+  "name": "US News Global Rankings",
+  "description": "International university ranking portal publishing global best universities lists and academic subject rankings.",
+  "link": "https://www.usnews.com/education"
+},
+{
+  "category": "world-rankings",
+  "name": "NIRF India Rankings",
+  "description": "National Institutional Ranking Framework official portal publishing annual Indian university and college rankings.",
+  "link": "https://www.nirfindia.org"
+},
+{
+  "category": "study-abroad",
+  "name": "EducationUSA",
+  "description": "Official U.S. Department of State network providing verified guidance on studying in the United States, university selection, visa process and scholarship opportunities.",
+  "link": "https://educationusa.state.gov"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in UK",
+  "description": "British Council official portal offering complete guidance on UK universities, admission requirements, scholarships and visa procedures.",
+  "link": "https://study-uk.britishcouncil.org"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in Canada",
+  "description": "Government of Canada education portal providing information about universities, student permits, scholarships and post study work opportunities.",
+  "link": "https://www.educanada.ca"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in Australia",
+  "description": "Australian Government official education portal offering university listings, visa guidance and scholarship details for international students.",
+  "link": "https://www.studyinaustralia.gov.au"
+},
+{
+  "category": "study-abroad",
+  "name": "DAAD Study in Germany",
+  "description": "German Academic Exchange Service portal providing study programs, scholarship funding and admission guidance for Germany.",
+  "link": "https://www.daad.de"
+},
+{
+  "category": "study-abroad",
+  "name": "Campus France",
+  "description": "Official French government portal offering guidance on studying in France, application procedures and scholarship schemes.",
+  "link": "https://www.campusfrance.org"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in Ireland",
+  "description": "Irish government education portal providing university information, visa guidance and scholarship options.",
+  "link": "https://www.educationinireland.com"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in Singapore",
+  "description": "Official Singapore education portal offering details on universities, admissions and global academic programs.",
+  "link": "https://www.studyinsingapore.sg"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in New Zealand",
+  "description": "New Zealand government portal providing verified information on institutions, visas and international student pathways.",
+  "link": "https://www.studyinnewzealand.govt.nz"
+},
+{
+  "category": "study-abroad",
+  "name": "Study in Japan",
+  "description": "Japanese government supported portal offering information about universities, scholarships and student visa processes.",
+  "link": "https://www.studyinjapan.go.jp"
+},
+
+{
+  "category": "online-platforms",
+  "name": "Coursera",
+  "description": "Global online learning platform offering university level courses, professional certificates and degree programs across diverse disciplines.",
+  "link": "https://www.coursera.org"
+},
+{
+  "category": "online-platforms",
+  "name": "edX",
+  "description": "International online education platform providing academic courses from leading universities and certification programs.",
+  "link": "https://www.edx.org"
+},
+{
+  "category": "online-platforms",
+  "name": "Udemy",
+  "description": "Global skill based learning platform offering practical courses in technology, business, design and personal development.",
+  "link": "https://www.udemy.com"
+},
+{
+  "category": "online-platforms",
+  "name": "Khan Academy",
+  "description": "Free educational platform providing structured lessons and practice exercises for school and competitive exam preparation.",
+  "link": "https://www.khanacademy.org"
+},
+{
+  "category": "online-platforms",
+  "name": "FutureLearn",
+  "description": "Online learning platform offering university backed courses and micro credentials from international institutions.",
+  "link": "https://www.futurelearn.com"
+},
+{
+  "category": "online-platforms",
+  "name": "Skillshare",
+  "description": "Creative and professional learning platform providing project based courses in design, writing and entrepreneurship.",
+  "link": "https://www.skillshare.com"
+},
+{
+  "category": "online-platforms",
+  "name": "Alison",
+  "description": "Free online certification platform offering diploma and certificate courses across academic and vocational domains.",
+  "link": "https://alison.com"
+},
+{
+  "category": "online-platforms",
+  "name": "Saylor Academy",
+  "description": "Open access online learning initiative providing free college level courses and certifications.",
+  "link": "https://www.saylor.org"
+},
+{
+  "category": "online-platforms",
+  "name": "OpenLearn",
+  "description": "The Open University free learning portal offering open educational resources and structured study materials.",
+  "link": "https://www.open.edu/openlearn"
+},
+{
+  "category": "online-platforms",
+  "name": "SWAYAM",
+  "description": "Government of India massive open online course platform offering free university and school level courses.",
+  "link": "https://swayam.gov.in"
+},
+
+{
+  "category": "education-funding",
+  "name": "NSDL e-Gov",
+  "description": "National Securities Depository Limited portal supporting education related financial services and digital documentation systems.",
+  "link": "https://www.egov-nsdl.co.in"
+},
+{
+  "category": "education-funding",
+  "name": "Vidya Lakshmi Portal",
+  "description": "Government of India education loan portal providing centralized access to multiple bank loan schemes for higher education.",
+  "link": "https://www.vidyalakshmi.co.in"
+},
+{
+  "category": "education-funding",
+  "name": "SBI Education Loan",
+  "description": "State Bank of India official portal offering domestic and international education loan schemes with eligibility criteria.",
+  "link": "https://sbi.co.in"
+},
+{
+  "category": "education-funding",
+  "name": "HDFC Credila",
+  "description": "Private education loan provider offering structured financial support for higher education in India and abroad.",
+  "link": "https://www.credila.com"
+},
+{
+  "category": "education-funding",
+  "name": "Axis Bank Education Loan",
+  "description": "Axis Bank official portal providing education financing options and repayment guidelines.",
+  "link": "https://www.axisbank.com"
+},
+{
+  "category": "education-funding",
+  "name": "Canara Bank Education Loan",
+  "description": "Public sector bank portal offering student loan schemes for domestic and overseas higher education.",
+  "link": "https://canarabank.com"
+},
+{
+  "category": "education-funding",
+  "name": "Punjab National Bank Education Loan",
+  "description": "PNB official portal providing financial assistance schemes for students pursuing higher education.",
+  "link": "https://www.pnbindia.in"
+},
+{
+  "category": "education-funding",
+  "name": "ICICI Education Loan",
+  "description": "ICICI Bank education loan portal offering funding options and online application facilities.",
+  "link": "https://www.icicibank.com"
+},
+{
+  "category": "education-funding",
+  "name": "Bank of Baroda Education Loan",
+  "description": "Bank of Baroda official portal offering student financial assistance schemes and repayment information.",
+  "link": "https://www.bankofbaroda.in"
+},
+{
+  "category": "education-funding",
+  "name": "Avanse Education Loan",
+  "description": "Specialized education finance company portal providing customized loan solutions for global study programs.",
+  "link": "https://www.avanse.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "BYJU'S",
+  "description": "Indian edtech learning platform offering interactive video lessons, competitive exam preparation modules and structured school curriculum support across multiple grade levels.",
+  "link": "https://byjus.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Unacademy",
+  "description": "Online competitive exam preparation platform providing live classes, structured test series and educator driven learning programs.",
+  "link": "https://unacademy.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Vedantu",
+  "description": "Live online tutoring platform offering personalized classes for school curriculum and competitive examinations.",
+  "link": "https://www.vedantu.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "PhysicsWallah",
+  "description": "Affordable digital education platform offering engineering and medical entrance preparation courses with structured content delivery.",
+  "link": "https://www.pw.live"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Toppr",
+  "description": "Personalized adaptive learning platform supporting school and entrance exam preparation through structured study resources.",
+  "link": "https://www.toppr.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Testbook",
+  "description": "Competitive exam preparation platform offering mock tests, practice questions and structured learning materials.",
+  "link": "https://testbook.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Gradeup",
+  "description": "Online exam preparation community platform providing mock tests, practice resources and peer learning support.",
+  "link": "https://www.gradeup.co"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Embibe",
+  "description": "AI driven personalized learning platform offering data based preparation tools for engineering and medical aspirants.",
+  "link": "https://www.embibe.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "Simplilearn",
+  "description": "Professional certification platform offering technology and management skill development courses for career growth.",
+  "link": "https://www.simplilearn.com"
+},
+{
+  "category": "edtech-platforms",
+  "name": "UpGrad",
+  "description": "Online higher education platform offering degree programs and industry oriented professional certifications.",
+  "link": "https://www.upgrad.com"
+},
+
+{
+  "category": "digital-libraries",
+  "name": "National Digital Library of India",
+  "description": "Government digital repository offering access to books, research papers, journals and academic resources across disciplines.",
+  "link": "https://ndl.iitkgp.ac.in"
+},
+{
+  "category": "digital-libraries",
+  "name": "Internet Archive",
+  "description": "Global digital archive providing free access to books, research publications and multimedia educational resources.",
+  "link": "https://archive.org"
+},
+{
+  "category": "digital-libraries",
+  "name": "Project Gutenberg",
+  "description": "Open digital library offering free access to public domain literary works and educational texts.",
+  "link": "https://www.gutenberg.org"
+},
+{
+  "category": "digital-libraries",
+  "name": "Google Books",
+  "description": "Digital book discovery platform providing previews and academic references from global publications.",
+  "link": "https://books.google.com"
+},
+{
+  "category": "digital-libraries",
+  "name": "JSTOR",
+  "description": "Academic digital library providing access to peer reviewed journals, research articles and scholarly publications.",
+  "link": "https://www.jstor.org"
+},
+{
+  "category": "digital-libraries",
+  "name": "DOAJ",
+  "description": "Directory of Open Access Journals offering free access to peer reviewed research publications worldwide.",
+  "link": "https://doaj.org"
+},
+{
+  "category": "digital-libraries",
+  "name": "Shodhganga",
+  "description": "Indian thesis repository providing access to doctoral dissertations and research submissions from universities.",
+  "link": "https://shodhganga.inflibnet.ac.in"
+},
+{
+  "category": "digital-libraries",
+  "name": "World Digital Library",
+  "description": "UNESCO supported digital platform providing cultural manuscripts, historical documents and global archives.",
+  "link": "https://www.wdl.org"
+},
+{
+  "category": "digital-libraries",
+  "name": "Open Library",
+  "description": "Digital catalog initiative aiming to create a web page for every published book and provide open access editions.",
+  "link": "https://openlibrary.org"
+},
+{
+  "category": "digital-libraries",
+  "name": "PubMed Central",
+  "description": "Free biomedical and life sciences journal archive offering open access research publications.",
+  "link": "https://www.ncbi.nlm.nih.gov/pmc"
+},
+
+{
+  "category": "fellowships",
+  "name": "Rhodes Scholarship",
+  "description": "Prestigious international fellowship program supporting postgraduate study at the University of Oxford.",
+  "link": "https://www.rhodeshouse.ox.ac.uk"
+},
+{
+  "category": "fellowships",
+  "name": "Commonwealth Fellowship",
+  "description": "International fellowship program supporting research and academic exchange among Commonwealth nations.",
+  "link": "https://cscuk.fcdo.gov.uk"
+},
+{
+  "category": "fellowships",
+  "name": "DAAD Research Fellowship",
+  "description": "German Academic Exchange Service research fellowship program supporting international academic collaboration.",
+  "link": "https://www.daad.de"
+},
+{
+  "category": "fellowships",
+  "name": "Fulbright Fellowship",
+  "description": "Global academic exchange fellowship program supporting research, teaching and postgraduate study.",
+  "link": "https://foreign.fulbrightonline.org"
+},
+{
+  "category": "fellowships",
+  "name": "Raman Fellowship",
+  "description": "Government of India fellowship program supporting research scholars for postdoctoral research abroad.",
+  "link": "https://www.education.gov.in"
+},
+{
+  "category": "fellowships",
+  "name": "SERB Fellowship",
+  "description": "Science and Engineering Research Board fellowship portal supporting research grants and academic projects.",
+  "link": "https://www.serbonline.in"
+},
+{
+  "category": "fellowships",
+  "name": "ICMR Fellowship",
+  "description": "Medical research fellowship program supporting doctoral and postdoctoral research initiatives.",
+  "link": "https://www.icmr.gov.in"
+},
+{
+  "category": "fellowships",
+  "name": "CSIR Fellowship",
+  "description": "Council of Scientific and Industrial Research fellowship program supporting scientific research scholars.",
+  "link": "https://www.csirhrdg.res.in"
+},
+{
+  "category": "fellowships",
+  "name": "Tata Trust Fellowship",
+  "description": "Philanthropic fellowship initiative supporting academic research and social development projects.",
+  "link": "https://www.tatatrusts.org"
+},
+{
+  "category": "fellowships",
+  "name": "UNICEF Fellowship",
+  "description": "International fellowship initiative supporting youth development, research and global education advocacy.",
+  "link": "https://www.unicef.org"
+},
+{
+  "category": "agriculture-science",
+  "name": "ICAR",
+  "description": "Indian Council of Agricultural Research official portal providing agricultural education standards, research programs and innovation updates for farming sciences.",
+  "link": "https://icar.org.in"
+},
+{
+  "category": "agriculture-science",
+  "name": "IARI",
+  "description": "Indian Agricultural Research Institute official site offering postgraduate agricultural education and advanced research initiatives.",
+  "link": "https://www.iari.res.in"
+},
+{
+  "category": "agriculture-science",
+  "name": "Krishi Vigyan Kendra",
+  "description": "Government agricultural extension portal providing farmer training programs and applied research support services.",
+  "link": "https://kvk.icar.gov.in"
+},
+{
+  "category": "agriculture-science",
+  "name": "FAO",
+  "description": "Food and Agriculture Organization of the United Nations portal offering global agricultural research data and policy resources.",
+  "link": "https://www.fao.org"
+},
+{
+  "category": "agriculture-science",
+  "name": "NABARD",
+  "description": "National Bank for Agriculture and Rural Development portal supporting rural education, agricultural finance and development programs.",
+  "link": "https://www.nabard.org"
+},
+{
+  "category": "agriculture-science",
+  "name": "Agmarknet",
+  "description": "Agricultural marketing information portal providing price trends and agricultural commodity market insights.",
+  "link": "https://agmarknet.gov.in"
+},
+{
+  "category": "agriculture-science",
+  "name": "Soil Health Card",
+  "description": "Government initiative portal offering soil testing data and agricultural advisory services to farmers.",
+  "link": "https://soilhealth.dac.gov.in"
+},
+{
+  "category": "agriculture-science",
+  "name": "eNAM",
+  "description": "National Agriculture Market portal enabling digital agricultural trade and market transparency.",
+  "link": "https://www.enam.gov.in"
+},
+{
+  "category": "agriculture-science",
+  "name": "CGIAR",
+  "description": "Global agricultural research partnership portal supporting food security and sustainable farming research initiatives.",
+  "link": "https://www.cgiar.org"
+},
+{
+  "category": "agriculture-science",
+  "name": "AgriStack",
+  "description": "Digital agriculture ecosystem portal supporting technology integration and farmer centric data systems.",
+  "link": "https://agristack.gov.in"
+},
+
+{
+  "category": "space-science",
+  "name": "NASA",
+  "description": "National Aeronautics and Space Administration official portal providing space missions, research publications and educational resources.",
+  "link": "https://www.nasa.gov"
+},
+{
+  "category": "space-science",
+  "name": "ISRO",
+  "description": "Indian Space Research Organisation official site offering space mission updates, research initiatives and academic collaboration programs.",
+  "link": "https://www.isro.gov.in"
+},
+{
+  "category": "space-science",
+  "name": "ESA",
+  "description": "European Space Agency official portal providing scientific research programs and space exploration missions.",
+  "link": "https://www.esa.int"
+},
+{
+  "category": "space-science",
+  "name": "JAXA",
+  "description": "Japan Aerospace Exploration Agency official website offering research updates and educational resources in space science.",
+  "link": "https://www.jaxa.jp"
+},
+{
+  "category": "space-science",
+  "name": "CNSA",
+  "description": "China National Space Administration official portal providing mission information and space research updates.",
+  "link": "https://www.cnsa.gov.cn"
+},
+{
+  "category": "space-science",
+  "name": "SpaceX",
+  "description": "Private aerospace company portal providing updates on rocket launches, space missions and research developments.",
+  "link": "https://www.spacex.com"
+},
+{
+  "category": "space-science",
+  "name": "Blue Origin",
+  "description": "Commercial space exploration company portal offering research insights and mission updates.",
+  "link": "https://www.blueorigin.com"
+},
+{
+  "category": "space-science",
+  "name": "Hubble Site",
+  "description": "NASA supported portal providing astronomical research data and educational resources from the Hubble telescope.",
+  "link": "https://hubblesite.org"
+},
+{
+  "category": "space-science",
+  "name": "ISRO IIRS",
+  "description": "Indian Institute of Remote Sensing portal offering space applications training and geospatial research programs.",
+  "link": "https://www.iirs.gov.in"
+},
+{
+  "category": "space-science",
+  "name": "UNOOSA",
+  "description": "United Nations Office for Outer Space Affairs portal promoting international cooperation in space science and policy.",
+  "link": "https://www.unoosa.org"
+},
+
+{
+  "category": "machine-learning-ai",
+  "name": "OpenAI",
+  "description": "Artificial intelligence research organization portal providing AI research updates, tools and policy discussions.",
+  "link": "https://www.openai.com"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "DeepMind",
+  "description": "AI research company portal offering advancements in machine learning and artificial intelligence systems.",
+  "link": "https://www.deepmind.com"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "Google AI",
+  "description": "Google artificial intelligence research portal providing machine learning innovations and educational resources.",
+  "link": "https://ai.google"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "Kaggle",
+  "description": "Data science competition platform offering datasets, notebooks and collaborative machine learning challenges.",
+  "link": "https://www.kaggle.com"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "TensorFlow",
+  "description": "Open source machine learning framework portal providing documentation, tutorials and developer resources.",
+  "link": "https://www.tensorflow.org"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "PyTorch",
+  "description": "Open source deep learning framework portal offering developer documentation and research tools.",
+  "link": "https://pytorch.org"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "Hugging Face",
+  "description": "AI model hosting platform providing open source transformer models and collaborative machine learning resources.",
+  "link": "https://huggingface.co"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "AICTE NEAT",
+  "description": "Government supported digital technology platform connecting students with AI based educational solutions.",
+  "link": "https://neat.aicte-india.org"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "Stanford AI Lab",
+  "description": "Stanford University artificial intelligence research lab portal providing academic publications and research insights.",
+  "link": "https://ai.stanford.edu"
+},
+{
+  "category": "machine-learning-ai",
+  "name": "MIT CSAIL",
+  "description": "MIT Computer Science and Artificial Intelligence Laboratory portal offering advanced research and innovation resources.",
+  "link": "https://www.csail.mit.edu"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "International Astronomical Union",
+  "description": "Global astronomical authority coordinating research standards, celestial naming conventions and international space science collaboration initiatives.",
+  "link": "https://www.iau.org"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "European Southern Observatory",
+  "description": "Leading astronomical research organization operating advanced telescopes and publishing space science discoveries.",
+  "link": "https://www.eso.org"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "National Radio Astronomy Observatory",
+  "description": "Research facility portal providing radio astronomy discoveries, data archives and educational outreach resources.",
+  "link": "https://public.nrao.edu"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "ISRO PRL",
+  "description": "Physical Research Laboratory portal supporting astrophysics research and planetary science programs.",
+  "link": "https://www.prl.res.in"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "NASA Astrophysics",
+  "description": "NASA division portal offering astrophysics missions, telescope research and cosmology publications.",
+  "link": "https://science.nasa.gov/astrophysics"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "Chandra Observatory",
+  "description": "NASA X ray observatory portal providing deep space imaging research and cosmic discovery updates.",
+  "link": "https://chandra.harvard.edu"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "James Webb Space Telescope",
+  "description": "Official mission portal providing updates, research publications and high resolution space imagery.",
+  "link": "https://jwst.nasa.gov"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "Royal Astronomical Society",
+  "description": "UK based scientific society promoting astronomy research publications and academic collaboration.",
+  "link": "https://ras.ac.uk"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "Indian Institute of Astrophysics",
+  "description": "Research institute portal offering astrophysics programs, observatory data and academic collaborations.",
+  "link": "https://www.iiap.res.in"
+},
+{
+  "category": "astronomy-astrophysics",
+  "name": "ESO Archive",
+  "description": "Astronomical data archive providing open access telescope observations and research datasets.",
+  "link": "https://archive.eso.org"
+},
+
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Sanskrit University",
+  "description": "Dedicated university portal promoting Vedic studies, Sanskrit literature and classical philosophical education programs.",
+  "link": "https://www.sanskrit.nic.in"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "IGNCA Vedic Studies",
+  "description": "Indira Gandhi National Centre for the Arts division focusing on Vedic manuscripts and spiritual heritage research.",
+  "link": "https://ignca.gov.in"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Bhandarkar Oriental Research Institute",
+  "description": "Historic research institute preserving ancient manuscripts and conducting Vedic and Indological research.",
+  "link": "https://bori.ac.in"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Chinmaya International Foundation",
+  "description": "Research and education center offering structured programs in Vedanta, Sanskrit and spiritual philosophy.",
+  "link": "https://www.chinfo.org"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Ramakrishna Mission",
+  "description": "Spiritual and educational organization offering philosophical teachings and social service initiatives.",
+  "link": "https://www.rkmission.org"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Isha Foundation",
+  "description": "Spiritual organization portal offering yogic science programs and inner wellbeing educational initiatives.",
+  "link": "https://isha.sadhguru.org"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Art of Living",
+  "description": "Global spiritual organization offering meditation programs and Vedic knowledge based learning initiatives.",
+  "link": "https://www.artofliving.org"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Vedanta Society",
+  "description": "International spiritual education network promoting Vedantic philosophy and scriptural studies.",
+  "link": "https://vedanta.org"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Gaudiya Vedanta",
+  "description": "Spiritual institution portal focusing on Vaishnava philosophy and devotional education.",
+  "link": "https://www.gaudiyavedanta.org"
+},
+{
+  "category": "vedic-spiritual-studies",
+  "name": "Kanchi Kamakoti Peetham",
+  "description": "Traditional spiritual institution portal preserving Vedic traditions and philosophical teachings.",
+  "link": "https://www.kanchikamakoti.org"
+},
+
+{
+  "category": "archaeology-history",
+  "name": "Archaeological Survey of India",
+  "description": "Government agency portal managing archaeological research, monument conservation and historical documentation.",
+  "link": "https://asi.nic.in"
+},
+{
+  "category": "archaeology-history",
+  "name": "National Museum Delhi",
+  "description": "Official museum portal providing access to historical artifacts, research resources and cultural archives.",
+  "link": "https://nationalmuseumindia.gov.in"
+},
+{
+  "category": "archaeology-history",
+  "name": "British Museum",
+  "description": "Global museum portal offering digital archives and educational resources on world history and archaeology.",
+  "link": "https://www.britishmuseum.org"
+},
+{
+  "category": "archaeology-history",
+  "name": "Smithsonian Institution",
+  "description": "Research and museum complex portal providing global historical and archaeological resources.",
+  "link": "https://www.si.edu"
+},
+{
+  "category": "archaeology-history",
+  "name": "World Heritage Centre",
+  "description": "UNESCO portal managing world heritage sites and preservation research documentation.",
+  "link": "https://whc.unesco.org"
+},
+{
+  "category": "archaeology-history",
+  "name": "National Archives UK",
+  "description": "United Kingdom archival portal providing access to government documents and historical manuscripts.",
+  "link": "https://www.nationalarchives.gov.uk"
+},
+{
+  "category": "archaeology-history",
+  "name": "Library of Congress",
+  "description": "United States national library portal offering historical documents and educational archives.",
+  "link": "https://www.loc.gov"
+},
+{
+  "category": "archaeology-history",
+  "name": "INTACH",
+  "description": "Indian National Trust for Art and Cultural Heritage portal focusing on conservation and heritage research.",
+  "link": "https://intach.org"
+},
+{
+  "category": "archaeology-history",
+  "name": "National Archives of India",
+  "description": "Government archival institution providing access to historical records and research materials.",
+  "link": "https://nationalarchives.nic.in"
+},
+{
+  "category": "archaeology-history",
+  "name": "Digital South Asia Library",
+  "description": "Digital archive portal offering South Asian historical resources and research materials.",
+  "link": "https://dsal.uchicago.edu"
+}
+]
