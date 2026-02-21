@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>QBank – Category</title>
+  <title>QBank – Grand Categories</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -20,51 +20,60 @@
 
 <header class="app-header">
   <button class="menu-btn" id="menuBtn">☰</button>
-  <div class="logo" id="categoryTitle">Category</div>
+  <div class="logo">QBank</div>
 </header>
 
 <main class="main-content">
 
   <div class="glass-card">
-    <div class="card-title" id="categoryHeading">Loading...</div>
+    <div class="card-title">📂 Grand Education Categories</div>
     <div class="card-desc">
-      Verified official platforms and structured academic resources.
+      A complete structured ecosystem covering Indian core education and global extensions.
     </div>
   </div>
 
-  <!-- JSON Render Container -->
-  <div id="dataContainer"></div>
+  <div class="grid">
+
+    <a href="/category.html?cat=competitive-exams" class="category-box"><span>📝</span>Competitive Exams</a>
+    <a href="/category.html?cat=universities" class="category-box"><span>🎓</span>Universities</a>
+    <a href="/category.html?cat=scholarships" class="category-box"><span>💰</span>Scholarships</a>
+    <a href="/category.html?cat=research-institutes" class="category-box"><span>🔬</span>Research</a>
+    <a href="/category.html?cat=government-jobs" class="category-box"><span>💼</span>Government Jobs</a>
+    <a href="/category.html?cat=education-boards" class="category-box"><span>🏫</span>Education Boards</a>
+
+    <a href="/category.html?cat=engineering" class="category-box"><span>⚙️</span>Engineering</a>
+    <a href="/category.html?cat=medical" class="category-box"><span>🩺</span>Medical</a>
+    <a href="/category.html?cat=law" class="category-box"><span>⚖️</span>Law</a>
+    <a href="/category.html?cat=commerce" class="category-box"><span>📊</span>Commerce</a>
+    <a href="/category.html?cat=it-computer" class="category-box"><span>💻</span>IT & Computer</a>
+    <a href="/category.html?cat=design-arts" class="category-box"><span>🎨</span>Design & Arts</a>
+    <a href="/category.html?cat=humanities" class="category-box"><span>📖</span>Humanities</a>
+    <a href="/category.html?cat=management" class="category-box"><span>📈</span>Management</a>
+    <a href="/category.html?cat=defence" class="category-box"><span>🛡</span>Defence</a>
+    <a href="/category.html?cat=railway-exams" class="category-box"><span>🚆</span>Railway Exams</a>
+
+    <a href="/category.html?cat=global-exams" class="category-box"><span>🌍</span>Global Exams</a>
+    <a href="/category.html?cat=international-universities" class="category-box"><span>🏫</span>International Universities</a>
+    <a href="/category.html?cat=global-accreditation" class="category-box"><span>📜</span>Global Accreditation</a>
+    <a href="/category.html?cat=world-rankings" class="category-box"><span>🏆</span>World Rankings</a>
+    <a href="/category.html?cat=study-abroad" class="category-box"><span>✈️</span>Study Abroad</a>
+    <a href="/category.html?cat=online-platforms" class="category-box"><span>🌐</span>Online Platforms</a>
+    <a href="/category.html?cat=education-funding" class="category-box"><span>💹</span>Education Funding</a>
+    <a href="/category.html?cat=edtech-platforms" class="category-box"><span>📡</span>EdTech</a>
+    <a href="/category.html?cat=digital-libraries" class="category-box"><span>📚</span>Digital Libraries</a>
+    <a href="/category.html?cat=fellowships" class="category-box"><span>🎓</span>Fellowships</a>
+
+    <a href="/category.html?cat=agriculture-science" class="category-box"><span>🌾</span>Agriculture</a>
+    <a href="/category.html?cat=space-science" class="category-box"><span>🚀</span>Space Science</a>
+    <a href="/category.html?cat=machine-learning-ai" class="category-box"><span>🤖</span>AI & ML</a>
+    <a href="/category.html?cat=astronomy-astrophysics" class="category-box"><span>🌌</span>Astronomy</a>
+    <a href="/category.html?cat=vedic-spiritual-studies" class="category-box"><span>🕉</span>Vedic Studies</a>
+    <a href="/category.html?cat=archaeology-history" class="category-box"><span>🏺</span>Archaeology</a>
+
+  </div>
 
 </main>
 
 <script src="/app.js"></script>
-
-<script>
-const params = new URLSearchParams(window.location.search);
-const category = params.get("cat");
-
-if(category){
-  document.getElementById("categoryTitle").innerText = category.replaceAll("-", " ");
-  document.getElementById("categoryHeading").innerText = category.replaceAll("-", " ");
-
-  const container = document.getElementById("dataContainer");
-  container.dataset.json = "/data/platforms.json";
-
-  fetch("/data/platforms.json")
-    .then(res => res.json())
-    .then(data => {
-      const filtered = data.filter(item => item.category === category);
-
-      container.innerHTML = filtered.map(item => `
-        <div class="list-card">
-          <div class="list-title">${item.name}</div>
-          <div class="list-desc">${item.description}</div>
-          <a href="${item.link}" target="_blank" class="btn">Visit</a>
-        </div>
-      `).join("");
-    });
-}
-</script>
-
 </body>
 </html>
