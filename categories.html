@@ -2,109 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>QBank – Grand Categories</title>
+  <title>QBank – Category</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
+<!-- Overlay -->
+<div class="drawer-overlay" id="overlay"></div>
+
+<!-- Drawer -->
+<div class="drawer" id="drawer">
+  <a href="/">🏠 Home</a>
+  <a href="/categories.html">📂 All Categories</a>
+</div>
+
 <header class="app-header">
-  <button class="menu-btn">☰</button>
-  <div class="logo">QBank</div>
-  <div style="width:24px;"></div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <div class="logo" id="categoryTitle">Category</div>
 </header>
 
 <main class="main-content">
 
   <div class="glass-card">
-    <div class="card-title">📂 Grand Education Categories</div>
+    <div class="card-title" id="categoryHeading">Loading...</div>
     <div class="card-desc">
-      A complete A–Z structured ecosystem covering Indian core education and global extensions.
+      Verified official platforms and structured academic resources.
     </div>
   </div>
 
-  <div class="section-title">India Core Education</div>
-
-  <div class="grid">
-
-    <a href="#" class="category-box"><span>📝</span>Competitive Exams</a>
-    <a href="#" class="category-box"><span>🎓</span>Universities</a>
-    <a href="#" class="category-box"><span>🏫</span>Colleges</a>
-    <a href="#" class="category-box"><span>📘</span>School Boards</a>
-    <a href="#" class="category-box"><span>📚</span>Entrance Tests</a>
-    <a href="#" class="category-box"><span>💼</span>Government Jobs</a>
-    <a href="#" class="category-box"><span>🏛</span>Education Ministries</a>
-    <a href="#" class="category-box"><span>🧾</span>Accreditation Bodies</a>
-    <a href="#" class="category-box"><span>🔬</span>Research Institutes</a>
-    <a href="#" class="category-box"><span>💰</span>Scholarships</a>
-
-  </div>
-
-  <div class="section-title">Professional & Career Domains</div>
-
-  <div class="grid">
-
-    <a href="#" class="category-box"><span>⚙️</span>Engineering</a>
-    <a href="#" class="category-box"><span>🩺</span>Medical</a>
-    <a href="#" class="category-box"><span>⚖️</span>Law</a>
-    <a href="#" class="category-box"><span>📊</span>Commerce</a>
-    <a href="#" class="category-box"><span>💻</span>IT & Computer</a>
-    <a href="#" class="category-box"><span>🎨</span>Design & Arts</a>
-    <a href="#" class="category-box"><span>📖</span>Humanities</a>
-    <a href="#" class="category-box"><span>📈</span>Management</a>
-    <a href="#" class="category-box"><span>🛡</span>Defence</a>
-    <a href="#" class="category-box"><span>🚆</span>Railway Exams</a>
-
-  </div>
-
-  <div class="section-title">Global Education Layer</div>
-
-  <div class="grid">
-
-    <a href="#" class="category-box"><span>🌍</span>Global Exams</a>
-    <a href="#" class="category-box"><span>🏫</span>International Universities</a>
-    <a href="#" class="category-box"><span>📜</span>Global Accreditation</a>
-    <a href="#" class="category-box"><span>📊</span>World Rankings</a>
-    <a href="#" class="category-box"><span>✈️</span>Study Abroad</a>
-    <a href="#" class="category-box"><span>🌐</span>Online Platforms</a>
-    <a href="#" class="category-box"><span>💹</span>Education Funding</a>
-    <a href="#" class="category-box"><span>📡</span>EdTech Platforms</a>
-    <a href="#" class="category-box"><span>📂</span>Digital Libraries</a>
-    <a href="#" class="category-box"><span>🏆</span>Fellowships</a>
-
-  </div>
+  <!-- JSON Render Container -->
+  <div id="dataContainer"></div>
 
 </main>
 
-<nav class="bottom-nav">
+<script src="/app.js"></script>
 
-  <a href="index.html" class="bottom-item">
-    <span>🏠</span>
-    Home
-  </a>
+<script>
+const params = new URLSearchParams(window.location.search);
+const category = params.get("cat");
 
-  <a href="categories.html" class="bottom-item active">
-    <span>📂</span>
-    Categories
-  </a>
+if(category){
+  document.getElementById("categoryTitle").innerText = category.replaceAll("-", " ");
+  document.getElementById("categoryHeading").innerText = category.replaceAll("-", " ");
 
-  <a href="#" class="bottom-item">
-    <span>📝</span>
-    Exams
-  </a>
+  const container = document.getElementById("dataContainer");
+  container.dataset.json = "/data/platforms.json";
 
-  <a href="#" class="bottom-item">
-    <span>🎓</span>
-    Uni
-  </a>
+  fetch("/data/platforms.json")
+    .then(res => res.json())
+    .then(data => {
+      const filtered = data.filter(item => item.category === category);
 
-  <a href="#" class="bottom-item">
-    <span>🌍</span>
-    Global
-  </a>
-
-</nav>
+      container.innerHTML = filtered.map(item => `
+        <div class="list-card">
+          <div class="list-title">${item.name}</div>
+          <div class="list-desc">${item.description}</div>
+          <a href="${item.link}" target="_blank" class="btn">Visit</a>
+        </div>
+      `).join("");
+    });
+}
+</script>
 
 </body>
 </html>
