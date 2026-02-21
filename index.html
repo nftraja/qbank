@@ -4,29 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QBank – Global Education Gateway</title>
-<meta name="description" content="QBank is a structured global education gateway connecting students to official boards, universities, exams, learning platforms and academic resources worldwide.">
 
 <link rel="stylesheet" href="/style.css">
-<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0f0c0a">
 </head>
 
 <body>
 
-<!-- ================= OVERLAY ================= -->
+<!-- OVERLAY -->
 <div class="drawer-overlay" id="overlay"></div>
 
-<!-- ================= DRAWER ================= -->
+<!-- DRAWER -->
 <div class="drawer" id="drawer">
 
   <a href="/">🏠 Home</a>
   <a href="/categories.html">📂 All Categories</a>
-  <a href="/exams.html">📝 Exams</a>
-  <a href="/universities.html">🎓 Universities</a>
-  <a href="/scholarships.html">💰 Scholarships</a>
-  <a href="/research.html">🔬 Research</a>
-  <a href="/careers.html">💼 Careers</a>
-  <a href="/global.html">🌍 Global Boards</a>
+
+  <!-- Direct category routing -->
+  <a href="/category.html?cat=competitive-exams">📝 Competitive Exams</a>
+  <a href="/category.html?cat=universities">🎓 Universities</a>
+  <a href="/category.html?cat=scholarships">💰 Scholarships</a>
+  <a href="/category.html?cat=research-institutes">🔬 Research</a>
+  <a href="/category.html?cat=government-jobs">💼 Government Jobs</a>
+  <a href="/category.html?cat=education-boards">🏫 Education Boards</a>
 
   <a href="/about.html">ℹ️ About</a>
   <a href="/contact.html">✉️ Contact</a>
@@ -36,101 +36,55 @@
 
 </div>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="app-header">
   <button class="menu-btn" id="menuBtn">☰</button>
   <div class="logo">QBank</div>
 </header>
 
-<!-- ================= MAIN ================= -->
+<!-- MAIN -->
 <main class="main-content">
 
-  <!-- HERO -->
   <div class="glass-card">
     <div class="card-title">🌐 Global Education Gateway</div>
     <div class="card-desc">
-      Access official education boards, competitive exams, universities,
-      research institutions, scholarships and verified academic resources —
-      all structured in one powerful super app.
+      Access official education boards, competitive exams,
+      universities and global academic resources — structured in one place.
     </div>
   </div>
 
   <!-- PRIMARY CATEGORIES -->
   <div class="grid">
 
-    <a href="/exams.html" class="category-box">
-      <span>📝</span>
-      Competitive Exams
+    <a href="/category.html?cat=competitive-exams" class="category-box">
+      <span>📝</span>Competitive Exams
     </a>
 
-    <a href="/universities.html" class="category-box">
-      <span>🎓</span>
-      Universities
+    <a href="/category.html?cat=universities" class="category-box">
+      <span>🎓</span>Universities
     </a>
 
-    <a href="/scholarships.html" class="category-box">
-      <span>💰</span>
-      Scholarships
+    <a href="/category.html?cat=scholarships" class="category-box">
+      <span>💰</span>Scholarships
     </a>
 
-    <a href="/research.html" class="category-box">
-      <span>🔬</span>
-      Research
+    <a href="/category.html?cat=research-institutes" class="category-box">
+      <span>🔬</span>Research
     </a>
 
-    <a href="/career.html" class="category-box">
-      <span>💼</span>
-      Career & Jobs
+    <a href="/category.html?cat=government-jobs" class="category-box">
+      <span>💼</span>Government Jobs
     </a>
 
-    <a href="/boards.html" class="category-box">
-      <span>🏫</span>
-      Education Boards
+    <a href="/category.html?cat=education-boards" class="category-box">
+      <span>🏫</span>Education Boards
     </a>
 
-  </div>
-
-  <!-- GLOBAL ACCESS SECTION -->
-  <div class="glass-card">
-    <div class="card-title">🌍 Global Access</div>
-    <div class="card-desc">
-      Discover government portals, international exam bodies,
-      global universities, accreditation authorities and academic
-      councils from multiple countries in structured format.
-    </div>
-  </div>
-
-  <!-- QUICK LINKS (UTILITY GATEWAY STYLE) -->
-  <div class="list-card">
-    <div class="list-title">📘 Official Exam Boards</div>
-    <div class="list-desc">
-      Direct access to verified government exam authorities,
-      entrance portals and national testing agencies.
-    </div>
-    <a href="/exams.html" class="btn">Explore</a>
-  </div>
-
-  <div class="list-card">
-    <div class="list-title">🏛 Accreditation & Regulatory Bodies</div>
-    <div class="list-desc">
-      Access UGC, AICTE, NAAC, global accreditation councils
-      and academic regulatory institutions.
-    </div>
-    <a href="/boards.html" class="btn">View</a>
-  </div>
-
-  <div class="list-card">
-    <div class="list-title">🌎 International Study Resources</div>
-    <div class="list-desc">
-      Explore SAT, GRE, IELTS, TOEFL authorities and
-      global study destination portals.
-    </div>
-    <a href="/global.html" class="btn">Access</a>
   </div>
 
 </main>
 
-<!-- ================= BOTTOM NAV ================= -->
+<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
 
   <a href="/" class="bottom-item active">
@@ -143,24 +97,23 @@
     <small>Categories</small>
   </a>
 
-  <a href="/exams.html" class="bottom-item">
+  <a href="/category.html?cat=competitive-exams" class="bottom-item">
     <span>📝</span>
     <small>Exams</small>
   </a>
 
-  <a href="/universities.html" class="bottom-item">
+  <a href="/category.html?cat=universities" class="bottom-item">
     <span>🎓</span>
     <small>Uni</small>
   </a>
 
-  <a href="/global.html" class="bottom-item">
+  <a href="/category.html?cat=global-exams" class="bottom-item">
     <span>🌍</span>
     <small>Global</small>
   </a>
 
 </nav>
 
-<!-- ================= SCRIPT ================= -->
 <script src="/app.js"></script>
 
 </body>
