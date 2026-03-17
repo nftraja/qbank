@@ -6,7 +6,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   /* =========================
-     DRAWER TOGGLE SYSTEM
+     DRAWER TOGGLE SYSTEM (FIXED)
   ========================== */
 
   const menuBtn = document.getElementById("menuBtn");
@@ -15,20 +15,66 @@ document.addEventListener("DOMContentLoaded", function(){
 
   if(menuBtn && drawer && overlay){
 
-    menuBtn.addEventListener("click", function(){
-      drawer.classList.toggle("active");
-      overlay.classList.toggle("active");
-      document.body.classList.toggle("no-scroll");
-    });
+    function openDrawer(){
+      drawer.classList.add("active");
+      overlay.classList.add("active");
+      document.body.classList.add("no-scroll");
 
-    overlay.addEventListener("click", function(){
+      // 🔥 scroll reset (important)
+      drawer.scrollTop = 0;
+    }
+
+    function closeDrawer(){
       drawer.classList.remove("active");
       overlay.classList.remove("active");
       document.body.classList.remove("no-scroll");
+    }
+
+    // MENU BUTTON
+    menuBtn.addEventListener("click", function(){
+      if(drawer.classList.contains("active")){
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+
+    // OVERLAY CLICK
+    overlay.addEventListener("click", closeDrawer);
+
+    /* =========================
+       MENU CLICK FIX (IMPORTANT)
+    ========================== */
+
+    document.querySelectorAll("#drawer a").forEach(link=>{
+      link.addEventListener("click", function(e){
+
+        // अगर internal navigation है
+        if(this.getAttribute("href") === "#"){
+          e.preventDefault();
+        }
+
+        // 🔥 drawer close (fix)
+        closeDrawer();
+
+        // ⚠️ यहाँ कोई innerHTML replace मत करना
+      });
+    });
+
+    /* =========================
+       BACK BUTTON FIX
+    ========================== */
+
+    document.querySelectorAll(".back-btn").forEach(btn=>{
+      btn.addEventListener("click", function(){
+        closeDrawer();
+        history.back(); // अगर custom routing है तो बदल सकता है
+      });
     });
 
   }
 
+});
 
   /* =========================
      ACTIVE BOTTOM NAV AUTO DETECT
