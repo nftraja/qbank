@@ -5,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   /* =========================
-     DRAWER SYSTEM (FINAL FIX)
+     DRAWER SYSTEM (STABLE)
   ========================== */
 
   const menuBtn = document.getElementById("menuBtn");
@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.add("active");
       overlay.classList.add("active");
 
-      // 🔥 FORCE REPAINT FIX (main issue solve)
-      drawer.style.display = "none";
-      drawer.offsetHeight;
-      drawer.style.display = "";
+      // 🔥 repaint fix
+      requestAnimationFrame(()=>{
+        drawer.style.transform = "translateZ(0)";
+      });
     }
 
     function closeDrawer(){
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function(){
       overlay.classList.remove("active");
     }
 
-    // MENU BUTTON
     menuBtn.addEventListener("click", function(e){
       e.stopPropagation();
 
@@ -40,10 +39,9 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
 
-    // OVERLAY CLICK
     overlay.addEventListener("click", closeDrawer);
 
-    // BACK BUTTON SAFE FIX
+    // SAFE BACK BUTTON
     const back = drawer.querySelector("a[href*='history.back']");
     if(back){
       back.addEventListener("click", function(e){
@@ -58,16 +56,76 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     }
 
-    // LINK CLICK CLOSE
+    // CLOSE ON LINK CLICK
     drawer.querySelectorAll("a").forEach(a=>{
-      a.addEventListener("click", function(){
-        closeDrawer();
-      });
+      a.addEventListener("click", closeDrawer);
     });
 
   }
 
+  /* =========================
+     ACTIVE BOTTOM NAV
+  ========================== */
+
+  const bottomItems = document.querySelectorAll(".bottom-item");
+  const currentPath = window.location.pathname;
+
+  bottomItems.forEach(item => {
+    const linkPath = item.getAttribute("href");
+    if(linkPath === currentPath){
+      item.classList.add("active");
+    }
+  });
+
+  /* =========================
+     EXTERNAL LINK SAFETY
+  ========================== */
+
+  document.querySelectorAll("a[target='_blank']")
+    .forEach(link => link.setAttribute("rel", "noopener noreferrer"));
+
+  /* =========================
+     JSON LOADER
+  ========================== */
+
+  const dataContainer = document.getElementById("dataContainer");
+
+  if(dataContainer){
+    const jsonFile = dataContainer.dataset.json;
+
+    if(jsonFile){
+      fetch(jsonFile, { cache: "no-store" })
+        .then(res => res.json())
+        .then(data => {
+
+          if(!Array.isArray(data)) return;
+
+          dataContainer.innerHTML = data.map(item => `
+            <div class="list-card">
+              <div class="list-title">${item.name}</div>
+              <div class="list-desc">${item.description}</div>
+              <a href="${item.link}" target="_blank" class="btn">Visit</a>
+            </div>
+          `).join("");
+
+        })
+        .catch(err => console.error("JSON load error:", err));
+    }
+  }
+
 });
+
+/* =========================
+   SERVICE WORKER
+========================== */
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => console.log("Service Worker Registered"))
+      .catch(err => console.log("SW Failed:", err));
+  });
+}
 
   /* =========================
      ACTIVE BOTTOM NAV
