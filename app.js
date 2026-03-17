@@ -1,5 +1,5 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (CLEAN)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (FINAL CLEAN + STABLE)
 ======================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.add("active");
       overlay.classList.add("active");
 
+      // scroll reset
+      drawer.scrollTop = 0;
+
+      // repaint fix
       requestAnimationFrame(()=>{
         drawer.style.transform = "translateZ(0)";
       });
@@ -40,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     overlay.addEventListener("click", closeDrawer);
 
+    // back button safe
     const back = drawer.querySelector("a[href*='history.back']");
     if(back){
       back.addEventListener("click", function(e){
@@ -54,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     }
 
+    // close on link click
     drawer.querySelectorAll("a").forEach(a=>{
       a.addEventListener("click", closeDrawer);
     });
@@ -109,6 +115,16 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 
+});
+
+/* =========================
+   BACK/FORWARD CACHE FIX
+========================== */
+
+window.addEventListener("pageshow", function(event){
+  if(event.persisted){
+    window.location.reload();
+  }
 });
 
 /* =========================
