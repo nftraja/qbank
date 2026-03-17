@@ -195,31 +195,38 @@ html,body{
 
   background:#181310;
 
-  /* 🔥 FIX: gap reduce */
-  padding-top:48px;
+  /* 🔥 CLEAN TOP GAP */
+  padding-top:52px;
 
   transition:left .28s ease;
   z-index:2000;
 
-  /* 🔥 MAIN FIX: proper scroll */
+  /* 🔥 PERFECT SCROLL */
   overflow-y:auto;
   overflow-x:hidden;
 
-  border-right:1px solid rgba(255,255,255,.10);
-
-  display:block;
-
-  /* 🔥 smooth scroll */
+  /* 🔥 FIX: isolate scroll */
+  overscroll-behavior:contain;
   -webkit-overflow-scrolling:touch;
 
-  /* 🔥 IMPORTANT */
-  overscroll-behavior:contain;
+  border-right:1px solid rgba(255,255,255,.10);
+
+  /* 🔥 IMPORTANT: prevent layout bugs */
+  will-change:left;
 }
 
+/* ACTIVE */
 .drawer.active{
   left:0;
 }
 
+/* 🔥 WRAPPER FIX (MANDATORY) */
+.drawer-content{
+  display:block;
+  min-height:100%;
+}
+
+/* LINKS */
 .drawer a{
   display:block;
   padding:12px 14px;
@@ -227,8 +234,12 @@ html,body{
   color:#fff;
   text-decoration:none;
   border-bottom:1px solid rgba(255,255,255,.05);
+
+  /* 🔥 FIX: pointer वापस */
+  cursor:pointer;
 }
 
+/* HOVER */
 .drawer a:hover{
   background:rgba(255,255,255,.06);
 }
@@ -241,6 +252,9 @@ html,body{
   background:rgba(0,0,0,.6);
   display:none;
   z-index:1500;
+
+  /* 🔥 prevents scroll bleed */
+  touch-action:none;
 }
 
 .drawer-overlay.active{
