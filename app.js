@@ -3,28 +3,39 @@
    Works across all 30 pages without breaking anything
 ======================================================= */
 
-const menuBtn = document.getElementById("menuBtn");
-const drawer = document.getElementById("drawer");
-const overlay = document.getElementById("overlay");
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
-if(menuBtn){
-  menuBtn.onclick = function(){
-    drawer.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("no-scroll");
+  const menuBtn = document.getElementById("menuBtn");
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
 
-    // scroll reset
-    drawer.scrollTop = 0;
-  };
-}
+  if(menuBtn && drawer && overlay){
 
-if(overlay){
-  overlay.onclick = function(){
-    drawer.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  };
-}
+    // TOGGLE DRAWER
+    menuBtn.onclick = function(){
+      drawer.classList.toggle("active");
+      overlay.classList.toggle("active");
+    };
+
+    // CLOSE ON OVERLAY
+    overlay.onclick = function(){
+      drawer.classList.remove("active");
+      overlay.classList.remove("active");
+    };
+
+    // CLOSE DRAWER ON LINK CLICK (optional UX fix)
+    document.querySelectorAll("#drawer a").forEach(link=>{
+      link.addEventListener("click", function(){
+        drawer.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    });
+
+  }
+
+});
+</script>
 
   /* =========================
      ACTIVE BOTTOM NAV AUTO DETECT
