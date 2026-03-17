@@ -5,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   /* =========================
-     DRAWER SYSTEM
+     DRAWER SYSTEM (FINAL FIX)
   ========================== */
 
   const menuBtn = document.getElementById("menuBtn");
@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function(){
     function openDrawer(){
       drawer.classList.add("active");
       overlay.classList.add("active");
+
+      // 🔥 FORCE REPAINT FIX (main issue solve)
+      drawer.style.display = "none";
+      drawer.offsetHeight;
+      drawer.style.display = "";
     }
 
     function closeDrawer(){
@@ -27,8 +32,12 @@ document.addEventListener("DOMContentLoaded", function(){
     // MENU BUTTON
     menuBtn.addEventListener("click", function(e){
       e.stopPropagation();
-      drawer.classList.toggle("active");
-      overlay.classList.toggle("active");
+
+      if(drawer.classList.contains("active")){
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
     });
 
     // OVERLAY CLICK
@@ -57,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
   }
+
+});
 
   /* =========================
      ACTIVE BOTTOM NAV
