@@ -2,12 +2,13 @@
    QBANK – FINAL UNIVERSAL APP SCRIPT (FIXED)
 ======================================================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+(function(){
 
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
-  const backBtn = document.getElementById("drawerBack");
+
+  if(!menuBtn || !drawer || !overlay) return;
 
   function openDrawer(){
     drawer.classList.add("active");
@@ -19,42 +20,42 @@ document.addEventListener("DOMContentLoaded", function(){
     overlay.classList.remove("active");
   }
 
-  // MENU TOGGLE
-  if(menuBtn){
-    menuBtn.onclick = function(){
-      drawer.classList.toggle("active");
-      overlay.classList.toggle("active");
-    };
-  }
+  // MENU BUTTON
+  menuBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    if(drawer.classList.contains("active")){
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
 
-  // OVERLAY CLOSE
-  if(overlay){
-    overlay.onclick = closeDrawer;
-  }
+  // OVERLAY CLICK
+  overlay.addEventListener("click", closeDrawer);
 
-  // 🔥 BACK BUTTON SAFE FIX
-  if(backBtn){
-    backBtn.onclick = function(e){
+  // 🔥 BACK FIX (SAFE)
+  const back = drawer.querySelector("a[href*='history.back']");
+  if(back){
+    back.addEventListener("click", function(e){
       e.preventDefault();
-
       closeDrawer();
 
-      if(window.history.length > 1){
-        window.history.back();
+      if(history.length > 1){
+        history.back();
       } else {
-        window.location.href = "/"; // fallback
+        location.href = "/";
       }
-    };
+    });
   }
 
-  // 🔥 LINK CLICK FIX (no glitch)
-  document.querySelectorAll("#drawer a").forEach(link=>{
-    link.addEventListener("click", function(){
+  // 🔥 LINK CLICK (NO GLITCH)
+  drawer.querySelectorAll("a").forEach(a=>{
+    a.addEventListener("click", function(){
       closeDrawer();
     });
   });
 
-});
+})();
 
   /* =========================
      ACTIVE BOTTOM NAV
