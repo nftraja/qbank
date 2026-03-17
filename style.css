@@ -196,31 +196,43 @@ html,body{
   background:#181310;
   padding-top:60px;
 
-  transition:left .3s ease;
+  transition:left .28s ease;
   z-index:2000;
 
   overflow-y:auto;
+  overflow-x:hidden;
 
   border-right:1px solid rgba(255,255,255,.10);
 
   display:block;
+
+  /* 🔥 FIX: mobile rendering stable */
+  -webkit-overflow-scrolling:touch;
+  will-change:left;
 }
 
+/* ACTIVE */
 .drawer.active{
   left:0;
 }
 
+/* LINKS */
 .drawer a{
   display:block;
-  padding:11px 14px;
+  padding:12px 14px; /* थोड़ा better spacing */
   font-size:13px;
   color:#fff;
   text-decoration:none;
+
   border-bottom:1px solid rgba(255,255,255,.05);
+
+  /* 🔥 FIX: collapse prevent (without flex) */
+  white-space:nowrap;
 }
 
+/* HOVER */
 .drawer a:hover{
-  background:rgba(255,255,255,.05);
+  background:rgba(255,255,255,.06);
 }
 
 /* ================= OVERLAY ================= */
@@ -231,6 +243,9 @@ html,body{
   background:rgba(0,0,0,.6);
   display:none;
   z-index:1500;
+
+  /* 🔥 smoother feel */
+  backdrop-filter:blur(3px);
 }
 
 .drawer-overlay.active{
