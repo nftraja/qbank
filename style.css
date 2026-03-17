@@ -1,10 +1,10 @@
 :root{
 
-  --bg-main:#0f0c0a;
-  --bg-elev-1:#181310;
-  --bg-elev-2:#211a16;
+  --bg-main:linear-gradient(135deg,#0b0b0b,#151515);
+  --bg-elev-1:rgba(255,255,255,.04);
+  --bg-elev-2:rgba(255,255,255,.06);
 
-  --accent:#d4af37;
+  --accent:#00ff88;
 
   --text-primary:#ffffff;
   --text-secondary:#b9b1a8;
@@ -14,6 +14,7 @@
   --radius-sm:8px;
 }
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -37,9 +38,8 @@ html,body{
   align-items:center;
   justify-content:space-between;
   padding:0 14px;
-  background:rgba(20,15,12,.85);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,255,136,.25);
   z-index:1000;
 }
 
@@ -61,13 +61,14 @@ html,body{
 .card-title{
   font-size:14px;
   font-weight:600;
-  margin-bottom:8px; 
+  margin-bottom:8px;
+  color:#66ffb3;
 }
 
 .card-desc,
 .list-desc{
   font-size:13.5px;
-  color:var(--text-secondary);
+  color:#e6e6e6;
   line-height:1.5;
 }
 
@@ -77,9 +78,15 @@ html,body{
   margin:8px 6px;
   padding:14px;
   border-radius:var(--radius-lg);
-  background:#1b1512;
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 4px 10px rgba(0,0,0,.35);
+
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(10px);
+
+  border:1px solid rgba(0,255,136,.25);
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.6),
+    inset 0 1px 0 rgba(255,255,255,.15);
 }
 
 /* ================= GRID ================= */
@@ -99,24 +106,29 @@ html,body{
   text-align:center;
   text-decoration:none;
   color:#fff;
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow:0 4px 10px rgba(0,0,0,.4);
+
+  border:1px solid rgba(255,255,255,.2);
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,.6),
+    inset 0 1px 0 rgba(255,255,255,.25),
+    inset 0 -4px 6px rgba(0,0,0,.6);
+
   transition:.2s ease;
   font-size:13px;
 }
 
-/* ================= CATEGORY COLOR SYSTEM (FIXED FOR 30+ CARDS) ================= */
-
-.category-box:nth-child(10n+1){background:linear-gradient(145deg,#3a2b22,#1f1612);}
-.category-box:nth-child(10n+2){background:linear-gradient(145deg,#2a3140,#161b24);}
-.category-box:nth-child(10n+3){background:linear-gradient(145deg,#3a2430,#1d1419);}
-.category-box:nth-child(10n+4){background:linear-gradient(145deg,#243a2e,#132019);}
-.category-box:nth-child(10n+5){background:linear-gradient(145deg,#3a3322,#1f1b12);}
-.category-box:nth-child(10n+6){background:linear-gradient(145deg,#2a263a,#171421);}
-.category-box:nth-child(10n+7){background:linear-gradient(145deg,#2e3a3a,#141f1f);}
-.category-box:nth-child(10n+8){background:linear-gradient(145deg,#3a2626,#1f1414);}
-.category-box:nth-child(10n+9){background:linear-gradient(145deg,#2a3a2a,#162416);}
-.category-box:nth-child(10n+10){background:linear-gradient(145deg,#3a2f1f,#1f190f);}
+/* 🔥 NFTRAJA STYLE GRADIENT SYSTEM */
+.category-box:nth-child(10n+1){background:linear-gradient(135deg,#00ff88,#00c6ff);}
+.category-box:nth-child(10n+2){background:linear-gradient(135deg,#00c6ff,#0072ff);}
+.category-box:nth-child(10n+3){background:linear-gradient(135deg,#ff6a00,#ee0979);}
+.category-box:nth-child(10n+4){background:linear-gradient(135deg,#00b09b,#96c93d);}
+.category-box:nth-child(10n+5){background:linear-gradient(135deg,#fc466b,#3f5efb);}
+.category-box:nth-child(10n+6){background:linear-gradient(135deg,#ff9966,#ff5e62);}
+.category-box:nth-child(10n+7){background:linear-gradient(135deg,#00f2fe,#4facfe);}
+.category-box:nth-child(10n+8){background:linear-gradient(135deg,#43e97b,#38f9d7);}
+.category-box:nth-child(10n+9){background:linear-gradient(135deg,#fa709a,#fee140);}
+.category-box:nth-child(10n+10){background:linear-gradient(135deg,#30cfd0,#330867);}
 
 .category-box span{
   display:block;
@@ -126,7 +138,7 @@ html,body{
 
 .category-box:hover{
   transform:translateY(-2px);
-  box-shadow:0 6px 14px rgba(0,0,0,.5);
+  box-shadow:0 8px 20px rgba(0,0,0,.7);
 }
 
 /* ================= LIST CARDS ================= */
@@ -136,38 +148,52 @@ html,body{
   padding:14px;
   margin:8px 6px;
 
-  background:linear-gradient(145deg,#221913,#16110e);
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 4px 12px rgba(0,0,0,.4);
-  transition:.2s ease;
-}
+  background:rgba(255,255,255,.03);
 
-/* ❌ no hover jump */
-.list-card:hover{
-  transform:none;
+  border:1px solid rgba(0,255,136,.25);
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.6),
+    inset 0 1px 0 rgba(255,255,255,.1);
+
 }
 
 /* ================= BUTTON ================= */
 
 .btn{
   display:inline-block;
-  padding:7px 14px;
-  border-radius:var(--radius-sm);
-  background:var(--accent);
+  padding:8px 16px;
+  border-radius:999px;
+
+  background:linear-gradient(135deg,#00ff88,#00c6ff);
+
   color:#000;
   font-size:12px;
-  font-weight:600;
+  font-weight:700;
   text-decoration:none;
+
   margin-top:10px;
+
+  border:1px solid rgba(255,255,255,.3);
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,.6),
+    inset 0 2px 4px rgba(255,255,255,.4),
+    inset 0 -4px 6px rgba(0,0,0,.5);
+
   transition:.2s ease;
 }
 
 .btn:hover{
   transform:translateY(-1px);
-  box-shadow:0 4px 10px rgba(212,175,55,.3);
 }
 
-/* ================= DRAWER FINAL PERFECT FIX ================= */
+.btn:active{
+  transform:translateY(2px);
+  box-shadow:0 2px 6px rgba(0,0,0,.8);
+}
+
+/* ================= DRAWER ================= */
 
 .drawer{
   position:fixed;
@@ -176,43 +202,34 @@ html,body{
   width:80%;
   max-width:260px;
   height:100vh;
-  background:#181310;
-  padding-top:18px;
+
+  background:rgba(10,12,20,.95);
+
+  padding-top:20px;
+
   transition:left .28s ease;
   z-index:2000;
-  overflow-y:scroll;
-  overflow-x:hidden;
-  -webkit-overflow-scrolling:touch;
-  touch-action:auto;
-  overscroll-behavior:contain;
-  border-right:1px solid rgba(255,255,255,.10);
+
+  overflow-y:auto;
+
+  border-right:1px solid rgba(0,255,136,.25);
 }
 
 .drawer.active{
   left:0;
 }
 
-/* ================= WRAPPER ================= */
-
-.drawer-content{
-  display:block;
-  min-height:100%;
-}
-
-/* ================= LINKS ================= */
-
 .drawer a{
   display:block;
   padding:12px 14px;
   font-size:13px;
-  color:#fff;
+  color:#00ff88;
   text-decoration:none;
   border-bottom:1px solid rgba(255,255,255,.05);
-  cursor:pointer;
 }
 
 .drawer a:hover{
-  background:rgba(255,255,255,.06);
+  background:rgba(0,255,136,.08);
 }
 
 /* ================= OVERLAY ================= */
@@ -220,31 +237,13 @@ html,body{
 .drawer-overlay{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
+  background:rgba(0,0,0,.65);
   display:none;
   z-index:1500;
 }
 
 .drawer-overlay.active{
   display:block;
-}
-
-/* ================= 🔥 SCROLLBAR FORCE SHOW ================= */
-
-/* Chrome / Android */
-.drawer::-webkit-scrollbar{
-  width:5px;
-}
-
-.drawer::-webkit-scrollbar-thumb{
-  background:rgba(255,255,255,.25);
-  border-radius:10px;
-}
-
-/* Firefox */
-.drawer{
-  scrollbar-width:thin;
-  scrollbar-color:rgba(255,255,255,.25) transparent;
 }
 
 /* ================= NAV ================= */
@@ -255,9 +254,11 @@ html,body{
   left:0;
   right:0;
   height:60px;
-  background:rgba(20,15,12,.9);
-  backdrop-filter:blur(10px);
-  border-top:1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(12px);
+
+  border-top:1px solid rgba(0,255,136,.25);
+
   display:flex;
   justify-content:space-around;
   align-items:center;
@@ -268,7 +269,7 @@ html,body{
   flex-direction:column;
   align-items:center;
   text-decoration:none;
-  color:var(--text-secondary);
+  color:#66ffb3;
   font-size:10px;
 }
 
@@ -278,5 +279,5 @@ html,body{
 }
 
 .bottom-item.active{
-  color:var(--accent);
+  color:#00ff88;
 }
