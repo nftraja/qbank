@@ -61,25 +61,27 @@ html,body{
 .card-title{
   font-size:14px;
   font-weight:600;
-  margin-bottom:6px;
+  margin-bottom:8px; /* 🔥 FIX spacing */
 }
 
 .card-desc,
 .list-desc{
   font-size:13.5px;
   color:var(--text-secondary);
-  line-height:1.45;
+  line-height:1.5;
 }
 
 /* ================= GLASS CARD ================= */
 
 .glass-card{
   margin:8px 6px;
-  padding:12px;
+  padding:14px; /* 🔥 better padding */
   border-radius:var(--radius-lg);
 
   background:#1b1512;
-  border:1px solid rgba(255,255,255,.08);
+
+  /* 🔥 visible border */
+  border:1px solid rgba(255,255,255,.14);
 
   box-shadow:0 4px 10px rgba(0,0,0,.35);
 }
@@ -93,14 +95,16 @@ html,body{
   padding:8px;
 }
 
-/* ================= CATEGORY CARDS (COLORFUL 3D) ================= */
+/* ================= CATEGORY CARDS ================= */
 
 .category-box{
   border-radius:var(--radius-md);
-  padding:12px;
+  padding:13px;
   text-align:center;
   text-decoration:none;
   color:#fff;
+
+  border:1px solid rgba(255,255,255,.10);
 
   box-shadow:0 4px 10px rgba(0,0,0,.4);
 
@@ -108,13 +112,18 @@ html,body{
   font-size:13px;
 }
 
-/* 🎨 different gradients */
-.category-box:nth-child(1){background:linear-gradient(145deg,#3a2b22,#1f1612);}
-.category-box:nth-child(2){background:linear-gradient(145deg,#2a3140,#161b24);}
-.category-box:nth-child(3){background:linear-gradient(145deg,#3a2430,#1d1419);}
-.category-box:nth-child(4){background:linear-gradient(145deg,#243a2e,#132019);}
-.category-box:nth-child(5){background:linear-gradient(145deg,#3a3322,#1f1b12);}
-.category-box:nth-child(6){background:linear-gradient(145deg,#2a263a,#171421);}
+/* ================= CATEGORY COLOR SYSTEM (FIXED FOR 30+ CARDS) ================= */
+
+.category-box:nth-child(10n+1){background:linear-gradient(145deg,#3a2b22,#1f1612);}
+.category-box:nth-child(10n+2){background:linear-gradient(145deg,#2a3140,#161b24);}
+.category-box:nth-child(10n+3){background:linear-gradient(145deg,#3a2430,#1d1419);}
+.category-box:nth-child(10n+4){background:linear-gradient(145deg,#243a2e,#132019);}
+.category-box:nth-child(10n+5){background:linear-gradient(145deg,#3a3322,#1f1b12);}
+.category-box:nth-child(10n+6){background:linear-gradient(145deg,#2a263a,#171421);}
+.category-box:nth-child(10n+7){background:linear-gradient(145deg,#2e3a3a,#141f1f);}
+.category-box:nth-child(10n+8){background:linear-gradient(145deg,#3a2626,#1f1414);}
+.category-box:nth-child(10n+9){background:linear-gradient(145deg,#2a3a2a,#162416);}
+.category-box:nth-child(10n+10){background:linear-gradient(145deg,#3a2f1f,#1f190f);}
 
 .category-box span{
   display:block;
@@ -122,7 +131,7 @@ html,body{
   margin-bottom:5px;
 }
 
-/* 🔥 subtle hover */
+/* subtle hover */
 .category-box:hover{
   transform:translateY(-2px);
   box-shadow:0 6px 14px rgba(0,0,0,.5);
@@ -132,19 +141,20 @@ html,body{
 
 .list-card{
   border-radius:var(--radius-md);
-  padding:13px;
+  padding:14px;
   margin:8px 6px;
 
   background:linear-gradient(145deg,#221913,#16110e);
 
-  border:1px solid rgba(255,255,255,.08);
+  /* 🔥 visible border */
+  border:1px solid rgba(255,255,255,.14);
 
   box-shadow:0 4px 12px rgba(0,0,0,.4);
 
   transition:.2s ease;
 }
 
-/* ❌ hover removed from card */
+/* ❌ no hover jump */
 .list-card:hover{
   transform:none;
 }
@@ -163,18 +173,18 @@ html,body{
   font-weight:600;
   text-decoration:none;
 
-  margin-top:8px;
+  margin-top:10px;
 
   transition:.2s ease;
 }
 
-/* 🔥 button hover only */
+/* hover only button */
 .btn:hover{
   transform:translateY(-1px);
   box-shadow:0 4px 10px rgba(212,175,55,.3);
 }
 
-/* ================= DRAWER (FIXED) ================= */
+/* ================= DRAWER ================= */
 
 .drawer{
   position:fixed;
@@ -191,7 +201,7 @@ html,body{
 
   overflow-y:auto;
 
-  border-right:1px solid rgba(255,255,255,.08);
+  border-right:1px solid rgba(255,255,255,.10);
 
   display:block;
 }
@@ -202,7 +212,7 @@ html,body{
 
 .drawer a{
   display:block;
-  padding:10px 14px;
+  padding:11px 14px;
   font-size:13px;
   color:#fff;
   text-decoration:none;
