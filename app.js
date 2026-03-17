@@ -3,32 +3,28 @@
    Works across all 30 pages without breaking anything
 ======================================================= */
 
-document.addEventListener("DOMContentLoaded", function(){
+const menuBtn = document.getElementById("menuBtn");
+const drawer = document.getElementById("drawer");
+const overlay = document.getElementById("overlay");
 
-  const menuBtn = document.getElementById("menuBtn");
-  const drawer = document.getElementById("drawer");
-  const overlay = document.getElementById("overlay");
+if(menuBtn){
+  menuBtn.onclick = function(){
+    drawer.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
 
-  if(menuBtn && drawer && overlay){
+    // scroll reset
+    drawer.scrollTop = 0;
+  };
+}
 
-    menuBtn.addEventListener("click", function(){
-      drawer.classList.toggle("active");
-      overlay.classList.toggle("active");
-      document.body.classList.toggle("no-scroll");
-
-      // 🔥 scroll reset
-      drawer.scrollTop = 0;
-    });
-
-    overlay.addEventListener("click", function(){
-      drawer.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("no-scroll");
-    });
-
-  }
-
-});
+if(overlay){
+  overlay.onclick = function(){
+    drawer.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  };
+}
 
   /* =========================
      ACTIVE BOTTOM NAV AUTO DETECT
