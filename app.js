@@ -1,9 +1,7 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (LOCKED)
-   Works across all 30 pages without breaking anything
+   QBANK – FINAL UNIVERSAL APP SCRIPT (FIXED)
 ======================================================= */
 
-<script>
 document.addEventListener("DOMContentLoaded", function(){
 
   const menuBtn = document.getElementById("menuBtn");
@@ -12,19 +10,16 @@ document.addEventListener("DOMContentLoaded", function(){
 
   if(menuBtn && drawer && overlay){
 
-    // TOGGLE DRAWER
     menuBtn.onclick = function(){
       drawer.classList.toggle("active");
       overlay.classList.toggle("active");
     };
 
-    // CLOSE ON OVERLAY
     overlay.onclick = function(){
       drawer.classList.remove("active");
       overlay.classList.remove("active");
     };
 
-    // CLOSE DRAWER ON LINK CLICK (optional UX fix)
     document.querySelectorAll("#drawer a").forEach(link=>{
       link.addEventListener("click", function(){
         drawer.classList.remove("active");
@@ -34,11 +29,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
-});
-</script>
-
   /* =========================
-     ACTIVE BOTTOM NAV AUTO DETECT
+     ACTIVE BOTTOM NAV
   ========================== */
 
   const bottomItems = document.querySelectorAll(".bottom-item");
@@ -46,15 +38,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
   bottomItems.forEach(item => {
     const linkPath = item.getAttribute("href");
-
     if(linkPath === currentPath){
       item.classList.add("active");
     }
   });
 
-
   /* =========================
-     SAFE EXTERNAL LINK HANDLING
+     EXTERNAL LINK SAFETY
   ========================== */
 
   const externalLinks = document.querySelectorAll("a[target='_blank']");
@@ -62,10 +52,8 @@ document.addEventListener("DOMContentLoaded", function(){
     link.setAttribute("rel", "noopener noreferrer");
   });
 
-
   /* =========================
-     FUTURE JSON READY (SAFE PLACEHOLDER)
-     (No execution until JSON page uses it)
+     JSON LOADER
   ========================== */
 
   const dataContainer = document.getElementById("dataContainer");
@@ -101,10 +89,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-
-/* =======================================================
-   SERVICE WORKER (SAFE REGISTER – NO BREAK)
-======================================================= */
+/* =========================
+   SERVICE WORKER
+========================== */
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
