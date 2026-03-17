@@ -1,5 +1,5 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (DRAWER + SCROLL FIXED)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (ULTIMATE STABLE)
 ======================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -11,78 +11,73 @@ document.addEventListener("DOMContentLoaded", function(){
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
+  const backBtn = document.getElementById("drawerBack");
 
   if(menuBtn && drawer && overlay){
 
     function openDrawer(){
       drawer.classList.add("active");
       overlay.classList.add("active");
-
-      // 🔥 BODY SCROLL LOCK (MAIN FIX)
       document.body.style.overflow = "hidden";
-
-      // 🔥 REMOVE OLD BUGGY REPAINT (IMPORTANT)
-      // drawer.style.display = "none";
-      // drawer.offsetHeight;
-      // drawer.style.display = "";
-
-      // scroll reset
       drawer.scrollTop = 0;
     }
 
     function closeDrawer(){
       drawer.classList.remove("active");
       overlay.classList.remove("active");
-
-      // 🔥 BODY SCROLL UNLOCK
       document.body.style.overflow = "";
     }
 
-    // MENU BUTTON
+    /* MENU BUTTON */
     menuBtn.addEventListener("click", function(e){
       e.stopPropagation();
-
-      if(drawer.classList.contains("active")){
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
+      drawer.classList.contains("active") ? closeDrawer() : openDrawer();
     });
 
-    // OVERLAY CLICK
+    /* OVERLAY */
     overlay.addEventListener("click", closeDrawer);
 
-    // BACK BUTTON
-    const backBtn = document.getElementById("drawerBack");
+    /* BACK BUTTON (SAFE CONTROLLED) */
     if(backBtn){
       backBtn.addEventListener("click", function(e){
         e.preventDefault();
         closeDrawer();
 
-        if(history.length > 1){
-          history.back();
-        } else {
-          location.href = "/";
-        }
+        setTimeout(()=>{
+          if(history.length > 1){
+            history.back();
+          } else {
+            location.href = "/";
+          }
+        }, 120);
       });
     }
 
-    // CLOSE ON LINK CLICK
+    /* 🔥 IMPORTANT FIX
+       Only close drawer for INTERNAL LINKS
+       (skip back button) */
     drawer.querySelectorAll("a").forEach(a=>{
-      a.addEventListener("click", closeDrawer);
+      if(a.id !== "drawerBack"){
+        a.addEventListener("click", closeDrawer);
+      }
     });
 
   }
 
   /* =========================
-     ACTIVE BOTTOM NAV
+     ACTIVE BOTTOM NAV (SMART MATCH)
   ========================== */
 
   const bottomItems = document.querySelectorAll(".bottom-item");
   const currentPath = window.location.pathname;
 
   bottomItems.forEach(item => {
-    if(item.getAttribute("href") === currentPath){
+    const href = item.getAttribute("href");
+
+    if(href === "/" && currentPath === "/"){
+      item.classList.add("active");
+    }
+    else if(href !== "/" && currentPath.includes(href)){
       item.classList.add("active");
     }
   });
@@ -95,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(){
     .forEach(link => link.setAttribute("rel", "noopener noreferrer"));
 
   /* =========================
-     JSON LOADER (FIXED)
+     JSON LOADER (SAFE)
   ========================== */
 
   const dataContainer = document.getElementById("dataContainer");
