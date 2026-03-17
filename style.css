@@ -192,13 +192,18 @@ html,body{
   position:fixed;
   top:0;
   left:-260px;
-  width:260px;
 
-  /* 🔥 CRITICAL FIX */
-  height:100dvh;
+  /* 🔥 MOBILE RESPONSIVE WIDTH */
+  width:80%;
+  max-width:260px;
+
+  /* 🔥 HEIGHT FIX (mobile safe) */
+  height:100vh;
 
   background:#181310;
-  padding-top:52px;
+
+  /* 🔥 TOP GAP CONTROL */
+  padding-top:50px;
 
   transition:left .28s ease;
   z-index:2000;
@@ -210,10 +215,10 @@ html,body{
   /* 🔥 MOBILE SCROLL ENABLE */
   touch-action:pan-y;
 
-  /* 🔥 iOS + Android smooth scroll */
+  /* 🔥 SMOOTH SCROLL */
   -webkit-overflow-scrolling:touch;
 
-  /* 🔥 isolate scroll */
+  /* 🔥 SCROLL ISOLATION */
   overscroll-behavior:contain;
 
   border-right:1px solid rgba(255,255,255,.10);
@@ -241,6 +246,7 @@ html,body{
   text-decoration:none;
   border-bottom:1px solid rgba(255,255,255,.05);
 
+  /* 🔥 POINTER FIX */
   cursor:pointer;
 }
 
@@ -256,6 +262,9 @@ html,body{
   background:rgba(0,0,0,.6);
   display:none;
   z-index:1500;
+
+  /* ❌ IMPORTANT: scroll block मत करना */
+  touch-action:auto;
 }
 
 .drawer-overlay.active{
