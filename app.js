@@ -7,27 +7,54 @@ document.addEventListener("DOMContentLoaded", function(){
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
+  const backBtn = document.getElementById("drawerBack");
 
-  if(menuBtn && drawer && overlay){
+  function openDrawer(){
+    drawer.classList.add("active");
+    overlay.classList.add("active");
+  }
 
+  function closeDrawer(){
+    drawer.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+
+  // MENU TOGGLE
+  if(menuBtn){
     menuBtn.onclick = function(){
       drawer.classList.toggle("active");
       overlay.classList.toggle("active");
     };
-
-    overlay.onclick = function(){
-      drawer.classList.remove("active");
-      overlay.classList.remove("active");
-    };
-
-    document.querySelectorAll("#drawer a").forEach(link=>{
-      link.addEventListener("click", function(){
-        drawer.classList.remove("active");
-        overlay.classList.remove("active");
-      });
-    });
-
   }
+
+  // OVERLAY CLOSE
+  if(overlay){
+    overlay.onclick = closeDrawer;
+  }
+
+  // 🔥 BACK BUTTON SAFE FIX
+  if(backBtn){
+    backBtn.onclick = function(e){
+      e.preventDefault();
+
+      closeDrawer();
+
+      if(window.history.length > 1){
+        window.history.back();
+      } else {
+        window.location.href = "/"; // fallback
+      }
+    };
+  }
+
+  // 🔥 LINK CLICK FIX (no glitch)
+  document.querySelectorAll("#drawer a").forEach(link=>{
+    link.addEventListener("click", function(){
+      closeDrawer();
+    });
+  });
+
+});
 
   /* =========================
      ACTIVE BOTTOM NAV
