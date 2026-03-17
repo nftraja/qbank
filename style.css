@@ -194,11 +194,14 @@ html,body{
   height:100vh;
 
   background:#181310;
-  padding-top:60px;
+
+  /* 🔥 FIX: gap reduce */
+  padding-top:48px;
 
   transition:left .28s ease;
   z-index:2000;
 
+  /* 🔥 MAIN FIX: proper scroll */
   overflow-y:auto;
   overflow-x:hidden;
 
@@ -206,31 +209,26 @@ html,body{
 
   display:block;
 
-  /* 🔥 FIX: mobile rendering stable */
+  /* 🔥 smooth scroll */
   -webkit-overflow-scrolling:touch;
-  will-change:left;
+
+  /* 🔥 IMPORTANT */
+  overscroll-behavior:contain;
 }
 
-/* ACTIVE */
 .drawer.active{
   left:0;
 }
 
-/* LINKS */
 .drawer a{
   display:block;
-  padding:12px 14px; /* थोड़ा better spacing */
+  padding:12px 14px;
   font-size:13px;
   color:#fff;
   text-decoration:none;
-
   border-bottom:1px solid rgba(255,255,255,.05);
-
-  /* 🔥 FIX: collapse prevent (without flex) */
-  white-space:nowrap;
 }
 
-/* HOVER */
 .drawer a:hover{
   background:rgba(255,255,255,.06);
 }
@@ -243,9 +241,6 @@ html,body{
   background:rgba(0,0,0,.6);
   display:none;
   z-index:1500;
-
-  /* 🔥 smoother feel */
-  backdrop-filter:blur(3px);
 }
 
 .drawer-overlay.active{
