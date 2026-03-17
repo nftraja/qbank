@@ -4,10 +4,6 @@
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* =========================
-     DRAWER SYSTEM
-  ========================== */
-
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
@@ -18,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.add("active");
       overlay.classList.add("active");
 
-      // scroll reset
-      drawer.scrollTop = 0;
+      // 🔥 force repaint (MAIN FIX)
+      drawer.style.display = "none";
+      drawer.offsetHeight; // trigger reflow
+      drawer.style.display = "";
 
-      // repaint fix
-      requestAnimationFrame(()=>{
-        drawer.style.transform = "translateZ(0)";
-      });
+      // 🔥 scroll reset (important)
+      drawer.scrollTop = 0;
     }
 
     function closeDrawer(){
@@ -32,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
       overlay.classList.remove("active");
     }
 
+    // MENU BUTTON
     menuBtn.addEventListener("click", function(e){
       e.stopPropagation();
 
@@ -42,12 +39,13 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
 
+    // OVERLAY
     overlay.addEventListener("click", closeDrawer);
 
-    // back button safe
-    const back = drawer.querySelector("a[href*='history.back']");
-    if(back){
-      back.addEventListener("click", function(e){
+    // BACK BUTTON
+    const backBtn = document.getElementById("drawerBack");
+    if(backBtn){
+      backBtn.addEventListener("click", function(e){
         e.preventDefault();
         closeDrawer();
 
@@ -59,12 +57,21 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     }
 
-    // close on link click
+    // CLOSE ON LINK CLICK
     drawer.querySelectorAll("a").forEach(a=>{
       a.addEventListener("click", closeDrawer);
     });
 
   }
+
+});
+
+/* 🔥 CRITICAL FIX: BACK/FORWARD CACHE ISSUE */
+window.addEventListener("pageshow", function(event){
+  if(event.persisted){
+    window.location.reload();
+  }
+});
 
   /* =========================
      ACTIVE BOTTOM NAV
