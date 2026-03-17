@@ -75,12 +75,12 @@ body.no-scroll{
 }
 
 .main-content{
-  padding-top:66px;
-  padding-bottom:78px;
+  padding-top:60px;
+  padding-bottom:60px;
 }
 
 .glass-card{
-  margin:10px 14px;
+  margin:8px 10px;
   padding:16px;
   border-radius:var(--radius-lg);
   background:var(--bg-elev-1);
@@ -118,7 +118,7 @@ body.no-scroll{
 .category-box{
   background:var(--bg-elev-2);
   border-radius:var(--radius-md);
-  padding:14px 10px;
+  padding:8px 10px;
   text-align:center;
   text-decoration:none;
   color:#fff;
@@ -145,7 +145,7 @@ body.no-scroll{
   background:var(--bg-elev-2);
   border-radius:var(--radius-md);
   padding:14px;
-  margin:10px 14px;
+  margin:8px 10px;
   border:1px solid var(--border-soft);
   box-shadow:var(--shadow-soft);
   transition:.25s ease;
@@ -171,7 +171,7 @@ body.no-scroll{
 
 .btn{
   display:inline-block;
-  padding:8px 14px;
+  padding:8px 16px;
   border-radius:var(--radius-sm);
   background:var(--accent);
   color:#000;
@@ -204,7 +204,7 @@ body.no-scroll{
 
 .drawer a{
   display:block;
-  padding:12px 18px;
+  padding:8px 12px;
   text-decoration:none;
   font-size:13px;
   color:#fff;
@@ -230,7 +230,7 @@ body.no-scroll{
   bottom:0;
   left:0;
   right:0;
-  height:62px;
+  height:60px;
   background:rgba(20,15,12,.9);
   backdrop-filter:blur(14px);
   border-top:1px solid var(--border-soft);
