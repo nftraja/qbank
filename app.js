@@ -1,5 +1,5 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (CLEAN + STABLE)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (FINAL STABLE)
 ======================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.add("active");
       overlay.classList.add("active");
 
-      // 🔥 force repaint fix
+      // repaint fix
       drawer.style.display = "none";
       drawer.offsetHeight;
       drawer.style.display = "";
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // OVERLAY CLICK
     overlay.addEventListener("click", closeDrawer);
 
-    // BACK BUTTON (SAFE)
+    // BACK BUTTON
     const backBtn = document.getElementById("drawerBack");
     if(backBtn){
       backBtn.addEventListener("click", function(e){
@@ -89,32 +89,59 @@ document.addEventListener("DOMContentLoaded", function(){
     .forEach(link => link.setAttribute("rel", "noopener noreferrer"));
 
   /* =========================
-     JSON LOADER
+     JSON LOADER (FIXED)
   ========================== */
 
   const dataContainer = document.getElementById("dataContainer");
 
   if(dataContainer){
+
     const jsonFile = dataContainer.dataset.json;
 
     if(jsonFile){
+
       fetch(jsonFile, { cache: "no-store" })
         .then(res => res.json())
         .then(data => {
 
           if(!Array.isArray(data)) return;
 
-          dataContainer.innerHTML = data.map(item => `
-            <div class="list-card">
-              <div class="list-title">${item.name}</div>
-              <div class="list-desc">${item.description}</div>
-              <a href="${item.link}" target="_blank" class="btn">Visit</a>
-            </div>
-          `).join("");
+          // ❌ पुराना innerHTML remove
+          dataContainer.innerHTML = "";
+
+          // ✅ safe render (no DOM break)
+          data.forEach(item => {
+
+            const card = document.createElement("div");
+            card.className = "list-card";
+
+            const title = document.createElement("div");
+            title.className = "list-title";
+            title.textContent = item.name;
+
+            const desc = document.createElement("div");
+            desc.className = "list-desc";
+            desc.textContent = item.description;
+
+            const btn = document.createElement("a");
+            btn.href = item.link;
+            btn.target = "_blank";
+            btn.className = "btn";
+            btn.textContent = "Visit";
+
+            card.appendChild(title);
+            card.appendChild(desc);
+            card.appendChild(btn);
+
+            dataContainer.appendChild(card);
+
+          });
 
         })
         .catch(err => console.error("JSON load error:", err));
+
     }
+
   }
 
 });
