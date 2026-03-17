@@ -80,8 +80,8 @@ body.no-scroll{
 }
 
 .glass-card{
-  margin:8px 10px;
-  padding:16px;
+  margin:10px 12px;
+  padding:10px;
   border-radius:var(--radius-lg);
   background:var(--bg-elev-1);
   border:1px solid var(--border-mid);
@@ -118,7 +118,7 @@ body.no-scroll{
 .category-box{
   background:var(--bg-elev-2);
   border-radius:var(--radius-md);
-  padding:8px 10px;
+  padding:10px 12px;
   text-align:center;
   text-decoration:none;
   color:#fff;
@@ -145,7 +145,7 @@ body.no-scroll{
   background:var(--bg-elev-2);
   border-radius:var(--radius-md);
   padding:14px;
-  margin:8px 10px;
+  margin:10px 12px;
   border:1px solid var(--border-soft);
   box-shadow:var(--shadow-soft);
   transition:.25s ease;
@@ -186,34 +186,59 @@ body.no-scroll{
   opacity:.9;
 }
 
+/* ================================
+   DRAWER MENU (SCROLL FIXED)
+================================ */
+
 .drawer{
   position:fixed;
   top:0;
   left:-260px;
   width:260px;
-  height:100vh;      
+
+  /* 🔥 HEIGHT FIX */
+  height:100dvh; /* mobile safe viewport */
+
   background:var(--bg-elev-1);
   padding-top:60px;
-  transition:.35s ease;
-  z-index:2000;
-  overflow-y:auto;          
-  -webkit-overflow-scrolling:touch;
-  border-right:1px solid var(--border-soft);
-}
-.drawer.active{ left:0; }
 
+  transition:left .35s ease;
+  z-index:2000;
+
+  /* 🔥 SCROLL FIX */
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+
+  border-right:1px solid var(--border-soft);
+
+  /* 🔥 PERFORMANCE */
+  will-change:transform;
+}
+
+/* ACTIVE STATE */
+.drawer.active{
+  left:0;
+}
+
+/* LINKS */
 .drawer a{
   display:block;
-  padding:8px 12px;
+  padding:10px 14px;
   text-decoration:none;
   font-size:13px;
   color:#fff;
   border-bottom:1px solid var(--border-soft);
 }
 
+/* HOVER */
 .drawer a:hover{
   background:var(--bg-elev-2);
 }
+
+/* ================================
+   OVERLAY
+================================ */
 
 .drawer-overlay{
   position:fixed;
@@ -221,9 +246,21 @@ body.no-scroll{
   background:rgba(0,0,0,.65);
   display:none;
   z-index:1500;
+  backdrop-filter:blur(4px); /* 🔥 premium feel */
 }
 
-.drawer-overlay.active{ display:block; }
+.drawer-overlay.active{
+  display:block;
+}
+
+/* ================================
+   SCROLLBAR HIDE (OPTIONAL)
+================================ */
+
+.drawer::-webkit-scrollbar{
+  width:0;
+  display:none;
+}
 
 .bottom-nav{
   position:fixed;
