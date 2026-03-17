@@ -98,12 +98,15 @@ html,body{
   padding:8px;
 }
 
-/* ================= CATEGORY FINAL CLEAN WHITE ================= */
+/* ================= CATEGORY FINAL CLEAN WHITE (FULL FIXED) ================= */
 
 .category-box{
   position:relative;
+  display:block;
+
   border-radius:var(--radius-md);
   padding:14px;
+
   text-align:center;
   text-decoration:none;
 
@@ -121,30 +124,35 @@ html,body{
 
   transition:.2s ease;
 
-  /* ❌ REMOVE DIRTY SHADOW */
+  /* 🔥 CLEAN TEXT */
   text-shadow:none;
-
   font-weight:500;
+
+  /* 🔥 CLICK SAFE */
+  z-index:0;
 }
 
-/* 🔥 LIGHT OVERLAY (NOT DARK) */
+/* 🔥 LIGHT OVERLAY (NO CLICK BLOCK) */
 .category-box::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.15); /* 👈 reduced */
+
+  background:rgba(0,0,0,.15);
+
   z-index:1;
+
+  /* 🔥 IMPORTANT FIX */
+  pointer-events:none;
 }
 
-/* 🔥 FORCE TEXT ABOVE */
-.category-box,
-.category-box span{
+/* 🔥 CONTENT ABOVE OVERLAY */
+.category-box span,
+.category-box *{
   position:relative;
   z-index:2;
-}
 
-/* 🔥 FORCE ALL TEXT WHITE */
-.category-box *{
+  /* 🔥 FORCE WHITE */
   color:#ffffff !important;
 }
 
@@ -153,6 +161,11 @@ html,body{
   display:block;
   font-size:20px;
   margin-bottom:6px;
+}
+
+/* 🔥 HOVER */
+.category-box:hover{
+  transform:translateY(-2px);
 }
 
 /* 🔥 GRADIENTS */
@@ -166,11 +179,6 @@ html,body{
 .category-box:nth-child(10n+8){background:linear-gradient(135deg,#2ecc71,#1abc9c);}
 .category-box:nth-child(10n+9){background:linear-gradient(135deg,#f06292,#fbc02d);}
 .category-box:nth-child(10n+10){background:linear-gradient(135deg,#26c6da,#512da8);}
-
-/* HOVER */
-.category-box:hover{
-  transform:translateY(-2px);
-}
 
 /* ================= LIST ================= */
 
