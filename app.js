@@ -1,5 +1,5 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (FINAL STABLE)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (DRAWER + SCROLL FIXED)
 ======================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -18,10 +18,13 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.add("active");
       overlay.classList.add("active");
 
-      // repaint fix
-      drawer.style.display = "none";
-      drawer.offsetHeight;
-      drawer.style.display = "";
+      // 🔥 BODY SCROLL LOCK (MAIN FIX)
+      document.body.style.overflow = "hidden";
+
+      // 🔥 REMOVE OLD BUGGY REPAINT (IMPORTANT)
+      // drawer.style.display = "none";
+      // drawer.offsetHeight;
+      // drawer.style.display = "";
 
       // scroll reset
       drawer.scrollTop = 0;
@@ -30,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function(){
     function closeDrawer(){
       drawer.classList.remove("active");
       overlay.classList.remove("active");
+
+      // 🔥 BODY SCROLL UNLOCK
+      document.body.style.overflow = "";
     }
 
     // MENU BUTTON
@@ -106,10 +112,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
           if(!Array.isArray(data)) return;
 
-          // ❌ पुराना innerHTML remove
           dataContainer.innerHTML = "";
 
-          // ✅ safe render (no DOM break)
           data.forEach(item => {
 
             const card = document.createElement("div");
