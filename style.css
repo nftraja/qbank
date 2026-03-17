@@ -187,7 +187,7 @@ body.no-scroll{
 }
 
 /* ================================
-   DRAWER MENU (SCROLL FIXED)
+   DRAWER MENU (FINAL FIXED)
 ================================ */
 
 .drawer{
@@ -196,8 +196,9 @@ body.no-scroll{
   left:-260px;
   width:260px;
 
-  /* 🔥 HEIGHT FIX */
-  height:100dvh; /* mobile safe viewport */
+  /* 🔥 HEIGHT FIX (IMPORTANT) */
+  height:100%;
+  max-height:100vh;
 
   background:var(--bg-elev-1);
   padding-top:60px;
@@ -212,11 +213,14 @@ body.no-scroll{
 
   border-right:1px solid var(--border-soft);
 
-  /* 🔥 PERFORMANCE */
+  /* 🔥 FLEX FIX (content vanish fix) */
+  display:flex;
+  flex-direction:column;
+
   will-change:transform;
 }
 
-/* ACTIVE STATE */
+/* ACTIVE */
 .drawer.active{
   left:0;
 }
@@ -229,6 +233,9 @@ body.no-scroll{
   font-size:13px;
   color:#fff;
   border-bottom:1px solid var(--border-soft);
+
+  /* 🔥 prevent collapse */
+  flex-shrink:0;
 }
 
 /* HOVER */
@@ -246,7 +253,7 @@ body.no-scroll{
   background:rgba(0,0,0,.65);
   display:none;
   z-index:1500;
-  backdrop-filter:blur(4px); /* 🔥 premium feel */
+  backdrop-filter:blur(4px);
 }
 
 .drawer-overlay.active{
@@ -254,7 +261,7 @@ body.no-scroll{
 }
 
 /* ================================
-   SCROLLBAR HIDE (OPTIONAL)
+   SCROLLBAR HIDE
 ================================ */
 
 .drawer::-webkit-scrollbar{
