@@ -1,61 +1,62 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (FIXED)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (STABLE FINAL)
 ======================================================= */
 
-(function(){
+document.addEventListener("DOMContentLoaded", function(){
+
+  /* =========================
+     DRAWER SYSTEM
+  ========================== */
 
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
 
-  if(!menuBtn || !drawer || !overlay) return;
+  if(menuBtn && drawer && overlay){
 
-  function openDrawer(){
-    drawer.classList.add("active");
-    overlay.classList.add("active");
-  }
-
-  function closeDrawer(){
-    drawer.classList.remove("active");
-    overlay.classList.remove("active");
-  }
-
-  // MENU BUTTON
-  menuBtn.addEventListener("click", function(e){
-    e.stopPropagation();
-    if(drawer.classList.contains("active")){
-      closeDrawer();
-    } else {
-      openDrawer();
+    function openDrawer(){
+      drawer.classList.add("active");
+      overlay.classList.add("active");
     }
-  });
 
-  // OVERLAY CLICK
-  overlay.addEventListener("click", closeDrawer);
+    function closeDrawer(){
+      drawer.classList.remove("active");
+      overlay.classList.remove("active");
+    }
 
-  // 🔥 BACK FIX (SAFE)
-  const back = drawer.querySelector("a[href*='history.back']");
-  if(back){
-    back.addEventListener("click", function(e){
-      e.preventDefault();
-      closeDrawer();
-
-      if(history.length > 1){
-        history.back();
-      } else {
-        location.href = "/";
-      }
+    // MENU BUTTON
+    menuBtn.addEventListener("click", function(e){
+      e.stopPropagation();
+      drawer.classList.toggle("active");
+      overlay.classList.toggle("active");
     });
+
+    // OVERLAY CLICK
+    overlay.addEventListener("click", closeDrawer);
+
+    // BACK BUTTON SAFE FIX
+    const back = drawer.querySelector("a[href*='history.back']");
+    if(back){
+      back.addEventListener("click", function(e){
+        e.preventDefault();
+        closeDrawer();
+
+        if(history.length > 1){
+          history.back();
+        } else {
+          location.href = "/";
+        }
+      });
+    }
+
+    // LINK CLICK CLOSE
+    drawer.querySelectorAll("a").forEach(a=>{
+      a.addEventListener("click", function(){
+        closeDrawer();
+      });
+    });
+
   }
-
-  // 🔥 LINK CLICK (NO GLITCH)
-  drawer.querySelectorAll("a").forEach(a=>{
-    a.addEventListener("click", function(){
-      closeDrawer();
-    });
-  });
-
-})();
 
   /* =========================
      ACTIVE BOTTOM NAV
