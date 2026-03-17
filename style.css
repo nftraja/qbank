@@ -98,7 +98,7 @@ html,body{
   padding:8px;
 }
 
-/* ================= CATEGORY TEXT WHITE FIX ================= */
+/* ================= CATEGORY FINAL CLEAN WHITE ================= */
 
 .category-box{
   position:relative;
@@ -107,7 +107,7 @@ html,body{
   text-align:center;
   text-decoration:none;
 
-  /* 🔥 FORCE WHITE */
+  /* 🔥 PURE WHITE TEXT */
   color:#ffffff !important;
 
   border:1px solid rgba(255,255,255,.18);
@@ -121,29 +121,31 @@ html,body{
 
   transition:.2s ease;
 
-  /* 🔥 CLEAN TEXT */
-  text-shadow:0 1px 2px rgba(0,0,0,.7);
+  /* ❌ REMOVE DIRTY SHADOW */
+  text-shadow:none;
+
+  font-weight:500;
 }
 
-/* 🔥 MAKE SURE TEXT ABOVE OVERLAY */
-.category-box span,
-.category-box{
-  position:relative;
-  z-index:2;
-}
-
-/* 🔥 ALSO FORCE CHILD TEXT */
-.category-box *{
-  color:#ffffff !important;
-}
-
-/* 🔥 OVERLAY */
+/* 🔥 LIGHT OVERLAY (NOT DARK) */
 .category-box::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.35);
+  background:rgba(0,0,0,.15); /* 👈 reduced */
   z-index:1;
+}
+
+/* 🔥 FORCE TEXT ABOVE */
+.category-box,
+.category-box span{
+  position:relative;
+  z-index:2;
+}
+
+/* 🔥 FORCE ALL TEXT WHITE */
+.category-box *{
+  color:#ffffff !important;
 }
 
 /* ICON */
@@ -153,7 +155,7 @@ html,body{
   margin-bottom:6px;
 }
 
-/* gradients */
+/* 🔥 GRADIENTS */
 .category-box:nth-child(10n+1){background:linear-gradient(135deg,#00c97a,#0099cc);}
 .category-box:nth-child(10n+2){background:linear-gradient(135deg,#0099cc,#0052cc);}
 .category-box:nth-child(10n+3){background:linear-gradient(135deg,#ff7a18,#d4145a);}
@@ -165,6 +167,7 @@ html,body{
 .category-box:nth-child(10n+9){background:linear-gradient(135deg,#f06292,#fbc02d);}
 .category-box:nth-child(10n+10){background:linear-gradient(135deg,#26c6da,#512da8);}
 
+/* HOVER */
 .category-box:hover{
   transform:translateY(-2px);
 }
