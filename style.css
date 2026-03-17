@@ -98,47 +98,73 @@ html,body{
   padding:8px;
 }
 
-/* ================= CATEGORY CARDS ================= */
+/* ================= CATEGORY CARDS FINAL FIX ================= */
 
 .category-box{
+  position:relative;
   border-radius:var(--radius-md);
-  padding:13px;
+  padding:14px;
   text-align:center;
   text-decoration:none;
-  color:#fff;
+  color:#ffffff;
 
-  border:1px solid rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.18);
+
+  overflow:hidden;
 
   box-shadow:
     0 6px 16px rgba(0,0,0,.6),
-    inset 0 1px 0 rgba(255,255,255,.25),
+    inset 0 1px 0 rgba(255,255,255,.2),
     inset 0 -4px 6px rgba(0,0,0,.6);
 
   transition:.2s ease;
   font-size:13px;
 }
 
-/* 🔥 NFTRAJA STYLE GRADIENT SYSTEM */
-.category-box:nth-child(10n+1){background:linear-gradient(135deg,#00ff88,#00c6ff);}
-.category-box:nth-child(10n+2){background:linear-gradient(135deg,#00c6ff,#0072ff);}
-.category-box:nth-child(10n+3){background:linear-gradient(135deg,#ff6a00,#ee0979);}
-.category-box:nth-child(10n+4){background:linear-gradient(135deg,#00b09b,#96c93d);}
-.category-box:nth-child(10n+5){background:linear-gradient(135deg,#fc466b,#3f5efb);}
-.category-box:nth-child(10n+6){background:linear-gradient(135deg,#ff9966,#ff5e62);}
-.category-box:nth-child(10n+7){background:linear-gradient(135deg,#00f2fe,#4facfe);}
-.category-box:nth-child(10n+8){background:linear-gradient(135deg,#43e97b,#38f9d7);}
-.category-box:nth-child(10n+9){background:linear-gradient(135deg,#fa709a,#fee140);}
-.category-box:nth-child(10n+10){background:linear-gradient(135deg,#30cfd0,#330867);}
+/* 🔥 DARK OVERLAY FOR TEXT READABILITY */
+.category-box::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.35);
+  z-index:1;
+}
 
+/* CONTENT ABOVE OVERLAY */
+.category-box span,
+.category-box{
+  position:relative;
+  z-index:2;
+}
+
+/* 🔥 SOFT GRADIENTS (MUTED) */
+.category-box:nth-child(10n+1){background:linear-gradient(135deg,#00c97a,#0099cc);}
+.category-box:nth-child(10n+2){background:linear-gradient(135deg,#0099cc,#0052cc);}
+.category-box:nth-child(10n+3){background:linear-gradient(135deg,#ff7a18,#d4145a);}
+.category-box:nth-child(10n+4){background:linear-gradient(135deg,#009688,#6dbf4b);}
+.category-box:nth-child(10n+5){background:linear-gradient(135deg,#d53369,#3f5efb);}
+.category-box:nth-child(10n+6){background:linear-gradient(135deg,#ff8a65,#ff5252);}
+.category-box:nth-child(10n+7){background:linear-gradient(135deg,#00bcd4,#3f51b5);}
+.category-box:nth-child(10n+8){background:linear-gradient(135deg,#2ecc71,#1abc9c);}
+.category-box:nth-child(10n+9){background:linear-gradient(135deg,#f06292,#fbc02d);}
+.category-box:nth-child(10n+10){background:linear-gradient(135deg,#26c6da,#512da8);}
+
+/* ICON */
 .category-box span{
   display:block;
   font-size:20px;
-  margin-bottom:5px;
+  margin-bottom:6px;
 }
 
+/* TEXT FIX */
+.category-box{
+  text-shadow:0 1px 3px rgba(0,0,0,.9);
+}
+
+/* HOVER */
 .category-box:hover{
   transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(0,0,0,.7);
+  box-shadow:0 10px 24px rgba(0,0,0,.8);
 }
 
 /* ================= LIST CARDS ================= */
