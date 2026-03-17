@@ -49,6 +49,8 @@ html,body{
   border:none;
   color:var(--accent);
   font-size:20px;
+
+  cursor:pointer; /* 🔥 FINAL FIX */
 }
 
 /* MAIN */
@@ -184,35 +186,37 @@ html,body{
   box-shadow:0 4px 10px rgba(212,175,55,.3);
 }
 
-/* ================= DRAWER ================= */
+/* ================= DRAWER FINAL FIX ================= */
 
 .drawer{
   position:fixed;
   top:0;
   left:-260px;
   width:260px;
-  height:100vh;
+
+  /* 🔥 CRITICAL FIX */
+  height:100dvh;
 
   background:#181310;
-
-  /* 🔥 CLEAN TOP GAP */
   padding-top:52px;
 
   transition:left .28s ease;
   z-index:2000;
 
-  /* 🔥 PERFECT SCROLL */
+  /* 🔥 SCROLL FIX */
   overflow-y:auto;
   overflow-x:hidden;
 
-  /* 🔥 FIX: isolate scroll */
-  overscroll-behavior:contain;
+  /* 🔥 MOBILE SCROLL ENABLE */
+  touch-action:pan-y;
+
+  /* 🔥 iOS + Android smooth scroll */
   -webkit-overflow-scrolling:touch;
 
-  border-right:1px solid rgba(255,255,255,.10);
+  /* 🔥 isolate scroll */
+  overscroll-behavior:contain;
 
-  /* 🔥 IMPORTANT: prevent layout bugs */
-  will-change:left;
+  border-right:1px solid rgba(255,255,255,.10);
 }
 
 /* ACTIVE */
@@ -220,13 +224,15 @@ html,body{
   left:0;
 }
 
-/* 🔥 WRAPPER FIX (MANDATORY) */
+/* ================= WRAPPER ================= */
+
 .drawer-content{
   display:block;
   min-height:100%;
 }
 
-/* LINKS */
+/* ================= LINKS ================= */
+
 .drawer a{
   display:block;
   padding:12px 14px;
@@ -235,11 +241,9 @@ html,body{
   text-decoration:none;
   border-bottom:1px solid rgba(255,255,255,.05);
 
-  /* 🔥 FIX: pointer वापस */
   cursor:pointer;
 }
 
-/* HOVER */
 .drawer a:hover{
   background:rgba(255,255,255,.06);
 }
@@ -252,9 +256,6 @@ html,body{
   background:rgba(0,0,0,.6);
   display:none;
   z-index:1500;
-
-  /* 🔥 prevents scroll bleed */
-  touch-action:none;
 }
 
 .drawer-overlay.active{
