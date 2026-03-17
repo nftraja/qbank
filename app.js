@@ -1,5 +1,5 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (ULTIMATE STABLE)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (FINAL STABLE FIXED)
 ======================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -18,14 +18,19 @@ document.addEventListener("DOMContentLoaded", function(){
     function openDrawer(){
       drawer.classList.add("active");
       overlay.classList.add("active");
-      document.body.style.overflow = "hidden";
+
+      // ❌ BODY SCROLL LOCK REMOVED (MAIN FIX)
+      // document.body.style.overflow = "hidden";
+
       drawer.scrollTop = 0;
     }
 
     function closeDrawer(){
       drawer.classList.remove("active");
       overlay.classList.remove("active");
-      document.body.style.overflow = "";
+
+      // ❌ BODY SCROLL UNLOCK REMOVED
+      // document.body.style.overflow = "";
     }
 
     /* MENU BUTTON */
@@ -34,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.contains("active") ? closeDrawer() : openDrawer();
     });
 
-    /* OVERLAY */
+    /* OVERLAY CLICK */
     overlay.addEventListener("click", closeDrawer);
 
-    /* BACK BUTTON (SAFE CONTROLLED) */
+    /* BACK BUTTON */
     if(backBtn){
       backBtn.addEventListener("click", function(e){
         e.preventDefault();
@@ -53,9 +58,7 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     }
 
-    /* 🔥 IMPORTANT FIX
-       Only close drawer for INTERNAL LINKS
-       (skip back button) */
+    /* CLOSE ON LINK CLICK (EXCEPT BACK) */
     drawer.querySelectorAll("a").forEach(a=>{
       if(a.id !== "drawerBack"){
         a.addEventListener("click", closeDrawer);
@@ -65,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   /* =========================
-     ACTIVE BOTTOM NAV (SMART MATCH)
+     ACTIVE BOTTOM NAV
   ========================== */
 
   const bottomItems = document.querySelectorAll(".bottom-item");
