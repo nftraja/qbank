@@ -5,71 +5,25 @@
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* =========================
-     DRAWER TOGGLE SYSTEM (FIXED)
-  ========================== */
-
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("overlay");
 
   if(menuBtn && drawer && overlay){
 
-    function openDrawer(){
-      drawer.classList.add("active");
-      overlay.classList.add("active");
-      document.body.classList.add("no-scroll");
+    menuBtn.addEventListener("click", function(){
+      drawer.classList.toggle("active");
+      overlay.classList.toggle("active");
+      document.body.classList.toggle("no-scroll");
 
-      // 🔥 scroll reset (important)
+      // 🔥 scroll reset
       drawer.scrollTop = 0;
-    }
+    });
 
-    function closeDrawer(){
+    overlay.addEventListener("click", function(){
       drawer.classList.remove("active");
       overlay.classList.remove("active");
       document.body.classList.remove("no-scroll");
-    }
-
-    // MENU BUTTON
-    menuBtn.addEventListener("click", function(){
-      if(drawer.classList.contains("active")){
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-
-    // OVERLAY CLICK
-    overlay.addEventListener("click", closeDrawer);
-
-    /* =========================
-       MENU CLICK FIX (IMPORTANT)
-    ========================== */
-
-    document.querySelectorAll("#drawer a").forEach(link=>{
-      link.addEventListener("click", function(e){
-
-        // अगर internal navigation है
-        if(this.getAttribute("href") === "#"){
-          e.preventDefault();
-        }
-
-        // 🔥 drawer close (fix)
-        closeDrawer();
-
-        // ⚠️ यहाँ कोई innerHTML replace मत करना
-      });
-    });
-
-    /* =========================
-       BACK BUTTON FIX
-    ========================== */
-
-    document.querySelectorAll(".back-btn").forEach(btn=>{
-      btn.addEventListener("click", function(){
-        closeDrawer();
-        history.back(); // अगर custom routing है तो बदल सकता है
-      });
     });
 
   }
