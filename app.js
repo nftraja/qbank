@@ -1,8 +1,12 @@
 /* =======================================================
-   QBANK – FINAL UNIVERSAL APP SCRIPT (FINAL CLEAN + STABLE)
+   QBANK – FINAL UNIVERSAL APP SCRIPT (CLEAN + STABLE)
 ======================================================= */
 
 document.addEventListener("DOMContentLoaded", function(){
+
+  /* =========================
+     DRAWER SYSTEM
+  ========================== */
 
   const menuBtn = document.getElementById("menuBtn");
   const drawer = document.getElementById("drawer");
@@ -14,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function(){
       drawer.classList.add("active");
       overlay.classList.add("active");
 
-      // 🔥 force repaint (MAIN FIX)
+      // 🔥 force repaint fix
       drawer.style.display = "none";
-      drawer.offsetHeight; // trigger reflow
+      drawer.offsetHeight;
       drawer.style.display = "";
 
-      // 🔥 scroll reset (important)
+      // scroll reset
       drawer.scrollTop = 0;
     }
 
@@ -39,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
 
-    // OVERLAY
+    // OVERLAY CLICK
     overlay.addEventListener("click", closeDrawer);
 
-    // BACK BUTTON
+    // BACK BUTTON (SAFE)
     const backBtn = document.getElementById("drawerBack");
     if(backBtn){
       backBtn.addEventListener("click", function(e){
@@ -63,15 +67,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
   }
-
-});
-
-/* 🔥 CRITICAL FIX: BACK/FORWARD CACHE ISSUE */
-window.addEventListener("pageshow", function(event){
-  if(event.persisted){
-    window.location.reload();
-  }
-});
 
   /* =========================
      ACTIVE BOTTOM NAV
