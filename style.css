@@ -25,6 +25,7 @@
 html,body{
   background:var(--bg-main);
   color:var(--text-primary);
+  touch-action:manipulation;
 }
 
 /* ================= HEADER ================= */
