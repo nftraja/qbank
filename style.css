@@ -1,17 +1,22 @@
 :root{
-
   --bg-main:linear-gradient(135deg,#0b0b0b,#151515);
   --bg-elev-1:rgba(255,255,255,.04);
   --bg-elev-2:rgba(255,255,255,.06);
+  --bg-elev-3:rgba(255,255,255,.08);
 
-  --accent:#00ff88;
+  --border-soft:rgba(0,255,136,.15);
+  --border-mid:rgba(0,255,136,.25);
+  --border-strong:rgba(0,255,136,.4);
 
   --text-primary:#ffffff;
   --text-secondary:#b9b1a8;
 
-  --radius-lg:16px;
-  --radius-md:12px;
-  --radius-sm:8px;
+  /* 🔥 QBANK ACCENT */
+  --accent:#00ff88;
+
+  --radius:20px;
+  --shadow-soft:0 8px 30px rgba(0,0,0,.45);
+  --shadow-hover:0 14px 40px rgba(0,0,0,.6);
 }
 
 /* RESET */
@@ -23,26 +28,27 @@
 }
 
 html,body{
+  width:100%;
+  height:100%;
   background:var(--bg-main);
   color:var(--text-primary);
-  touch-action:manipulation;
+  -webkit-overflow-scrolling:touch;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 .app-header{
   position:fixed;
   top:0;
   left:0;
   right:0;
-  height:54px;
+  height:58px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:0 14px;
-  backdrop-filter:blur(12px);
-  background:rgba(15,12,10,.7);
-  border-bottom:1px solid rgba(0,255,136,.25);
+  padding:0 18px;
+  background:rgba(15,12,10,.7); /* QBANK */
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border-mid);
   z-index:1000;
 }
 
@@ -51,221 +57,161 @@ html,body{
   border:none;
   color:var(--accent);
   font-size:22px;
-  cursor:pointer;
 }
 
-/* ================= MAIN ================= */
-
-.main-content{
-  padding:60px 10px 60px; /* 🔥 bottom nav safe */
-}
-
-/* ================= TYPO ================= */
-
-.card-title{
-  font-size:14px;
+.logo{
+  font-size:15px;
   font-weight:600;
-  margin-bottom:8px;
-  color:#66ffb3;
+  color:var(--accent);
 }
 
-.card-desc,
-.list-desc{
-  font-size:13.5px;
-  color:#e6e6e6;
-  line-height:1.5;
+/* MAIN */
+.main-content{
+  padding-top:70px;
+  padding-bottom:85px;
 }
 
-/* ================= GLASS ================= */
-
+/* GLASS */
 .glass-card{
-  margin:8px;
-  padding:14px;
-  border-radius:var(--radius-lg);
+  margin:14px;
+  padding:22px;
+  border-radius:var(--radius);
+  background:var(--bg-elev-1);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--border-mid);
+  box-shadow:var(--shadow-soft);
+}
+
+/* 🔥 QBANK TYPO */
+.glass-card .card-title{
+  color:#66ffb3;
+  font-weight:600;
+}
+
+.glass-card .card-desc{
+  color:#e6e6e6;
+}
+
+/* GRID */
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  padding:16px;
+}
+
+/* 🔥 QBANK STYLE CARDS */
+.quick-card{
+  aspect-ratio:1/1;
+  border-radius:var(--radius);
+
   background:rgba(255,255,255,.04);
-  backdrop-filter:blur(10px);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+  color:#ffffff;
+
   border:1px solid rgba(0,255,136,.25);
+
   box-shadow:
     0 6px 18px rgba(0,0,0,.6),
     inset 0 1px 0 rgba(255,255,255,.15);
+
+  transition:.25s;
 }
 
-/* ================= GRID ================= */
+.quick-card:hover{
+  transform:translateY(-4px);
+  border:1px solid var(--border-strong);
+  box-shadow:var(--shadow-hover);
+}
 
-.grid{
+.quick-card span{
+  font-size:32px;
+  margin-bottom:8px;
+}
+
+/* TOOLS */
+.tools-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:8px;
-  padding:6px;
-  margin-top:10px;
-  margin-bottom:10px;
+  grid-template-columns:repeat(auto-fill,minmax(170px,1fr));
+  gap:18px;
+  padding:18px;
 }
 
-/* ================= CATEGORY FINAL CLEAN WHITE (FULL FIXED) ================= */
+.tool-card{
+  background:rgba(255,255,255,.04);
+  border-radius:var(--radius);
+  padding:18px;
+  border:1px solid var(--border-soft);
+  box-shadow:var(--shadow-soft);
+}
 
-.category-box{
-  position:relative;
+.tool-card h3{
+  color:#fff;
+}
+
+.tool-card p{
+  color:#e6e6e6;
+}
+
+/* BUTTON */
+.visit-btn{
   display:block;
-
-  border-radius:var(--radius-md);
-  padding:14px;
-
   text-align:center;
-  text-decoration:none;
+  padding:9px;
+  border-radius:12px;
 
-  /* 🔥 PURE WHITE TEXT */
-  color:#ffffff !important;
+  background:linear-gradient(135deg,#00ff88,#00c6ff); /* QBANK */
 
-  border:1px solid rgba(255,255,255,.18);
-
-  overflow:hidden;
-
-  box-shadow:
-    0 6px 16px rgba(0,0,0,.6),
-    inset 0 1px 0 rgba(255,255,255,.2),
-    inset 0 -4px 6px rgba(0,0,0,.6);
-
-  transition:.2s ease;
-
-  /* 🔥 CLEAN TEXT */
-  text-shadow:none;
-  font-weight:500;
-
-  /* 🔥 CLICK SAFE */
-  z-index:0;
-}
-
-/* 🔥 LIGHT OVERLAY (NO CLICK BLOCK) */
-.category-box::after{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:rgba(0,0,0,.15);
-
-  z-index:1;
-
-  /* 🔥 IMPORTANT FIX */
-  pointer-events:none;
-}
-
-/* 🔥 CONTENT ABOVE OVERLAY */
-.category-box span,
-.category-box *{
-  position:relative;
-  z-index:2;
-
-  /* 🔥 FORCE WHITE */
-  color:#ffffff !important;
-}
-
-/* ICON */
-.category-box span{
-  display:block;
-  font-size:20px;
-  margin-bottom:6px;
-}
-
-/* 🔥 HOVER */
-.category-box:hover{
-  transform:translateY(-2px);
-}
-
-/* 🔥 GRADIENTS */
-.category-box:nth-child(10n+1){background:linear-gradient(135deg,#00c97a,#0099cc);}
-.category-box:nth-child(10n+2){background:linear-gradient(135deg,#0099cc,#0052cc);}
-.category-box:nth-child(10n+3){background:linear-gradient(135deg,#ff7a18,#d4145a);}
-.category-box:nth-child(10n+4){background:linear-gradient(135deg,#009688,#6dbf4b);}
-.category-box:nth-child(10n+5){background:linear-gradient(135deg,#d53369,#3f5efb);}
-.category-box:nth-child(10n+6){background:linear-gradient(135deg,#ff8a65,#ff5252);}
-.category-box:nth-child(10n+7){background:linear-gradient(135deg,#00bcd4,#3f51b5);}
-.category-box:nth-child(10n+8){background:linear-gradient(135deg,#2ecc71,#1abc9c);}
-.category-box:nth-child(10n+9){background:linear-gradient(135deg,#f06292,#fbc02d);}
-.category-box:nth-child(10n+10){background:linear-gradient(135deg,#26c6da,#512da8);}
-
-/* ================= LIST ================= */
-
-.list-card{
-  border-radius:var(--radius-md);
-  padding:14px;
-  margin:8px 6px;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(0,255,136,.25);
-  box-shadow:
-    0 6px 18px rgba(0,0,0,.6);
-}
-
-/* ================= JSON CARD TITLE COLOR ================= */
-
-.list-title{
-  font-size:15px;
-  font-weight:700;
-
-  /* 🔥 GREEN COLOR */
-  color:#00ff88;
-
-  margin-bottom:6px;
-
-  /* 🔥 CLEAN LOOK */
-  letter-spacing:.3px;
-}
-
-/* ================= BUTTON ================= */
-
-.btn{
-  display:inline-block;
-  padding:8px 16px;
-  border-radius:999px;
-  background:linear-gradient(135deg,#00ff88,#00c6ff);
   color:#000;
-  font-size:12px;
-  font-weight:700;
-  text-decoration:none;
-  margin-top:10px;
+  font-weight:600;
 }
 
-/* ================= DRAWER ================= */
+/* SEARCH */
+.search-input{
+  width:100%;
+  padding:13px;
+  border-radius:16px;
+  border:1px solid var(--border-soft);
+  background:var(--bg-elev-2);
+  color:#fff;
+}
 
+.search-input:focus{
+  border:1px solid var(--border-strong);
+}
+
+/* DRAWER */
 .drawer{
   position:fixed;
   top:0;
   left:-260px;
-  width:80%;
-  max-width:260px;
-
-  height:100vh;
-
-  background:rgba(10,12,20,.96);
-
-  padding-top:10px;
-
-  transition:left .28s ease;
+  width:260px;
+  height:100%;
+  background:rgba(10,12,20,.96); /* QBANK */
+  backdrop-filter:blur(12px);
+  transition:.35s ease;
+  padding-top:60px;
   z-index:2000;
-
   overflow-y:auto;
-  overflow-x:hidden;
-
-  -webkit-overflow-scrolling:touch;
-  touch-action:pan-y;
-
-  border-right:1px solid rgba(0,255,136,.25);
+  border-right:1px solid var(--border-mid);
 }
 
-.drawer.active{
-  left:0;
-}
+.drawer.active{left:0;}
 
 .drawer a{
   display:block;
-  padding:12px 14px;
-  font-size:13px;
-  color:#00ff88;
-  text-decoration:none;
+  padding:14px 22px;
+  color:var(--accent);
   border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-/* ================= OVERLAY ================= */
-
+/* OVERLAY */
 .drawer-overlay{
   position:fixed;
   inset:0;
@@ -274,58 +220,39 @@ html,body{
   z-index:1500;
 }
 
-.drawer-overlay.active{
-  display:block;
-}
+.drawer-overlay.active{display:block;}
 
-/* ================= BOTTOM NAV ================= */
-
+/* BOTTOM NAV */
 .bottom-nav{
   position:fixed;
   bottom:0;
   left:0;
   right:0;
+  height:70px;
 
-  height:60px;
+  background:rgba(20,15,12,.9); /* QBANK */
 
-  backdrop-filter:blur(12px);
-  background:rgba(20,15,12,.9);
-
-  border-top:1px solid rgba(0,255,136,.25);
+  backdrop-filter:blur(18px);
+  border-top:1px solid var(--border-mid);
 
   display:flex;
   justify-content:space-around;
   align-items:center;
-
-  z-index:999;
 }
 
 .bottom-item{
   display:flex;
   flex-direction:column;
   align-items:center;
-  text-decoration:none;
   color:#66ffb3;
-  font-size:13px;
-}
-
-.bottom-item span{
-  font-size:18px;
+  font-size:11px;
 }
 
 .bottom-item.active{
-  color:#00ff88;
+  color:var(--accent);
 }
 
-/* ================= GLOBAL SAFE ================= */
-
+/* SAFE */
 body{
   padding-bottom:70px;
-}
-
-/* mobile safe */
-@supports(padding:max(0px)){
-  body{
-    padding-bottom:max(70px, env(safe-area-inset-bottom));
-  }
 }
